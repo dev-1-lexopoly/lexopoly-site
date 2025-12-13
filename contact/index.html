@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N29Z7B6T5T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        // Note: Config is called in analytics.js with attribution data
+    </script>
+    <title>Contact Lexopoly - Get in Touch with Our Team</title>
+    <meta name="description" content="Contact Lexopoly for sales inquiries, technical support, partnerships, or questions about ComplianceLogger, QuoteCreator, or LocalTranscribe. Multiple ways to reach our team.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Core brand colors */
+            --lexopoly-primary: #1a365d;
+            --lexopoly-secondary: #2d3748;
+            --accent: #2c5aa0;
+
+            /* Vertical-specific colors */
+            --lawyers: #2b6cb0;
+            --journalists: #b45309;
+            --dictation: #2f7d32;
+            --court: #553c9a;
+            --government: #4a5568;
+            --education: #8b5a00;
+
+            /* UI colors */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f7fafc;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --border: #e2e8f0;
+            --success: #2f7d32;
+            --warning: #8b5a00;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* Header - Unified Navigation Template */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--lexopoly-primary);
+            text-decoration: none;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .nav-main {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown > a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: color 0.3s;
+        }
+
+        .nav-dropdown > a:hover {
+            color: var(--accent);
+        }
+
+        .dropdown-arrow {
+            font-size: 0.7rem;
+            transition: transform 0.2s;
+        }
+
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            min-width: 220px;
+            padding: 0.5rem 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            z-index: 1000;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--bg-secondary);
+            color: var(--accent);
+        }
+
+        .dropdown-header {
+            padding: 0.5rem 1.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 0.5rem 0;
+        }
+
+        .nav-main > a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-main > a:hover {
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn-secondary-nav {
+            padding: 0.5rem 1.25rem;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary-nav:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary-nav {
+            padding: 0.5rem 1.25rem;
+            background: var(--accent);
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-primary-nav:hover {
+            background: var(--lexopoly-primary);
+        }
+
+        /* Main content container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        /* Contact sections */
+        .contact-section {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+
+        .contact-section h2 {
+            font-size: 2.5rem;
+            color: var(--lexopoly-primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* Contact options grid */
+        .contact-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-card {
+            padding: 2rem;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+            color: var(--accent);
+        }
+
+        .contact-card h3 {
+            color: var(--lexopoly-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .contact-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .contact-details {
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        /* Contact form */
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .form-section {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--lexopoly-primary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+        }
+
+        .form-control.textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            background: white;
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            background: #2c5aa0;
+        }
+
+        /* Business info */
+        .business-info {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .business-info h3 {
+            color: var(--lexopoly-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .info-icon {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+            min-width: 20px;
+        }
+
+        .info-content {
+            flex: 1;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: var(--lexopoly-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .info-value {
+            color: var(--text-secondary);
+        }
+
+        /* Response times */
+        .response-times {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .response-card {
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .response-card h4 {
+            color: var(--lexopoly-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .response-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Mobile Navigation - Unified Template */
+        @media (max-width: 968px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-main {
+                position: fixed;
+                top: 73px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 1rem 0;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+
+            .nav-main.show {
+                max-height: 80vh;
+                overflow-y: auto;
+                opacity: 1;
+            }
+
+            .nav-dropdown {
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-dropdown > a {
+                padding: 1rem 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                min-height: 44px;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                border-radius: 0;
+                background: var(--bg-secondary);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                padding: 0;
+            }
+
+            .nav-dropdown.mobile-open .dropdown-menu {
+                max-height: 500px;
+                padding: 0.5rem 0;
+            }
+
+            .dropdown-menu a {
+                padding: 0.75rem 2rem 0.75rem 3rem;
+                min-height: 44px;
+            }
+
+            .nav-main > a {
+                padding: 1rem 2rem;
+                border-bottom: 1px solid var(--border);
+                min-height: 44px;
+            }
+
+            .nav-cta {
+                flex-direction: column;
+                padding: 1rem 2rem;
+                gap: 0.75rem;
+            }
+
+            .btn-secondary-nav,
+            .btn-primary-nav {
+                width: 100%;
+                text-align: center;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .contact-section {
+                padding: 2rem 1rem;
+            }
+
+            .contact-form {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-options {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <!-- Analytics Integration -->
+    <script src="/js/analytics.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Track contact page view
+        trackEvent('funnel', 'contact_page_view');
+
+        // Check for success parameter and show success message
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            showFormStatus('success', '✅ Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.');
+        }
+
+        // Enhanced form submission handling
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = submitBtn.querySelector('.btn-text');
+        const btnSpinner = submitBtn.querySelector('.btn-spinner');
+        const formStatus = document.getElementById('form-status');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Validate form
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            // Show loading state
+            setLoadingState(true);
+
+            // Track analytics
+            const inquiryType = document.getElementById('inquiry-type').value;
+            trackEvent('conversion', 'contact_form_submit', inquiryType);
+
+            // Create JSON payload for Flask backend
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                company: document.getElementById('company').value,
+                phone: document.getElementById('phone').value,
+                product: document.getElementById('product').value,
+                inquiryType: inquiryType
+            };
+
+            // Submit to Flask backend /api/contact
+            fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    showFormStatus('success', '✅ ' + data.message);
+                    form.reset();
+                    trackEvent('conversion', 'contact_form_success', inquiryType);
+                } else {
+                    throw new Error(data.error || 'Form submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Form submission error:', error);
+                showFormStatus('error', '❌ Sorry, there was an error sending your message. Please try again or email us directly at hello@lexopoly.com');
+                trackEvent('error', 'contact_form_error', error.message);
+            })
+            .finally(() => {
+                setLoadingState(false);
+            });
+        });
+
+        function setLoadingState(loading) {
+            if (loading) {
+                submitBtn.disabled = true;
+                btnText.style.display = 'none';
+                btnSpinner.style.display = 'inline';
+                submitBtn.style.opacity = '0.7';
+            } else {
+                submitBtn.disabled = false;
+                btnText.style.display = 'inline';
+                btnSpinner.style.display = 'none';
+                submitBtn.style.opacity = '1';
+            }
+        }
+
+        function showFormStatus(type, message) {
+            formStatus.style.display = 'block';
+            formStatus.textContent = message;
+
+            if (type === 'success') {
+                formStatus.style.backgroundColor = '#d4edda';
+                formStatus.style.color = '#155724';
+                formStatus.style.borderLeft = '4px solid #28a745';
+            } else if (type === 'error') {
+                formStatus.style.backgroundColor = '#f8d7da';
+                formStatus.style.color = '#721c24';
+                formStatus.style.borderLeft = '4px solid #dc3545';
+            }
+
+            // Auto-hide after 10 seconds
+            setTimeout(() => {
+                formStatus.style.display = 'none';
+            }, 10000);
+        }
+
+        // Track contact method clicks
+        document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+            link.addEventListener('click', () => {
+                trackEvent('engagement', 'email_click', link.href);
+            });
+        });
+
+        // Track form field interactions
+        document.querySelectorAll('#contactForm input, #contactForm textarea, #contactForm select').forEach(field => {
+            let focused = false;
+            field.addEventListener('focus', () => {
+                if (!focused) {
+                    trackEvent('engagement', 'form_field_focus', field.name || field.id);
+                    focused = true;
+                }
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">Lexopoly</a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+
+            <div class="nav-main" id="nav-main">
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>Products <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">Our Products</div>
+                        <a href="/localtranscribe/">LocalTranscribe</a>
+                        <a href="/quotecreator/">QuoteCreator</a>
+                        <a href="/compliancelogger/">ComplianceLogger</a>
+                        <a href="/casscalculator/">CASS Calculator</a>
+                        <a href="/revenuerescue/">RevenueRescue</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/#products">View All Products →</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>Solutions <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">By Industry</div>
+                        <a href="/lawyers/">Lawyers</a>
+                        <a href="/journalists/">Journalists</a>
+                        <a href="/dictation/">Dictation Services</a>
+                        <a href="/court-reporters/">Court Reporters</a>
+                        <a href="/government/">Government</a>
+                        <a href="/education/">Education</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/solutions/" style="font-weight: 600;">View All Solutions →</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>About <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="/about/">About Lexopoly</a>
+                        <a href="/support/">Support</a>
+                        <a href="/contact/">Contact</a>
+                    </div>
+                </div>
+
+                <a href="/pricing/">Pricing</a>
+
+                <div class="nav-cta">
+                    <a href="/demo/" class="btn-secondary-nav">Demo</a>
+                    <a href="/signup/" class="btn-primary-nav">Start Trial</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Contact Us</h1>
+            <p class="subtitle">
+                Get in touch with our team for sales inquiries, technical support, partnerships,
+                or any questions about LocalTranscribe, QuoteCreator, or our other products.
+            </p>
+        </section>
+
+        <section class="contact-section">
+            <h2>How Can We Help You?</h2>
+
+            <div class="contact-options">
+                <div class="contact-card">
+                    <span class="contact-icon">💼</span>
+                    <h3>Sales & Enterprise</h3>
+                    <p>Interested in Lexopoly products for your organization? Questions about volume pricing, enterprise features, or custom solutions?</p>
+                    <div class="contact-details">sales@lexopoly.com</div>
+                    <p style="font-size: 0.9rem; color: var(--success);">Response within 2 business hours</p>
+                </div>
+
+                <div class="contact-card">
+                    <span class="contact-icon">🔧</span>
+                    <h3>Technical Support</h3>
+                    <p>Need help with installation, troubleshooting, or technical questions about our products?</p>
+                    <div class="contact-details">support@lexopoly.com</div>
+                    <p style="font-size: 0.9rem; color: var(--success);">Response within 4 business hours</p>
+                </div>
+
+                <div class="contact-card">
+                    <span class="contact-icon">🤝</span>
+                    <h3>Partnerships</h3>
+                    <p>Interested in partnering with Lexopoly? Integration opportunities, reseller programs, or strategic partnerships.</p>
+                    <div class="contact-details">partnerships@lexopoly.com</div>
+                    <p style="font-size: 0.9rem; color: var(--warning);">Response within 1-2 business days</p>
+                </div>
+
+                <!-- Temporarily disabled - phone support not yet available
+                <div class="contact-card">
+                    <span class="contact-icon">📞</span>
+                    <h3>Priority Phone Support</h3>
+                    <p>Direct phone support available for Team, Business, and Enterprise customers during business hours.</p>
+                    <div class="contact-details">Request callback below</div>
+                    <p style="font-size: 0.9rem; color: var(--success);">Available 9 AM - 6 PM EST</p>
+                </div>
+                -->
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>Send Us a Message</h2>
+
+            <div class="contact-form">
+                <div class="form-section">
+                    <form id="contactForm" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company/Organization</label>
+                            <input type="text" id="company" name="company" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product">Product *</label>
+                            <select id="product" name="product" class="form-select" required>
+                                <option value="">Select a product</option>
+                                <option value="localtranscribe">LocalTranscribe</option>
+                                <option value="quotecreator">QuoteCreator</option>
+                                <option value="compliancelogger">ComplianceLogger</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inquiry-type">Inquiry Type *</label>
+                            <select id="inquiry-type" name="inquiry-type" class="form-select" required>
+                                <option value="">Select an option</option>
+                                <option value="sales">Sales & Pricing</option>
+                                <option value="support">Technical Support</option>
+                                <option value="demo">Request Demo</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="billing">Billing Question</option>
+                                <option value="feedback">Feedback & Suggestions</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" class="form-control textarea" required placeholder="Please provide details about your inquiry..."></textarea>
+                        </div>
+
+                        <div class="form-status" id="form-status" style="display: none; margin-bottom: 1rem; padding: 1rem; border-radius: 8px;"></div>
+
+                        <button type="submit" class="btn-submit" id="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-spinner" style="display: none;">Sending...</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="business-info">
+                    <h3>Business Information</h3>
+
+                    <div class="info-item">
+                        <span class="info-icon">🏢</span>
+                        <div class="info-content">
+                            <div class="info-label">Company</div>
+                            <div class="info-value">Lexopoly LLC</div>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">📧</span>
+                        <div class="info-content">
+                            <div class="info-label">General Inquiries</div>
+                            <div class="info-value">hello@lexopoly.com</div>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">🕒</span>
+                        <div class="info-content">
+                            <div class="info-label">Business Hours</div>
+                            <div class="info-value">Monday - Friday<br>9:00 AM - 6:00 PM EST</div>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">🌐</span>
+                        <div class="info-content">
+                            <div class="info-label">Website</div>
+                            <div class="info-value">www.lexopoly.com</div>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">𝕏</span>
+                        <div class="info-content">
+                            <div class="info-label">Follow Us on X</div>
+                            <div class="info-value"><a href="https://x.com/lexopoly" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">@lexopoly</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>Response Times</h2>
+
+            <div class="response-times">
+                <div class="response-card">
+                    <h4>Sales Inquiries</h4>
+                    <p>Within 2 business hours during business days. Urgent requests receive priority handling.</p>
+                </div>
+
+                <div class="response-card">
+                    <h4>Technical Support</h4>
+                    <p>Within 4 business hours for paid customers. Free tier users within 24 business hours.</p>
+                </div>
+
+                <div class="response-card">
+                    <h4>General Questions</h4>
+                    <p>Within 24 business hours. Complex inquiries may require additional time for thorough research.</p>
+                </div>
+
+                <div class="response-card">
+                    <h4>Partnership Inquiries</h4>
+                    <p>Within 1-2 business days. Strategic partnership discussions scheduled separately.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="/about/">About</a>
+            <a href="/support/">Support</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/terms/">Terms</a>
+            <a href="/contact/">Contact</a>
+        </div>
+        <p>&copy; 2025 Lexopoly LLC (Wyoming, USA). All rights reserved.</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+            Professional transcription software that respects your privacy.
+        </p>
+    </footer>
+
+    <script>
+        // Unified Navigation Functions
+        function toggleMobileMenu() {
+            const navMain = document.getElementById('nav-main');
+            navMain.classList.toggle('show');
+        }
+
+        function toggleMobileDropdown(element) {
+            if (window.innerWidth <= 968) {
+                element.classList.toggle('mobile-open');
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('.nav-container');
+            const navMain = document.getElementById('nav-main');
+            if (!nav.contains(event.target) && navMain.classList.contains('show')) {
+                navMain.classList.remove('show');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-main a[href]').forEach(link => {
+            link.addEventListener('click', function() {
+                const navMain = document.getElementById('nav-main');
+                navMain.classList.remove('show');
+            });
+        });
+
+        // Clear mobile dropdown states when resizing to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 968) {
+                document.querySelectorAll('.nav-dropdown.mobile-open').forEach(dropdown => {
+                    dropdown.classList.remove('mobile-open');
+                });
+            }
+        });
+
+        // Simple form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Basic form validation
+            const requiredFields = this.querySelectorAll('[required]');
+            let isValid = true;
+
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = '#e53e3e';
+                    isValid = false;
+                } else {
+                    field.style.borderColor = '#e2e8f0';
+                }
+            });
+
+            if (isValid) {
+                // In a real implementation, this would submit to a server
+                alert('Thank you for your message! We\'ll get back to you within our stated response times.');
+                this.reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+
+        // Clear error styling on input
+        document.querySelectorAll('.form-control, .form-select').forEach(field => {
+            field.addEventListener('input', function() {
+                this.style.borderColor = '#e2e8f0';
+            });
+        });
+    </script>
+</body>
+</html>

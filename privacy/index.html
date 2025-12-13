@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N29Z7B6T5T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        // Note: Config is called in analytics.js with attribution data
+    </script>
+    <title>Privacy Policy - Lexopoly LLC</title>
+    <meta name="description" content="Comprehensive privacy practices for lexopoly.com, LocalTranscribe, and QuoteCreator. GDPR compliant, minimal data collection, local processing ensures data security.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Core brand colors */
+            --lexopoly-primary: #1a365d;
+            --lexopoly-secondary: #2d3748;
+            --accent: #2c5aa0;
+
+            /* Vertical-specific colors */
+            --lawyers: #2b6cb0;
+            --journalists: #b45309;
+            --dictation: #2f7d32;
+            --court: #553c9a;
+            --government: #4a5568;
+            --education: #8b5a00;
+
+            /* UI colors */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f7fafc;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --border: #e2e8f0;
+            --success: #2f7d32;
+            --warning: #8b5a00;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* Unified Navigation Template */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--lexopoly-primary);
+            text-decoration: none;
+            white-space: nowrap;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: var(--lexopoly-primary);
+            z-index: 1001;
+        }
+
+        .nav-main {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown > a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-dropdown > a:hover {
+            color: var(--accent);
+        }
+
+        .dropdown-arrow {
+            font-size: 0.7em;
+            margin-left: 0.3rem;
+            transition: transform 0.3s;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+            z-index: 1000;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--bg-secondary);
+            color: var(--accent);
+        }
+
+        .dropdown-header {
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            opacity: 0.7;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 0.5rem 0;
+        }
+
+        .nav-main > a {
+            padding: 0.75rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            white-space: nowrap;
+        }
+
+        .nav-main > a:hover {
+            color: var(--accent);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            margin-left: 1rem;
+        }
+
+        .btn-secondary {
+            padding: 0.5rem 1.25rem;
+            border: 2px solid var(--accent);
+            background: transparent;
+            color: var(--accent);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary {
+            padding: 0.5rem 1.25rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn-primary:hover {
+            background: #2c5aa0;
+            transform: translateY(-2px);
+        }
+
+        /* Main content container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        .last-updated {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Product navigator */
+        .product-navigator {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .product-navigator h3 {
+            color: var(--lexopoly-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .product-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .product-link {
+            padding: 1rem;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .product-link:hover {
+            border-color: var(--accent);
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        .product-link .icon {
+            font-size: 1.5rem;
+        }
+
+        .product-link .text {
+            flex: 1;
+        }
+
+        .product-link .title {
+            font-weight: 600;
+            color: var(--lexopoly-primary);
+        }
+
+        .product-link .desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Content sections */
+        .content-section {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: var(--lexopoly-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .content-section h3 {
+            font-size: 1.4rem;
+            color: var(--lexopoly-primary);
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+
+        .content-section h4 {
+            font-size: 1.2rem;
+            color: var(--lexopoly-secondary);
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .content-section p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .content-section ul, .content-section ol {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            padding-left: 2rem;
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        /* Collapsible details styling */
+        details {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin: 2rem 0;
+            padding: 0;
+            transition: all 0.3s;
+        }
+
+        details[open] {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        summary {
+            padding: 1.5rem;
+            cursor: pointer;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--lexopoly-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            user-select: none;
+            transition: color 0.3s;
+        }
+
+        summary:hover {
+            color: var(--accent);
+        }
+
+        summary::marker {
+            display: none;
+        }
+
+        summary::before {
+            content: '▶';
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        .details-content {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .details-content h3 {
+            margin-top: 1.5rem;
+        }
+
+        .details-content h3:first-child {
+            margin-top: 0;
+        }
+
+        /* Privacy highlights */
+        .privacy-highlight {
+            background: linear-gradient(135deg, var(--success) 0%, #2f855a 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .privacy-highlight h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-highlight p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+        }
+
+        /* Key points */
+        .key-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .key-point {
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .key-point h4 {
+            color: var(--lexopoly-primary);
+            margin-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .key-point p {
+            color: var(--text-secondary);
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Contact info */
+        .contact-info {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin: 2rem 0;
+        }
+
+        .contact-info h4 {
+            color: var(--lexopoly-primary);
+            margin-bottom: 1rem;
+            margin-top: 0;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Responsive design */
+        @media (max-width: 968px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-main {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            }
+
+            .nav-main.show {
+                max-height: 600px;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-dropdown {
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-dropdown > a {
+                padding: 1rem 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                min-height: 44px;
+            }
+
+            .nav-dropdown.mobile-open > a .dropdown-arrow {
+                transform: rotate(180deg);
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                border-radius: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+                background: var(--bg-secondary);
+            }
+
+            .nav-dropdown.mobile-open .dropdown-menu {
+                max-height: 500px;
+            }
+
+            .dropdown-menu a {
+                padding: 0.75rem 3rem;
+                min-height: 44px;
+            }
+
+            .nav-main > a {
+                padding: 1rem 2rem;
+                border-bottom: 1px solid var(--border);
+                min-height: 44px;
+            }
+
+            .nav-actions {
+                flex-direction: column;
+                margin: 0;
+                padding: 1rem 2rem;
+                gap: 0.5rem;
+            }
+
+            .nav-actions a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .content-section {
+                padding: 2rem 1rem;
+            }
+
+            .key-points {
+                grid-template-columns: 1fr;
+            }
+
+            .product-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">Lexopoly</a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
+
+            <div class="nav-main" id="nav-main">
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>Products <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">Our Products</div>
+                        <a href="/localtranscribe/">LocalTranscribe</a>
+                        <a href="/quotecreator/">QuoteCreator</a>
+                        <a href="/compliancelogger/">ComplianceLogger</a>
+                        <a href="/casscalculator/">CASS Calculator</a>
+                        <a href="/revenuerescue/">RevenueRescue</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/#products">View All Products →</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>Solutions <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">By Industry</div>
+                        <a href="/lawyers/">Lawyers</a>
+                        <a href="/journalists/">Journalists</a>
+                        <a href="/dictation/">Dictation</a>
+                        <a href="/court-reporters/">Court Reporters</a>
+                        <a href="/government/">Government</a>
+                        <a href="/education/">Education</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>About <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="/about/">About Lexopoly</a>
+                        <a href="/support/">Support</a>
+                        <a href="/contact/">Contact Us</a>
+                    </div>
+                </div>
+
+                <a href="/pricing/">Pricing</a>
+
+                <div class="nav-actions">
+                    <a href="/signup/" class="btn-secondary">Sign Up Free</a>
+                    <a href="/demo/" class="btn-primary">Watch Demo</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">
+                Comprehensive privacy practices for lexopoly.com, LocalTranscribe, and QuoteCreator.
+                Your privacy and data security are fundamental to everything we build.
+            </p>
+            <div class="last-updated">
+                <strong>Last Updated:</strong> October 11, 2025<br>
+                <strong>Effective Date:</strong> October 11, 2025
+            </div>
+        </section>
+
+        <div class="product-navigator">
+            <h3>Product Privacy Navigator</h3>
+            <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">Quick jump to privacy practices for each product:</p>
+            <div class="product-links">
+                <a href="#website-privacy" class="product-link">
+                    <span class="icon">📊</span>
+                    <div class="text">
+                        <div class="title">Website Privacy</div>
+                        <div class="desc">lexopoly.com data practices</div>
+                    </div>
+                </a>
+                <a href="#localtranscribe-privacy" class="product-link">
+                    <span class="icon">🎙️</span>
+                    <div class="text">
+                        <div class="title">LocalTranscribe</div>
+                        <div class="desc">Desktop transcription software</div>
+                    </div>
+                </a>
+                <a href="#quotecreator-privacy" class="product-link">
+                    <span class="icon">📋</span>
+                    <div class="text">
+                        <div class="title">QuoteCreator</div>
+                        <div class="desc">Mobile estimate app</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <section class="content-section" id="overview">
+            <h2>1. Overview</h2>
+
+            <p>
+                Lexopoly LLC ("we," "us," or "our") operates three products: our marketing website (lexopoly.com), LocalTranscribe (desktop transcription software), and QuoteCreator (mobile estimate app). This Privacy Policy explains how we collect, use, and protect information across all our products and services.
+            </p>
+
+            <div class="key-points">
+                <div class="key-point">
+                    <h4>Privacy-First Design</h4>
+                    <p>All products built with privacy as a core principle, not an afterthought.</p>
+                </div>
+                <div class="key-point">
+                    <h4>GDPR Compliant</h4>
+                    <p>Full compliance with EU data protection regulations across all products.</p>
+                </div>
+                <div class="key-point">
+                    <h4>Minimal Data Collection</h4>
+                    <p>We only collect what's essential for functionality and service delivery.</p>
+                </div>
+                <div class="key-point">
+                    <h4>No Data Selling</h4>
+                    <p>We never sell, rent, or trade your personal information to third parties.</p>
+                </div>
+            </div>
+        </section>
+
+        <details id="website-privacy">
+            <summary>📊 Website (lexopoly.com) Privacy Practices</summary>
+            <div class="details-content">
+                <h3>What We Collect</h3>
+
+                <h4>Analytics & Tracking</h4>
+                <ul>
+                    <li><strong>Google Analytics 4 (GA4):</strong> We use GA4 to understand how visitors use our website. This includes page views, session duration, and navigation patterns.</li>
+                    <li><strong>UTM Tracking Parameters:</strong> We track campaign attribution (utm_source, utm_medium, utm_campaign, utm_content, utm_term) to measure marketing effectiveness.</li>
+                    <li><strong>IP Addresses:</strong> Automatically anonymized in GA4 for privacy protection.</li>
+                    <li><strong>First-Touch & Last-Touch Attribution:</strong> We store attribution data in your browser (localStorage/sessionStorage) to understand conversion paths.</li>
+                </ul>
+
+                <h4>Form Submissions</h4>
+                <p>When you submit forms on lexopoly.com, we collect:</p>
+                <ul>
+                    <li><strong>Contact Form:</strong> Name, email, message content (via Formspree)</li>
+                    <li><strong>Demo Request:</strong> Name, email, company (optional), message (via Formspree)</li>
+                    <li><strong>Signup Form:</strong> Name, email, intended use (via Formspree)</li>
+                </ul>
+
+                <h3>What We Don't Collect</h3>
+                <ul>
+                    <li>No advertising tracking pixels or third-party ad networks</li>
+                    <li>No cross-site tracking cookies</li>
+                    <li>No sale of visitor data to data brokers</li>
+                    <li>No personally identifiable information without explicit consent</li>
+                </ul>
+
+                <h3>Cookie Consent</h3>
+                <div class="privacy-highlight">
+                    <h3>GDPR-Compliant Cookie Consent</h3>
+                    <p>
+                        We use essential cookies for analytics and attribution tracking only. You can decline cookies,
+                        and our website will still function properly. Cookie consent is required before any tracking begins.
+                    </p>
+                </div>
+
+                <h3>Third-Party Services</h3>
+                <ul>
+                    <li><strong>Formspree:</strong> Form submission handling (contact, demo, signup forms)</li>
+                    <li><strong>Google Analytics 4:</strong> Website analytics with IP anonymization</li>
+                    <li><strong>GitHub Pages:</strong> Website hosting and content delivery</li>
+                </ul>
+            </div>
+        </details>
+
+        <details id="localtranscribe-privacy">
+            <summary>🎙️ LocalTranscribe (Desktop Software) Privacy</summary>
+            <div class="details-content">
+                <div class="privacy-highlight">
+                    <h3>🔒 Core Privacy Principle: LOCAL PROCESSING</h3>
+                    <p>
+                        LocalTranscribe processes all audio and transcription data locally on your computer.
+                        Your sensitive conversations, legal discussions, and confidential audio never travel
+                        to our servers or any cloud service.
+                    </p>
+                </div>
+
+                <h3>What We Collect</h3>
+
+                <h4>Account Information</h4>
+                <ul>
+                    <li>Email address (required for account access)</li>
+                    <li>Name (for billing and customer service)</li>
+                    <li>Company information (optional, for business accounts)</li>
+                    <li>Password (encrypted and stored securely)</li>
+                </ul>
+
+                <h4>Billing Information</h4>
+                <ul>
+                    <li>Billing address</li>
+                    <li>Payment method information (processed by Stripe)</li>
+                    <li>Transaction history and invoices</li>
+                </ul>
+
+                <h4>Usage Analytics (Anonymized)</h4>
+                <ul>
+                    <li>Number of transcriptions processed (not the content)</li>
+                    <li>Software version and performance metrics</li>
+                    <li>Feature usage patterns (which features are used, not what data is processed)</li>
+                    <li>Error logs and crash reports (containing no personal audio data)</li>
+                </ul>
+
+                <h3>What We DON'T Collect</h3>
+                <ul>
+                    <li>❌ Audio files - never uploaded to our servers</li>
+                    <li>❌ Transcription content - stays on your device</li>
+                    <li>❌ Sensitive professional data (legal, medical, journalistic)</li>
+                    <li>❌ Client information from your transcriptions</li>
+                </ul>
+
+                <h3>Professional Privacy Benefits</h3>
+                <ul>
+                    <li><strong>Attorney-Client Privilege:</strong> Protected by design - no cloud exposure risk</li>
+                    <li><strong>HIPAA Compliance Support:</strong> Local processing supports healthcare privacy requirements</li>
+                    <li><strong>Confidential Sources:</strong> Journalists can protect source identity completely</li>
+                    <li><strong>Government Security:</strong> Meets strict data handling requirements</li>
+                </ul>
+
+                <h3>Data Security</h3>
+                <ul>
+                    <li>Encryption in transit (TLS/SSL) for all account data transmission</li>
+                    <li>Encryption at rest for stored account data</li>
+                    <li>Secure password hashing using industry best practices</li>
+                    <li>Multi-factor authentication options</li>
+                </ul>
+            </div>
+        </details>
+
+        <details id="quotecreator-privacy">
+            <summary>📋 QuoteCreator (Mobile App) Privacy</summary>
+            <div class="details-content">
+                <h3>What We Collect</h3>
+
+                <h4>Account Data</h4>
+                <ul>
+                    <li>Email address (for account access)</li>
+                    <li>Name (for personalization and support)</li>
+                    <li>Optional profile information</li>
+                </ul>
+
+                <h4>Billing Information</h4>
+                <ul>
+                    <li>One-time payment of $12.99 (processed via Google Play/App Store)</li>
+                    <li>Payment method handled by platform payment processors</li>
+                    <li>Transaction receipts and purchase history</li>
+                </ul>
+
+                <h4>Clio Integration (Optional)</h4>
+                <ul>
+                    <li>Clio OAuth credentials (encrypted, user-initiated)</li>
+                    <li>Matter and contact sync data (only when enabled)</li>
+                    <li>Integration usage metrics</li>
+                </ul>
+
+                <h4>App Usage Analytics</h4>
+                <ul>
+                    <li>Feature usage patterns (anonymized)</li>
+                    <li>App performance metrics</li>
+                    <li>Error logs and crash reports</li>
+                </ul>
+
+                <h3>What We DON'T Collect</h3>
+                <ul>
+                    <li>❌ Quote/estimate content - stays on your device</li>
+                    <li>❌ Client information from your quotes</li>
+                    <li>❌ Financial data beyond billing</li>
+                    <li>❌ Location data or device identifiers</li>
+                </ul>
+
+                <h3>Offline-First Architecture</h3>
+                <div class="privacy-highlight">
+                    <h3>Privacy by Design: Offline-First</h3>
+                    <p>
+                        QuoteCreator works completely offline. Your quotes, client data, and estimates
+                        never leave your device unless you explicitly choose to sync with Clio or export data.
+                    </p>
+                </div>
+
+                <h3>Clio Integration Privacy</h3>
+                <ul>
+                    <li>Clio sync is completely optional - app works fully without it</li>
+                    <li>OAuth credentials stored encrypted on your device</li>
+                    <li>You control what data syncs to Clio</li>
+                    <li>Can disconnect Clio integration at any time</li>
+                </ul>
+            </div>
+        </details>
+
+        <section class="content-section" id="shared-practices">
+            <h2>5. Shared Privacy Practices</h2>
+            <p>The following practices apply to all Lexopoly products:</p>
+
+            <h3>5.1 GDPR Compliance</h3>
+            <ul>
+                <li>Full compliance with EU General Data Protection Regulation</li>
+                <li>Data minimization - we only collect what's necessary</li>
+                <li>Lawful basis for processing (consent, contract, legitimate interest)</li>
+                <li>Regular privacy impact assessments</li>
+            </ul>
+
+            <h3>5.2 Data Security Standards</h3>
+            <ul>
+                <li>Encryption in transit (TLS/SSL) for all data transmission</li>
+                <li>Encryption at rest for stored data</li>
+                <li>Regular security audits and penetration testing</li>
+                <li>Secure password hashing (bcrypt/Argon2)</li>
+                <li>Multi-factor authentication support</li>
+            </ul>
+
+            <h3>5.3 No Data Selling</h3>
+            <p><strong>We never sell, rent, or trade your personal information to third parties.</strong> Your data is yours, not a product.</p>
+
+            <h3>5.4 Limited Third-Party Sharing</h3>
+            <p>We only share data with essential service providers:</p>
+            <ul>
+                <li><strong>Payment Processors:</strong> Stripe, Google Play, Apple App Store (for billing only)</li>
+                <li><strong>Email Service:</strong> Transactional emails only (account notifications, support)</li>
+                <li><strong>Analytics:</strong> Google Analytics 4 (website only, with IP anonymization)</li>
+                <li><strong>Form Handling:</strong> Formspree (website contact/demo/signup forms)</li>
+            </ul>
+        </section>
+
+        <section class="content-section" id="your-rights">
+            <h2>6. Your Rights</h2>
+
+            <p>You have comprehensive control over your data across all Lexopoly products:</p>
+
+            <h3>6.1 Access Your Data</h3>
+            <ul>
+                <li>View all data we have about you</li>
+                <li>Download your data in portable format (JSON/CSV)</li>
+                <li>Request detailed data reports</li>
+            </ul>
+
+            <h3>6.2 Delete Your Data</h3>
+            <ul>
+                <li>Delete your account at any time</li>
+                <li>Request deletion of specific information</li>
+                <li>Cancel subscriptions with no penalty</li>
+                <li>30-day data retention after account deletion (for dispute resolution)</li>
+            </ul>
+
+            <h3>6.3 Export Your Information</h3>
+            <ul>
+                <li>Export account data in machine-readable format</li>
+                <li>Port your data to other services</li>
+                <li>LocalTranscribe: All transcription data already on your device</li>
+                <li>QuoteCreator: Export quotes as PDF, CSV, or JSON</li>
+            </ul>
+
+            <h3>6.4 GDPR Rights (EU Users)</h3>
+            <p>If you're in the European Union, you also have the right to:</p>
+            <ul>
+                <li>Object to processing of your personal data</li>
+                <li>Restrict processing under certain circumstances</li>
+                <li>Lodge a complaint with your local data protection authority</li>
+                <li>Withdraw consent for data processing</li>
+                <li>Data portability (export in structured format)</li>
+            </ul>
+
+            <div class="contact-info">
+                <h4>Exercise Your Rights</h4>
+                <p>
+                    To exercise any of these rights, contact us at <strong>privacy@lexopoly.com</strong>
+                    or use the data controls in your account settings. We'll respond within 30 days.
+                </p>
+            </div>
+        </section>
+
+        <section class="content-section" id="contact">
+            <h2>7. Contact Information</h2>
+
+            <div class="contact-info">
+                <h4>Privacy Officer</h4>
+                <p>
+                    <strong>Email:</strong> privacy@lexopoly.com<br>
+                    <strong>Company:</strong> Lexopoly LLC<br>
+                    <strong>Response Time:</strong> Within 30 days
+                </p>
+            </div>
+
+            <h3>7.1 Questions and Concerns</h3>
+            <p>If you have questions about this Privacy Policy or our data practices, please contact us. We're committed to addressing your concerns promptly and transparently.</p>
+
+            <h3>7.2 Data Protection Requests</h3>
+            <p>For requests related to your personal data (access, correction, deletion), please include:</p>
+            <ul>
+                <li>Your full name and email address associated with your account</li>
+                <li>Specific details about your request</li>
+                <li>Which product(s) your request applies to</li>
+                <li>Any supporting information to verify your identity</li>
+            </ul>
+
+            <h3>7.3 Security Issues</h3>
+            <p>If you discover a security vulnerability, please report it to <strong>security@lexopoly.com</strong>. We take security reports seriously and will respond promptly.</p>
+
+            <h3>7.4 Changes to This Policy</h3>
+            <p>We may update this Privacy Policy from time to time. When we make changes:</p>
+            <ul>
+                <li>We'll update the "Last Updated" date at the top</li>
+                <li>We'll notify you of significant changes via email</li>
+                <li>Changes take effect 30 days after notification</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="/about/">About</a>
+            <a href="/support/">Support</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/terms/">Terms</a>
+            <a href="/contact/">Contact</a>
+            <a href="https://x.com/lexopoly" target="_blank" rel="noopener">𝕏 Follow on X</a>
+            <!-- REDDIT BANNED: <a href="https://reddit.com/u/Lexopoly" target="_blank" rel="noopener">📱 Join us on Reddit</a> -->
+        </div>
+        <p>&copy; 2025 Lexopoly LLC (Wyoming, USA). All rights reserved.</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+            Professional software that respects your privacy.
+        </p>
+    </footer>
+
+    <!-- Analytics Integration -->
+    <script src="/js/analytics.js"></script>
+
+    <script>
+        // Unified Navigation Functions
+        function toggleMobileMenu() {
+            const navMain = document.getElementById('nav-main');
+            navMain.classList.toggle('show');
+        }
+
+        function toggleMobileDropdown(element) {
+            if (window.innerWidth <= 968) {
+                element.classList.toggle('mobile-open');
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navMain = document.getElementById('nav-main');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+
+            if (!event.target.closest('.nav-main') && !event.target.closest('.mobile-menu-btn')) {
+                navMain.classList.remove('show');
+            }
+        });
+
+        // Close mobile menu on window resize to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 968) {
+                document.getElementById('nav-main').classList.remove('show');
+                document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('mobile-open');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

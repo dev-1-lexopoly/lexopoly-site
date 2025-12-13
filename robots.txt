@@ -1,0 +1,96 @@
+# COPYRIGHT & INTELLECTUAL PROPERTY NOTICE
+# © 2025 Lexopoly LLC. All rights reserved.
+#
+# NO AI TRAINING: Use of this website's content (articles, documentation, product
+# descriptions, templates, code examples) to train generative artificial intelligence
+# (AI) technologies is expressly prohibited without prior written permission.
+#
+# NO DATA MINING: Automated extraction of user data, pricing information, or
+# proprietary business intelligence is prohibited.
+#
+# AI SEARCH ENGINE POLICY
+# We allow AI search citations (ChatGPT, Claude, Perplexity, Gemini) with proper
+# attribution, but block AI training crawlers to protect our intellectual property
+# and user privacy.
+
+# Allow search-focused AI crawlers (for citations)
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Block AI training crawlers
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+# Allow all other crawlers (Google Search, Bing, etc.)
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://lexopoly.com/sitemap.xml
+
+# Block user data and application pages (privacy protection)
+Disallow: /dashboard/
+
+# Block downloadable templates (copyright protection - available via web only)
+Disallow: /downloads/*.csv
+Disallow: /downloads/*.xlsx
+Disallow: /downloads/*.pdf
+
+# Optimize crawl budget - disallow development files
+Disallow: /node_modules/
+Disallow: /*.backup
+Disallow: /*.tar.gz
+Disallow: /test-results/
+Disallow: /clio-submission/
+Disallow: /marketing-assets/
+
+# Screenshots are public (for social media previews)
+Allow: /screenshots/
+
+# Allow important resources
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /assets/
+Allow: /buy/
+Allow: /demo/
+Allow: /lawyers/
+Allow: /journalists/
+Allow: /dictation/
+Allow: /court-reporters/
+Allow: /government/
+Allow: /education/
+Allow: /pricing/
+Allow: /about/
+Allow: /support/
+Allow: /contact/
+Allow: /terms/
+Allow: /privacy/
+Allow: /blog/
+Allow: /compliancelogger/
+Allow: /localtranscribe/
+Allow: /quotecreator/
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1

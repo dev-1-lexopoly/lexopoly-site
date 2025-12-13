@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N29Z7B6T5T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        // Note: Config is called in analytics.js with attribution data
+    </script>
+    <title>Lexopoly Support - Help Documentation & FAQ</title>
+    <meta name="description" content="Get help with Lexopoly products including LocalTranscribe transcription software, QuoteCreator estimate builder, and ComplianceLogger EPA compliance tracker. FAQ, troubleshooting guides, getting started documentation, and customer support.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Core brand colors */
+            --lexopoly-primary: #1a365d;
+            --lexopoly-secondary: #2d3748;
+            --accent: #2c5aa0;
+
+            /* Vertical-specific colors */
+            --lawyers: #2b6cb0;
+            --journalists: #b45309;
+            --dictation: #2f7d32;
+            --court: #553c9a;
+            --government: #4a5568;
+            --education: #8b5a00;
+
+            /* UI colors */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f7fafc;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --border: #e2e8f0;
+            --success: #2f7d32;
+            --warning: #8b5a00;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* Header - Unified Navigation Template */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--lexopoly-primary);
+            text-decoration: none;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .nav-main {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown > a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: color 0.3s;
+        }
+
+        .nav-dropdown > a:hover {
+            color: var(--accent);
+        }
+
+        .dropdown-arrow {
+            font-size: 0.7rem;
+            transition: transform 0.2s;
+        }
+
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            min-width: 220px;
+            padding: 0.5rem 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            z-index: 1000;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--bg-secondary);
+            color: var(--accent);
+        }
+
+        .dropdown-header {
+            padding: 0.5rem 1.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 0.5rem 0;
+        }
+
+        .nav-main > a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-main > a:hover {
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn-secondary-nav {
+            padding: 0.5rem 1.25rem;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary-nav:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary-nav {
+            padding: 0.5rem 1.25rem;
+            background: var(--accent);
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-primary-nav:hover {
+            background: var(--lexopoly-primary);
+        }
+
+        /* Main content container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        /* Search box */
+        .search-box {
+            background: white;
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+        }
+
+        /* Support sections */
+        .support-section {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+
+        .support-section h2 {
+            font-size: 2.5rem;
+            color: var(--lexopoly-primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .support-section h3 {
+            font-size: 1.8rem;
+            color: var(--lexopoly-primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Support categories */
+        .support-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .category-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .category-card h4 {
+            color: var(--lexopoly-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .category-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .category-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .category-link:hover {
+            text-decoration: underline;
+        }
+
+        /* FAQ Sections */
+        .faq-category {
+            margin-bottom: 3rem;
+        }
+
+        .faq-category h3 {
+            color: var(--lexopoly-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            border-color: var(--accent);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--lexopoly-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-top: 1rem;
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        /* Contact options */
+        .contact-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .contact-card {
+            padding: 2rem;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+            color: var(--accent);
+        }
+
+        .contact-card h4 {
+            color: var(--lexopoly-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-link {
+            background: var(--accent);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .contact-link:hover {
+            background: #2c5aa0;
+            color: white;
+        }
+
+        /* Status indicator */
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--success);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Mobile Navigation - Unified Template */
+        @media (max-width: 968px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-main {
+                position: fixed;
+                top: 73px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 1rem 0;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+
+            .nav-main.show {
+                max-height: 80vh;
+                overflow-y: auto;
+                opacity: 1;
+            }
+
+            .nav-dropdown {
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-dropdown > a {
+                padding: 1rem 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                min-height: 44px;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                border-radius: 0;
+                background: var(--bg-secondary);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                padding: 0;
+            }
+
+            .nav-dropdown.mobile-open .dropdown-menu {
+                max-height: 500px;
+                padding: 0.5rem 0;
+            }
+
+            .dropdown-menu a {
+                padding: 0.75rem 2rem 0.75rem 3rem;
+                min-height: 44px;
+            }
+
+            .nav-main > a {
+                padding: 1rem 2rem;
+                border-bottom: 1px solid var(--border);
+                min-height: 44px;
+            }
+
+            .nav-cta {
+                flex-direction: column;
+                padding: 1rem 2rem;
+                gap: 0.75rem;
+            }
+
+            .btn-secondary-nav,
+            .btn-primary-nav {
+                width: 100%;
+                text-align: center;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .support-section {
+                padding: 2rem 1rem;
+            }
+
+            .support-categories {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">Lexopoly</a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+
+            <div class="nav-main" id="nav-main">
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>Products <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">Our Products</div>
+                        <a href="/localtranscribe/">LocalTranscribe</a>
+                        <a href="/quotecreator/">QuoteCreator</a>
+                        <a href="/compliancelogger/">ComplianceLogger</a>
+                        <a href="/casscalculator/">CASS Calculator</a>
+                        <a href="/revenuerescue/">RevenueRescue</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/#products">View All Products →</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>Solutions <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">By Industry</div>
+                        <a href="/lawyers/">Lawyers</a>
+                        <a href="/journalists/">Journalists</a>
+                        <a href="/dictation/">Dictation Services</a>
+                        <a href="/court-reporters/">Court Reporters</a>
+                        <a href="/government/">Government</a>
+                        <a href="/education/">Education</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/solutions/" style="font-weight: 600;">View All Solutions →</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>About <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="/about/">About Lexopoly</a>
+                        <a href="/support/">Support</a>
+                        <a href="/contact/">Contact</a>
+                    </div>
+                </div>
+
+                <a href="/pricing/">Pricing</a>
+
+                <div class="nav-cta">
+                    <a href="/demo/" class="btn-secondary-nav">Demo</a>
+                    <a href="/signup/" class="btn-primary-nav">Start Trial</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Help & Support</h1>
+            <p class="subtitle">
+                Get the most out of your Lexopoly products with comprehensive help documentation,
+                frequently asked questions, and customer support options for LocalTranscribe, QuoteCreator, and ComplianceLogger.
+            </p>
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                All systems operational
+            </div>
+        </section>
+
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Search help articles and documentation..." id="supportSearch">
+        </div>
+
+        <section class="support-section">
+            <h2>Support Categories</h2>
+
+            <div class="support-categories">
+                <div class="category-card">
+                    <span class="category-icon">🎙️</span>
+                    <h4>LocalTranscribe</h4>
+                    <p>Professional transcription software help, setup guides, and technical support.</p>
+                    <a href="#localtranscribe" class="category-link">View LocalTranscribe FAQ →</a>
+                </div>
+
+                <div class="category-card">
+                    <span class="category-icon">📋</span>
+                    <h4>QuoteCreator</h4>
+                    <p>Estimate builder support, Clio integration, and mobile app guidance.</p>
+                    <a href="#quotecreator" class="category-link">View QuoteCreator FAQ →</a>
+                </div>
+
+                <div class="category-card">
+                    <span class="category-icon">📊</span>
+                    <h4>ComplianceLogger</h4>
+                    <p>EPA compliance tracking, waste log management, and audit reconstruction support.</p>
+                    <a href="#compliancelogger" class="category-link">View ComplianceLogger FAQ →</a>
+                </div>
+
+                <div class="category-card">
+                    <span class="category-icon">💰</span>
+                    <h4>Billing & Pricing</h4>
+                    <p>Questions about plans, pricing, billing, and account management for all products.</p>
+                    <a href="#billing" class="category-link">View Billing FAQ →</a>
+                </div>
+
+                <div class="category-card">
+                    <span class="category-icon">🔗</span>
+                    <h4>Integrations</h4>
+                    <p>Clio integration setup for both LocalTranscribe and QuoteCreator.</p>
+                    <a href="#integrations" class="category-link">View Integration Guides →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="support-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <!-- LocalTranscribe FAQs -->
+            <div class="faq-category" id="localtranscribe">
+                <h3>🎙️ LocalTranscribe Support</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I get started with my free 5 minutes?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Simply sign up for a free account, download the LocalTranscribe software, and you'll automatically receive 5 minutes of professional transcription each month. No credit card required for the free tier.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What audio formats does LocalTranscribe support?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        LocalTranscribe supports all major audio and video formats including MP3, WAV, M4A, MP4, MOV, AVI, and more. If you have an unusual format, our software will attempt to process it automatically.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How accurate is LocalTranscribe compared to human transcription?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        LocalTranscribe achieves 85-92% accuracy with our built-in editing tools to improve quality further. Combined with our quality review workflow, you can achieve professional-grade results much faster than traditional transcription services.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What are the system requirements for LocalTranscribe?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        LocalTranscribe runs on Windows 10/11, macOS 10.14+, and Linux. Minimum requirements: 8GB RAM, 2GB free disk space, and a modern multi-core processor. More RAM and faster processors improve transcription speed.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Does my audio data stay private with LocalTranscribe?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. Your audio never leaves your computer. LocalTranscribe processes everything locally, protecting attorney-client privilege and sensitive information. No cloud upload, no external servers—just fast, private transcription on your machine.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I set up Clio integration with LocalTranscribe?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Connect your Clio account through the LocalTranscribe settings. Once connected, transcriptions can streamline time entries and integrate with your billing workflow.
+                    </div>
+                </div>
+            </div>
+
+            <!-- QuoteCreator FAQs -->
+            <div class="faq-category" id="quotecreator">
+                <h3>📋 QuoteCreator Support</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I install QuoteCreator on my Android device?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        QuoteCreator is available on the Google Play Store. Simply search for "QuoteCreator" or "Lexopoly QuoteCreator", download the app, and complete the one-time $12.99 purchase to unlock all features. No subscription required.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is the $12.99 payment really one-time with no subscription?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, absolutely. QuoteCreator costs $12.99 one-time only. No monthly fees, no hidden charges, no subscription. Pay once, use forever. Create unlimited quotes and estimates without any recurring costs.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I connect QuoteCreator to Clio?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        In QuoteCreator settings, select "Clio Integration" and log in with your Clio credentials. Once connected, you can pull client and matter data directly from Clio into your quotes, streamlining your workflow and ensuring billing accuracy.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Does QuoteCreator work offline?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. QuoteCreator is designed to work completely offline. Create, edit, and save quotes without an internet connection. Clio sync requires connectivity, but all core features work offline.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I customize quote templates in QuoteCreator?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. QuoteCreator includes customizable templates for estimates and quotes. Add your logo, adjust line items, set default rates, and save templates for quick reuse. Perfect for contractors, consultants, and service professionals.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What file formats can QuoteCreator export?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        QuoteCreator exports quotes as PDF for client delivery and can integrate directly with Clio for seamless billing workflow. PDFs are professionally formatted and ready to send.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Billing FAQs -->
+            <div class="faq-category" id="billing">
+                <h3>💰 Billing & Pricing</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How does LocalTranscribe volume pricing work?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        LocalTranscribe pricing automatically decreases per user as your team grows: $79/user (1-9 users), $69/user (10-24 users), $59/user (25+ users). Enterprise customers (50+ users) get custom pricing with additional discounts.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I upgrade or downgrade my plan anytime?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, you can change your LocalTranscribe plan at any time. Upgrades take effect immediately, downgrades take effect at your next billing cycle. We handle proration automatically. QuoteCreator is one-time payment only—no plan changes needed.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is there a long-term contract required?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        No. LocalTranscribe plans are month-to-month with no long-term commitment. You can cancel anytime. Enterprise customers may choose annual contracts for additional discounts. QuoteCreator requires no contract—just a one-time $12.99 payment.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integrations FAQs -->
+            <div class="faq-category" id="integrations">
+                <h3>🔗 Integrations</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Which products integrate with Clio?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Both LocalTranscribe and QuoteCreator integrate with Clio. LocalTranscribe streamlines time entries from transcriptions, while QuoteCreator pulls client and matter data for accurate estimate creation and billing workflow.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Are there other practice management integrations available?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Currently, we offer deep integration with Clio for both LocalTranscribe and QuoteCreator. Additional practice management integrations are in development. Contact us if you have specific integration requirements for your practice.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is there an API for custom integrations?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        API access is available for LocalTranscribe Enterprise customers. This allows custom integrations with your existing systems and workflows. Contact our sales team to discuss your specific API requirements.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="support-section">
+            <h2>Contact Support</h2>
+
+            <div class="contact-options">
+                <div class="contact-card">
+                    <span class="contact-icon">📧</span>
+                    <h4>Email Support</h4>
+                    <p>Get help with general questions and account issues.</p>
+                    <a href="/contact/" class="contact-link">Send Email</a>
+                </div>
+
+                <!-- Temporarily disabled - live chat and phone support not yet available
+                <div class="contact-card">
+                    <span class="contact-icon">💬</span>
+                    <h4>Live Chat</h4>
+                    <p>Chat with our support team during business hours.</p>
+                    <a href="#" class="contact-link">Start Chat</a>
+                </div>
+
+                <div class="contact-card">
+                    <span class="contact-icon">📞</span>
+                    <h4>Priority Phone Support</h4>
+                    <p>Available for Team, Business, and Enterprise customers.</p>
+                    <a href="/contact/" class="contact-link">Request Callback</a>
+                </div>
+                -->
+
+                <div class="contact-card">
+                    <span class="contact-icon">🎥</span>
+                    <h4>Self-Serve Demo</h4>
+                    <p>Try our 5-minute self-guided demonstration and training.</p>
+                    <a href="/demo/" class="contact-link">Try Demo</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="/about/">About</a>
+            <a href="/support/">Support</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/terms/">Terms</a>
+            <a href="/contact/">Contact</a>
+            <a href="https://x.com/lexopoly" target="_blank" rel="noopener">𝕏 Follow on X</a>
+            <!-- REDDIT BANNED: <a href="https://reddit.com/u/Lexopoly" target="_blank" rel="noopener">📱 Join us on Reddit</a> -->
+        </div>
+        <p>&copy; 2025 Lexopoly LLC (Wyoming, USA). All rights reserved.</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+            Professional transcription software that respects your privacy.
+        </p>
+    </footer>
+
+    <script>
+        // Unified Navigation Functions
+        function toggleMobileMenu() {
+            const navMain = document.getElementById('nav-main');
+            navMain.classList.toggle('show');
+        }
+
+        function toggleMobileDropdown(element) {
+            if (window.innerWidth <= 968) {
+                element.classList.toggle('mobile-open');
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('.nav-container');
+            const navMain = document.getElementById('nav-main');
+            if (!nav.contains(event.target) && navMain.classList.contains('show')) {
+                navMain.classList.remove('show');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-main a[href]').forEach(link => {
+            link.addEventListener('click', function() {
+                const navMain = document.getElementById('nav-main');
+                navMain.classList.remove('show');
+            });
+        });
+
+        // Clear mobile dropdown states when resizing to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 968) {
+                document.querySelectorAll('.nav-dropdown.mobile-open').forEach(dropdown => {
+                    dropdown.classList.remove('mobile-open');
+                });
+            }
+        });
+
+        // Simple FAQ toggle functionality
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const toggle = item.querySelector('.faq-toggle');
+
+            answer.style.display = 'none';
+
+            question.addEventListener('click', () => {
+                const isOpen = answer.style.display === 'block';
+                answer.style.display = isOpen ? 'none' : 'block';
+                toggle.textContent = isOpen ? '+' : '−';
+            });
+        });
+
+        // Simple search functionality
+        document.getElementById('supportSearch').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = searchTerm ? 'none' : 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

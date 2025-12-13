@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N29Z7B6T5T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        // Note: Config is called in analytics.js with attribution data
+    </script>
+
+    <!-- Basic SEO -->
+    <title>Lexopoly Pricing - Professional Software for Legal & Business</title>
+    <meta name="description" content="Transparent pricing for professional software. LocalTranscribe: Freemium to $79/user monthly. QuoteCreator: $12.99 one-time. ComplianceLogger: $149/year. CASS Calculator: $74.99/year. RevenueRescue: $149/month. Choose the right tool for your business.">
+    <meta name="keywords" content="lexopoly pricing, transcription pricing, quote software pricing, professional software plans, legal software cost, family law calculator pricing">
+    <meta name="author" content="Lexopoly LLC">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.lexopoly.com/pricing/">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Lexopoly Pricing - Professional Software Plans">
+    <meta property="og:description" content="LocalTranscribe: Freemium to $79/user monthly. QuoteCreator: $12.99 one-time. ComplianceLogger: $149/year. CASS Calculator: $74.99/year. RevenueRescue: $149/month. Professional tools with transparent pricing.">
+    <meta property="og:url" content="https://www.lexopoly.com/pricing/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.lexopoly.com/images/og-pricing.png">
+    <meta property="og:site_name" content="Lexopoly">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lexopoly Pricing - Professional Software Plans">
+    <meta name="twitter:description" content="LocalTranscribe: Freemium to $79/user monthly. QuoteCreator: $12.99 one-time. ComplianceLogger: $149/year. CASS Calculator: $74.99/year. RevenueRescue: $149/month. Professional tools with transparent pricing.">
+    <meta name="twitter:image" content="https://www.lexopoly.com/images/og-pricing.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9IiMxYTM2NWQiIHJ4PSI0Ii8+CiAgPHRleHQgeD0iMTYiIHk9IjI0IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5MPC90ZXh0Pgo8L3N2Zz4K">
+
+    <!-- Design System CSS -->
+    <link rel="stylesheet" href="/css/design-tokens.css">
+    <link rel="stylesheet" href="/css/components.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Core brand colors */
+            --lexopoly-primary: #1a365d;
+            --lexopoly-secondary: #2d3748;
+            --accent: #2c5aa0;
+
+            /* UI colors */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f7fafc;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --border: #e2e8f0;
+            --success: #2f7d32;
+            --warning: #8b5a00;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* Header - Unified Navigation Template */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--lexopoly-primary);
+            text-decoration: none;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .nav-main {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown > a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: color 0.3s;
+        }
+
+        .nav-dropdown > a:hover {
+            color: var(--accent);
+        }
+
+        .dropdown-arrow {
+            font-size: 0.7rem;
+            transition: transform 0.2s;
+        }
+
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            min-width: 220px;
+            padding: 0.5rem 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            z-index: 1000;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--bg-secondary);
+            color: var(--accent);
+        }
+
+        .dropdown-header {
+            padding: 0.5rem 1.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 0.5rem 0;
+        }
+
+        .nav-main > a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-main > a:hover {
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn-secondary-nav {
+            padding: 0.5rem 1.25rem;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary-nav:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary-nav {
+            padding: 0.5rem 1.25rem;
+            background: var(--accent);
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-primary-nav:hover {
+            background: var(--lexopoly-primary);
+        }
+
+        /* Main content container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        /* Pricing tiers */
+        .pricing-tiers {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+
+        .tiers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tier-card {
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tier-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .tier-card.popular {
+            border-color: var(--accent);
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+        }
+
+        .tier-card.popular::before {
+            content: "Most Popular";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .tier-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--lexopoly-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .tier-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .tier-price-subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .tier-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .tier-features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .tier-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .tier-cta {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .tier-cta:hover {
+            background: #2c5aa0;
+            color: white;
+        }
+
+        .tier-cta.secondary {
+            background: transparent;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+        }
+
+        .tier-cta.secondary:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* Comparison table */
+        .comparison {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+
+        .comparison h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: var(--lexopoly-primary);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .comparison-table th {
+            background: var(--bg-secondary);
+            font-weight: 600;
+            color: var(--lexopoly-primary);
+        }
+
+        .comparison-table td.feature-name {
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .check {
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .cross {
+            color: #e53e3e;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .highlight {
+            background: #e6f3ff;
+            color: var(--lexopoly-primary);
+            font-weight: 600;
+        }
+
+        /* FAQ section */
+        .faq {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+
+        .faq h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: var(--lexopoly-primary);
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--lexopoly-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Mobile Responsive - 968px Breakpoint */
+        @media (max-width: 968px) {
+            .nav-container {
+                padding: 1rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-main {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                margin: 0.5rem;
+                padding: 1rem;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+                flex-direction: column;
+                gap: 0;
+                z-index: 1000;
+            }
+
+            .nav-main.show {
+                display: flex;
+            }
+
+            .nav-dropdown {
+                width: 100%;
+            }
+
+            .nav-dropdown > a {
+                width: 100%;
+                padding: 0.75rem 1rem;
+                min-height: 44px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: 4px;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                border-left: 2px solid var(--accent);
+                margin-left: 1rem;
+                padding: 0.5rem 0;
+                display: none;
+            }
+
+            .nav-dropdown.mobile-open .dropdown-menu {
+                display: block;
+            }
+
+            .nav-dropdown.mobile-open .dropdown-arrow {
+                transform: rotate(180deg);
+            }
+
+            .dropdown-menu a {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+
+            .nav-main > a {
+                padding: 0.75rem 1rem;
+                border-radius: 4px;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+
+            .nav-cta {
+                width: 100%;
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 1rem;
+                padding-top: 1rem;
+                border-top: 1px solid var(--border);
+            }
+
+            .btn-secondary-nav,
+            .btn-primary-nav {
+                width: 100%;
+                text-align: center;
+                padding: 1rem;
+                min-height: 44px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .pricing-tiers, .comparison, .faq {
+                padding: 2rem 1rem;
+            }
+
+            .tiers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tier-price {
+                font-size: 2rem;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.5rem;
+            }
+        }
+
+        /* Competitive comparison section */
+        .competitive-comparison {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .competitive-comparison h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            color: var(--lexopoly-primary);
+        }
+
+        .competitive-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .summary-card {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 2rem;
+            border-left: 4px solid var(--accent);
+        }
+
+        .summary-card h3 {
+            color: var(--lexopoly-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .summary-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .competitive-comparison {
+                padding: 2rem 1rem;
+            }
+
+            .competitive-summary {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        /* Trust Guarantee Styles */
+        .trust-guarantee {
+            background: linear-gradient(135deg, #f0fff4 0%, #e6f9ed 100%);
+            border-left: 4px solid var(--success);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .guarantee-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .guarantee-badge {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .badge-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .badge-content h3 {
+            color: var(--lexopoly-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+        }
+
+        .badge-content p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .trust-points {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .trust-point {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .trust-icon {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .trust-guarantee {
+                padding: 2rem 1.5rem;
+            }
+
+            .guarantee-badge {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .badge-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+
+            .badge-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .badge-content p {
+                font-size: 1rem;
+            }
+
+            .trust-points {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+
+            .trust-point {
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <!-- Pricing Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PriceSpecification",
+      "name": "LocalTranscribe Pricing Plans",
+      "description": "Professional transcription software with volume-based pricing",
+      "url": "https://www.lexopoly.com/pricing/",
+      "offers": [
+        {
+          "@type": "AggregateOffer",
+          "name": "LocalTranscribe Pricing",
+          "priceCurrency": "USD",
+          "lowPrice": "0",
+          "highPrice": "79"
+        },
+        {
+          "@type": "Offer",
+          "name": "QuoteCreator",
+          "priceCurrency": "USD",
+          "price": "12.99"
+        }
+      ]
+    }
+    </script>
+
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is included in the free tier?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free tier includes 5 minutes of transcription every month with full local processing and privacy protection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does volume pricing work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our volume pricing decreases per-user costs as you add more team members: $79/user (1-9 users), $69/user (10-24 users), $59/user (25+ users)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a revenue share with Clio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both LocalTranscribe and QuoteCreator integrate directly with Clio for seamless workflow management without additional fees beyond your subscription."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lexopoly.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pricing",
+          "item": "https://www.lexopoly.com/pricing/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Analytics Integration -->
+    <script src="/js/analytics.js"></script>
+
+    <!-- Exit-Intent Popup System -->
+    <script src="/js/exit-intent.js"></script>
+
+    <!-- Live Chat Widget -->
+    <script src="/js/live-chat.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Track pricing page view
+        trackEvent('funnel', 'pricing_page_view');
+
+        // Track tier interest
+        document.querySelectorAll('.tier-card').forEach((card, index) => {
+            const tierName = card.querySelector('.tier-name')?.textContent || `tier-${index}`;
+
+            card.addEventListener('mouseenter', () => {
+                trackEvent('pricing', 'tier_hover', tierName);
+            });
+
+            card.addEventListener('click', () => {
+                trackEvent('pricing', 'tier_click', tierName);
+            });
+        });
+
+        // Track CTA clicks from pricing
+        document.querySelectorAll('a[href="/signup/"]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                trackEvent('conversion', 'pricing_to_signup', btn.textContent.trim());
+            });
+        });
+
+        // Track urgency banner visibility
+        // trackEvent('urgency', 'launch_pricing_banner_view', 'October_31_deadline');
+
+        document.querySelectorAll('a[href="/contact/"]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                trackEvent('conversion', 'enterprise_contact_click', btn.textContent.trim());
+            });
+        });
+
+        // Track FAQ interactions
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                trackEvent('engagement', 'faq_click', question.textContent.trim());
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">Lexopoly</a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+
+            <div class="nav-main" id="nav-main">
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>Products <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">Our Products</div>
+                        <a href="/localtranscribe/">LocalTranscribe</a>
+                        <a href="/quotecreator/">QuoteCreator</a>
+                        <a href="/compliancelogger/">ComplianceLogger</a>
+                        <a href="/casscalculator/">CASS Calculator</a>
+                        <a href="/revenuerescue/">RevenueRescue</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/#products">View All Products →</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>Solutions <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">By Industry</div>
+                        <a href="/lawyers/">Lawyers</a>
+                        <a href="/journalists/">Journalists</a>
+                        <a href="/dictation/">Medical & Dictation</a>
+                        <a href="/court-reporters/">Court Reporters</a>
+                        <a href="/government/">Government</a>
+                        <a href="/education/">Education</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/solutions/" style="font-weight: 600;">View All Solutions →</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>About <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="/about/">About Lexopoly</a>
+                        <a href="/support/">Support</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/privacy/">Privacy Policy</a>
+                        <a href="/terms/">Terms of Service</a>
+                    </div>
+                </div>
+
+                <a href="/pricing/">Pricing</a>
+
+                <div class="nav-cta">
+                    <a href="/demo/" class="btn-secondary-nav">Watch Demo</a>
+                    <a href="/signup/" class="btn-primary-nav">Start Free</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Choose the Right Tool for Your Business</h1>
+            <p class="subtitle">
+                Professional software with transparent pricing. Whether you need powerful transcription or quick quotes, we have the right solution for your workflow.
+            </p>
+        </section>
+
+        <!-- Product Pricing Overview -->
+        <section class="pricing-tiers" style="margin-bottom: 4rem;">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem; color: var(--lexopoly-primary);">Our Products</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <!-- LocalTranscribe Card -->
+                <div style="border: 2px solid var(--border); border-radius: 12px; padding: 2rem; transition: all 0.3s;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎙️</div>
+                    <h3 style="color: var(--lexopoly-primary); margin-bottom: 0.5rem; font-size: 1.5rem;">LocalTranscribe</h3>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--accent); margin: 1rem 0;">$0 - $79</div>
+                    <div style="color: var(--text-secondary); margin-bottom: 1.5rem;">per user per month</div>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem; color: var(--text-secondary);">
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            Professional transcription software
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            Freemium to volume pricing
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            28x faster than real-time
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            100% local processing
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            Clio integration included
+                        </li>
+                    </ul>
+                    <a href="#localtranscribe-pricing" style="display: block; width: 100%; padding: 1rem; background: var(--accent); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; text-align: center; transition: background 0.3s;">View LocalTranscribe Plans →</a>
+                </div>
+
+                <!-- QuoteCreator Card -->
+                <div style="border: 2px solid var(--border); border-radius: 12px; padding: 2rem; transition: all 0.3s;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📋</div>
+                    <h3 style="color: var(--lexopoly-primary); margin-bottom: 0.5rem; font-size: 1.5rem;">QuoteCreator</h3>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--accent); margin: 1rem 0;">$12.99</div>
+                    <div style="color: var(--text-secondary); margin-bottom: 1.5rem;">one-time purchase</div>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem; color: var(--text-secondary);">
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            Professional estimate builder
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            No subscription required
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            Create unlimited quotes
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            Optional Clio integration
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            Android mobile app
+                        </li>
+                    </ul>
+                    <a href="/quotecreator/" style="display: block; width: 100%; padding: 1rem; background: transparent; color: var(--accent); border: 2px solid var(--accent); text-decoration: none; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s;">Learn More About QuoteCreator →</a>
+                </div>
+
+                <!-- ComplianceLogger Card -->
+                <div style="border: 2px solid var(--border); border-radius: 12px; padding: 2rem; transition: all 0.3s;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+                    <h3 style="color: var(--lexopoly-primary); margin-bottom: 0.5rem; font-size: 1.5rem;">ComplianceLogger</h3>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--accent); margin: 1rem 0;">$149</div>
+                    <div style="color: var(--text-secondary); margin-bottom: 1.5rem;">per year</div>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem; color: var(--text-secondary);">
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            EPA waste compliance tracking
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            Proactive + reactive modes
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            Legal audit reconstruction
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            Photo evidence storage
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            7-day free trial
+                        </li>
+                    </ul>
+                    <a href="/compliancelogger/" style="display: block; width: 100%; padding: 1rem; background: transparent; color: var(--accent); border: 2px solid var(--accent); text-decoration: none; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s;">Learn More About ComplianceLogger →</a>
+                </div>
+
+                <!-- CASS Calculator -->
+                <div style="border: 2px solid var(--border); border-radius: 12px; padding: 2rem; transition: all 0.3s;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">⚖️</div>
+                    <h3 style="color: var(--lexopoly-primary); margin-bottom: 0.5rem; font-size: 1.5rem;">CASS Calculator</h3>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--accent); margin: 1rem 0;">$74.99</div>
+                    <div style="color: var(--text-secondary); margin-bottom: 1.5rem;">per year (Michigan)</div>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem; color: var(--text-secondary);">
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            Child support calculations
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            Spousal support calculations
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            PDF export & calculation history
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            Clio integration included
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            2 free calculations trial
+                        </li>
+                    </ul>
+                    <a href="/casscalculator/" style="display: block; width: 100%; padding: 1rem; background: transparent; color: var(--accent); border: 2px solid var(--accent); text-decoration: none; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s;">Learn More About CASS Calculator →</a>
+                </div>
+
+                <!-- RevenueRescue -->
+                <div style="border: 2px solid var(--border); border-radius: 12px; padding: 2rem; transition: all 0.3s;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">💰</div>
+                    <h3 style="color: var(--lexopoly-primary); margin-bottom: 0.5rem; font-size: 1.5rem;">RevenueRescue</h3>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--accent); margin: 1rem 0;">$149</div>
+                    <div style="color: var(--text-secondary); margin-bottom: 1.5rem;">per month</div>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem; color: var(--text-secondary);">
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            AI-powered calendar monitoring
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            One-click approval workflow
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            Secure direct Clio connection
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            Revenue analytics dashboard
+                        </li>
+                        <li style="padding: 0.5rem 0; position: relative; padding-left: 1.5rem;">
+                            <span style="position: absolute; left: 0; color: var(--success); font-weight: bold;">✓</span>
+                            7-19x ROI, 18-30 day payback
+                        </li>
+                    </ul>
+                    <a href="/revenuerescue/" style="display: block; width: 100%; padding: 1rem; background: transparent; color: var(--accent); border: 2px solid var(--accent); text-decoration: none; border-radius: 8px; font-weight: 600; text-align: center; transition: all 0.3s;">Learn More About RevenueRescue →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LocalTranscribe Detailed Pricing -->
+        <div id="localtranscribe-pricing">
+            <h2 style="text-align: center; margin-bottom: 1rem; font-size: 2.5rem; color: var(--lexopoly-primary);">LocalTranscribe Pricing Plans</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Start free with 5 minutes monthly. Scale with volume discounts. Professional local transcription with no hidden fees or per-minute charges.
+            </p>
+            <!-- Launch Pricing Banner -->
+            <!-- <div style="background: linear-gradient(135deg, #2f7d32 0%, #1b5e20 100%); color: white; padding: 1rem 2rem; border-radius: 12px; margin: 2rem auto; max-width: 700px; box-shadow: 0 8px 24px rgba(47,125,50,0.3);">
+                <div style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.9; margin-bottom: 0.25rem;">🎉 Launch Pricing - Limited Time</div>
+                <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem;">Lock in founding member rates before prices increase</div>
+                <div style="font-size: 0.9rem; opacity: 0.9;">Current pricing guaranteed for life when you sign up by October 31, 2025</div>
+            </div> -->
+        </div>
+
+        <section class="pricing-tiers">
+            <!-- Early Adopter Banner -->
+            <!-- <div style="text-align: center; margin-bottom: 2rem; padding: 1rem; background: #fff9e6; border-left: 4px solid #d97706; border-radius: 8px;">
+                <p style="margin: 0; color: #92400e; font-weight: 500;">
+                    ⏰ <strong>Early Adopter Advantage:</strong> Join the first 100 customers to lock in lifetime founding member pricing. <span style="color: #d97706; font-weight: 600;">23 spots remaining</span>
+                </p>
+            </div> -->
+            <div class="tiers-grid">
+                <!-- Freemium Tier -->
+                <div class="tier-card">
+                    <div class="tier-name">Freemium</div>
+                    <div class="tier-price">$0</div>
+                    <div class="tier-price-subtitle">5 minutes per month</div>
+                    <ul class="tier-features">
+                        <li>5 minutes free transcription monthly</li>
+                        <li>Full quality demonstration (85-92% accuracy)</li>
+                        <li>Local processing privacy</li>
+                        <li>28x faster than real-time</li>
+                        <li>Standard export formats (TXT, DOCX)</li>
+                        <li>Community support</li>
+                    </ul>
+                    <a href="/signup/" class="tier-cta">Try Free Now - No Credit Card →</a>
+                </div>
+
+                <!-- Professional Tier -->
+                <div class="tier-card popular">
+                    <div class="tier-name">Professional</div>
+                    <div class="tier-price">$79</div>
+                    <div class="tier-price-subtitle">per user per month (1-9 users)</div>
+                    <ul class="tier-features">
+                        <li>Unlimited transcription</li>
+                        <li>Full editing tools + review workflow</li>
+                        <li>Clio integration</li>
+                        <li>Full export formats (TXT, DOCX, PDF, SRT)</li>
+                        <li>Email support</li>
+                        <li>Local processing privacy</li>
+                    </ul>
+                    <a href="/signup/" class="tier-cta">Start Professional Plan →</a>
+                </div>
+
+                <!-- Team Tier -->
+                <div class="tier-card">
+                    <div class="tier-name">Team</div>
+                    <div class="tier-price">$69</div>
+                    <div class="tier-price-subtitle">per user per month (10-24 users)</div>
+                    <ul class="tier-features">
+                        <li>Everything in Professional</li>
+                        <li>13% volume discount</li>
+                        <li>Priority support</li>
+                        <li>Team usage analytics*</li>
+                        <li>Volume billing management</li>
+                        <li>Dedicated account rep</li>
+                    </ul>
+                    <p style="font-size: 0.8rem; color: #666; margin-top: 1rem;">*Additional advanced features and optional plugins in development</p>
+                    <a href="/signup/" class="tier-cta">Start Team Plan →</a>
+                </div>
+
+                <!-- Business Tier -->
+                <div class="tier-card">
+                    <div class="tier-name">Business</div>
+                    <div class="tier-price">$59</div>
+                    <div class="tier-price-subtitle">per user per month (25+ users)</div>
+                    <ul class="tier-features">
+                        <li>Everything in Team</li>
+                        <li>25% volume discount</li>
+                        <li>Advanced reporting*</li>
+                        <li>Custom workflow setup*</li>
+                        <li>Priority email support</li>
+                        <li>Quarterly business reviews</li>
+                    </ul>
+                    <p style="font-size: 0.8rem; color: #666; margin-top: 1rem;">*Additional advanced features and optional plugins in development</p>
+                    <a href="/signup/" class="tier-cta">Start Business Plan →</a>
+                </div>
+
+                <!-- Enterprise Tier -->
+                <div class="tier-card">
+                    <div class="tier-name">Enterprise</div>
+                    <div class="tier-price">Custom</div>
+                    <div class="tier-price-subtitle">pricing for 50+ users</div>
+                    <ul class="tier-features">
+                        <li>Everything in Business</li>
+                        <li>30-40% volume discounts</li>
+                        <li>Custom branding options</li>
+                        <li>Enterprise security consultation</li>
+                        <li>Advanced integration planning</li>
+                        <li>Dedicated customer success manager</li>
+                    </ul>
+                    <a href="/contact/" class="tier-cta secondary">Get Custom Quote →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Guarantee Section -->
+        <section class="trust-guarantee">
+            <div class="guarantee-container">
+                <div class="guarantee-badge">
+                    <div class="badge-icon">✓</div>
+                    <div class="badge-content">
+                        <h3>30-Day Money-Back Guarantee</h3>
+                        <p>Try our software risk-free. If you're not completely satisfied within 30 days, we'll refund your purchase—no questions asked.</p>
+                    </div>
+                </div>
+                <div class="trust-points">
+                    <div class="trust-point">
+                        <span class="trust-icon">🔒</span>
+                        <span>Secure Payment</span>
+                    </div>
+                    <div class="trust-point">
+                        <span class="trust-icon">✉️</span>
+                        <span>Email Support</span>
+                    </div>
+                    <div class="trust-point">
+                        <span class="trust-icon">⚡</span>
+                        <span>Instant Access</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison">
+            <h2>Feature Comparison</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Freemium</th>
+                        <th>Professional</th>
+                        <th>Team</th>
+                        <th>Business</th>
+                        <th>Enterprise</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="feature-name">Monthly transcription</td>
+                        <td>5 minutes</td>
+                        <td><span class="check">✓</span> Unlimited</td>
+                        <td><span class="check">✓</span> Unlimited</td>
+                        <td><span class="check">✓</span> Unlimited</td>
+                        <td><span class="check">✓</span> Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Local processing</td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Editing tools + review workflow</td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Clio integration</td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Priority support</td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Usage insights*</td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Workflow consultation*</td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Enterprise consultation</td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 0.8rem; color: #666; margin-top: 1rem; text-align: center;">*Advanced features and optional plugins in development</p>
+        </section>
+
+        <section class="competitive-comparison">
+            <h2>Why Choose LocalTranscribe?</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                LocalTranscribe is purpose-built for professionals who need fast, private, and reliable transcription with industry-specific features.
+            </p>
+
+            <div class="competitive-summary">
+                <div class="summary-card advantage">
+                    <h3>🔒 Complete Privacy Control</h3>
+                    <p>100% local processing means your sensitive conversations never leave your computer. Full attorney-client privilege protection with complete privacy control.</p>
+                </div>
+                <div class="summary-card advantage">
+                    <h3>⚡ Lightning-Fast Processing</h3>
+                    <p>Process transcriptions 28x faster than real-time. Transform a 1-hour recording into readable text in just 2 minutes.</p>
+                </div>
+                <div class="summary-card advantage">
+                    <h3>💰 Predictable Volume Pricing</h3>
+                    <p>Unlimited transcription for one monthly fee. No per-minute charges that can surprise you with large bills during busy periods.</p>
+                </div>
+                <div class="summary-card advantage">
+                    <h3>🛠️ Professional Workflow</h3>
+                    <p>Built-in editing tools, review workflow, and direct Clio integration designed specifically for legal professionals.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How do volume discounts work?</div>
+                <div class="faq-answer">Our pricing automatically decreases per user as your team grows: $79/user (1-9 users), $69/user (10-24 users), $59/user (25+ users). Enterprise customers (50+ users) get custom pricing with additional discounts.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I upgrade or downgrade my plan?</div>
+                <div class="faq-answer">Yes, you can change your plan at any time. Upgrades take effect immediately, downgrades take effect at your next billing cycle. We'll handle the proration automatically.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is there a long-term contract required?</div>
+                <div class="faq-answer">No, all plans are month-to-month with no long-term commitment. You can cancel anytime. Enterprise customers may choose annual contracts for additional discounts.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does the demo process work?</div>
+                <div class="faq-answer">Request a demo to see LocalTranscribe in action with your own audio files. We'll show you the 28x speed processing, editing workflow, and Clio integration tailored to your specific use case.</div>
+            </div>
+
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="/about/">About</a>
+            <a href="/support/">Support</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/terms/">Terms</a>
+            <a href="/contact/">Contact</a>
+            <a href="https://x.com/lexopoly" target="_blank" rel="noopener">𝕏 Follow on X</a>
+            <!-- REDDIT BANNED: <a href="https://reddit.com/u/Lexopoly" target="_blank" rel="noopener">📱 Join us on Reddit</a> -->
+        </div>
+        <p>&copy; 2025 Lexopoly LLC (Wyoming, USA). All rights reserved.</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+            Professional transcription software that respects your privacy.
+        </p>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const navMain = document.getElementById('nav-main');
+            navMain.classList.toggle('show');
+        }
+
+        function toggleMobileDropdown(element) {
+            if (window.innerWidth <= 968) {
+                element.classList.toggle('mobile-open');
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('.nav-container');
+            const navMain = document.getElementById('nav-main');
+            if (!nav.contains(event.target) && navMain.classList.contains('show')) {
+                navMain.classList.remove('show');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-main a').forEach(link => {
+            link.addEventListener('click', function() {
+                const navMain = document.getElementById('nav-main');
+                navMain.classList.remove('show');
+            });
+        });
+
+        // Clear mobile dropdown states when resizing to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 968) {
+                document.querySelectorAll('.nav-dropdown.mobile-open').forEach(dropdown => {
+                    dropdown.classList.remove('mobile-open');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuoteCreator Articles | Professional Estimate & Quote Guides | Lexopoly Blog</title>
+    <meta name="description" content="Expert guides on professional estimates, quote creation best practices, mobile quoting workflows, and client communication strategies for contractors and service professionals.">
+    <meta name="keywords" content="QuoteCreator, professional estimates, quote creation, contractor quotes, service quotes, estimate best practices">
+    <link rel="canonical" href="https://lexopoly.com/blog/quotecreator/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="QuoteCreator Articles - Professional Estimate Guides">
+    <meta property="og:description" content="Expert guides on professional estimates, quote creation, and client communication for contractors and service professionals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lexopoly.com/blog/quotecreator/">
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+
+      function trackEvent(category, action, label) {
+          gtag('event', action, {
+              'event_category': category,
+              'event_label': label
+          });
+      }
+    </script>
+
+    <style>
+        :root {
+            --lexopoly-primary: #1a365d;
+            --lexopoly-secondary: #2d3748;
+            --accent: #2c5aa0;
+            --compliancelogger: #2b6cb0;
+            --localtranscribe: #b45309;
+            --quotecreator: #2f7d32;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f7fafc;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--lexopoly-primary);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-subtitle {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .nav-main {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-main a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-main a:hover {
+            color: var(--accent);
+        }
+
+        .btn-primary-nav {
+            background: var(--accent);
+            color: white !important;
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary-nav:hover {
+            background: var(--lexopoly-primary);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .breadcrumb {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .category-header {
+            background: white;
+            padding: 3rem 2.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .category-badge {
+            display: inline-block;
+            background: var(--quotecreator);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .category-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--lexopoly-primary);
+            margin-bottom: 1rem;
+        }
+
+        .category-description {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .coming-soon {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border: 2px dashed var(--border);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .coming-soon-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .coming-soon h2 {
+            font-size: 1.8rem;
+            color: var(--lexopoly-primary);
+            margin-bottom: 1rem;
+        }
+
+        .coming-soon p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .coming-soon-topics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .topic-item {
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--quotecreator);
+        }
+
+        .topic-title {
+            font-weight: 600;
+            color: var(--lexopoly-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .topic-description {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--quotecreator) 0%, #1e5e23 100%);
+            color: white;
+            padding: 3rem 2.5rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta {
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-cta-primary {
+            background: white;
+            color: var(--quotecreator);
+        }
+
+        .btn-cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn-cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-cta-secondary:hover {
+            background: white;
+            color: var(--quotecreator);
+        }
+
+        .footer {
+            background: rgba(255, 255, 255, 0.98);
+            margin-top: 4rem;
+            padding: 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 968px) {
+            .nav-main {
+                display: none;
+            }
+
+            .category-title {
+                font-size: 1.8rem;
+            }
+
+            .coming-soon-topics {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn-cta {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">
+                Lexopoly
+                <span class="logo-subtitle">Professional Software</span>
+            </a>
+            <div class="nav-main">
+                <a href="/blog/">Blog</a>
+                <a href="/pricing/">Pricing</a>
+                <a href="/demo/">Demo</a>
+                <a href="/#products" class="btn-primary-nav">Explore Products</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Home</a> / <a href="/blog/">Blog</a> / QuoteCreator
+        </div>
+
+        <div class="category-header">
+            <span class="category-badge">QuoteCreator</span>
+            <h1 class="category-title">Professional Estimate & Quote Guides</h1>
+            <p class="category-description">
+                Expert guides on creating professional estimates, quote best practices, mobile quoting workflows, client communication strategies, and pricing techniques for contractors, freelancers, and service professionals.
+            </p>
+        </div>
+
+        <div class="articles-grid" style="display: grid; gap: 2rem; margin: 2rem 0;">
+            <article class="article-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                <div class="article-meta" style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-secondary);">
+                    <span class="category-badge" style="background: var(--quotecreator); color: white; padding: 0.3rem 0.8rem; border-radius: 12px; font-size: 0.85rem; font-weight: 600;">Free Template</span>
+                    <time datetime="2025-10-25">October 25, 2025</time>
+                </div>
+                <h2 style="font-size: 1.8rem; color: var(--lexopoly-primary); margin-bottom: 1rem;">
+                    <a href="/blog/quotecreator/free-contractor-estimate-template/" style="color: inherit; text-decoration: none; transition: color 0.3s;">Free Contractor Estimate Template (Editable Excel + PDF)</a>
+                </h2>
+                <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">Professional contractor estimate template with automatic calculations. Free download in Excel format. Perfect for contractors, builders, and trade professionals creating accurate quotes.</p>
+                <div class="article-footer" style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border);">
+                    <span class="read-time" style="color: var(--text-secondary); font-size: 0.9rem;">📖 12 min read</span>
+                    <a href="/blog/quotecreator/free-contractor-estimate-template/" class="read-more" style="color: var(--quotecreator); text-decoration: none; font-weight: 600; transition: color 0.3s;">Read Article →</a>
+                </div>
+            </article>
+
+            <article class="article-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                <div class="article-meta" style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-secondary);">
+                    <span class="category-badge" style="background: var(--quotecreator); color: white; padding: 0.3rem 0.8rem; border-radius: 12px; font-size: 0.85rem; font-weight: 600;">Best Practices</span>
+                    <time datetime="2025-10-25">October 25, 2025</time>
+                </div>
+                <h2 style="font-size: 1.8rem; color: var(--lexopoly-primary); margin-bottom: 1rem;">
+                    <a href="/blog/quotecreator/professional-estimate-templates/" style="color: inherit; text-decoration: none; transition: color 0.3s;">Professional Estimate Templates: Complete 2025 Guide</a>
+                </h2>
+                <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">Industry-specific estimate templates for contractors, consultants, designers, and trade services. Create winning quotes in 60 seconds with proven formats that close deals.</p>
+                <div class="article-footer" style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border);">
+                    <span class="read-time" style="color: var(--text-secondary); font-size: 0.9rem;">📖 8 min read</span>
+                    <a href="/blog/quotecreator/professional-estimate-templates/" class="read-more" style="color: var(--quotecreator); text-decoration: none; font-weight: 600; transition: color 0.3s;">Read Article →</a>
+                </div>
+            </article>
+
+            <article class="article-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                <div class="article-meta" style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-secondary);">
+                    <span class="category-badge" style="background: var(--quotecreator); color: white; padding: 0.3rem 0.8rem; border-radius: 12px; font-size: 0.85rem; font-weight: 600;">Mobile Workflow</span>
+                    <time datetime="2025-10-15">October 15, 2025</time>
+                </div>
+                <h2 style="font-size: 1.8rem; color: var(--lexopoly-primary); margin-bottom: 1rem;">
+                    <a href="/blog/professional-estimates-60-seconds/" style="color: inherit; text-decoration: none; transition: color 0.3s;">How to Create Professional Estimates in Under 60 Seconds</a>
+                </h2>
+                <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">Mobile workflow optimization for field professionals. Common estimate mistakes, Clio integration benefits, and step-by-step 60-second estimate creation process.</p>
+                <div class="article-footer" style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border);">
+                    <span class="read-time" style="color: var(--text-secondary); font-size: 0.9rem;">📖 7 min read</span>
+                    <a href="/blog/professional-estimates-60-seconds/" class="read-more" style="color: var(--quotecreator); text-decoration: none; font-weight: 600; transition: color 0.3s;">Read Article →</a>
+                </div>
+            </article>
+
+            <article class="article-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s;">
+                <div class="article-meta" style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-secondary);">
+                    <span class="category-badge" style="background: var(--quotecreator); color: white; padding: 0.3rem 0.8rem; border-radius: 12px; font-size: 0.85rem; font-weight: 600;">Software Guide</span>
+                    <time datetime="2025-10-15">October 15, 2025</time>
+                </div>
+                <h2 style="font-size: 1.8rem; color: var(--lexopoly-primary); margin-bottom: 1rem;">
+                    <a href="/blog/contractor-estimate-software-one-time-purchase/" style="color: inherit; text-decoration: none; transition: color 0.3s;">Contractor Estimate Software: Why One-Time Purchase Beats Subscription</a>
+                </h2>
+                <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">Total cost of ownership comparison, subscription fatigue analysis, offline functionality importance, and when one-time purchase makes sense for contractors.</p>
+                <div class="article-footer" style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border);">
+                    <span class="read-time" style="color: var(--text-secondary); font-size: 0.9rem;">📖 9 min read</span>
+                    <a href="/blog/contractor-estimate-software-one-time-purchase/" class="read-more" style="color: var(--quotecreator); text-decoration: none; font-weight: 600; transition: color 0.3s;">Read Article →</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="cta-section">
+            <h2>Create Professional Quotes in 60 Seconds</h2>
+            <p>QuoteCreator helps contractors, freelancers, and service professionals create polished quotes on-site—no complex software, just fast results.</p>
+            <div class="cta-buttons">
+                <a href="https://quotecreator.lexopoly.com" class="btn-cta btn-cta-primary" onclick="trackEvent('conversion', 'category_cta_click', 'quotecreator_try')">Try QuoteCreator Free</a>
+                <a href="/demo/" class="btn-cta btn-cta-secondary" onclick="trackEvent('conversion', 'category_cta_click', 'quotecreator_demo')">Watch Demo</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Lexopoly LLC. Professional software for professionals.</p>
+            <div class="footer-links">
+                <a href="/privacy/">Privacy Policy</a>
+                <a href="/terms/">Terms of Service</a>
+                <a href="/support/">Support</a>
+                <a href="https://twitter.com/lexopoly">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="professionalGradLarge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Clean circular background -->
+  <circle cx="300" cy="300" r="240" fill="url(#professionalGradLarge)"/>
+
+  <!-- Simple, modern "L" letterform -->
+  <g transform="translate(300, 300)">
+    <!-- Vertical element -->
+    <rect x="-40" y="-80" width="24" height="140" fill="white" rx="2"/>
+    <!-- Horizontal element -->
+    <rect x="-40" y="40" width="80" height="24" fill="white" rx="2"/>
+  </g>
+
+  <!-- Clean wordmark -->
+  <text x="300" y="460" font-family="system-ui, sans-serif"
+        font-size="48" font-weight="600" fill="#1e40af" text-anchor="middle">
+    Lexopoly
+  </text>
+
+  <!-- Simple tagline -->
+  <text x="300" y="500" font-family="system-ui, sans-serif"
+        font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">
+    Professional Software
+  </text>
+</svg>
