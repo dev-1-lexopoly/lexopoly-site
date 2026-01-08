@@ -6,152 +6,380 @@
     <title>Getting Started | RevenueRescue</title>
     <meta name="description" content="Get started with RevenueRescue in 3 simple steps. Connect Clio, review suggestions, recover revenue.">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         :root {
-            --primary: #7c3aed;
-            --primary-dark: #6d28d9;
-            --gray-50: #f9fafb;
-            --gray-100: #f3f4f6;
-            --gray-600: #4b5563;
-            --gray-900: #111827;
+            --revenuerescue-primary: #7c3aed;
+            --revenuerescue-dark: #5b21b6;
+            --lexopoly-primary: #1a365d;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --bg-light: #f7fafc;
+            --border: #e2e8f0;
+            --success: #2f7d32;
         }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: var(--gray-900);
-            background: var(--gray-50);
+            color: var(--text-primary);
+            background: white;
         }
-        .container {
-            max-width: 800px;
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        header {
-            text-align: center;
-            padding: 3rem 0;
-            border-bottom: 1px solid var(--gray-100);
-            margin-bottom: 3rem;
-        }
+
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--revenuerescue-primary);
             text-decoration: none;
+            display: flex;
+            flex-direction: column;
         }
-        h1 {
-            font-size: 2.5rem;
-            margin: 1rem 0;
-            color: var(--gray-900);
+
+        .logo-subtitle {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-weight: 400;
         }
-        .subtitle {
-            color: var(--gray-600);
-            font-size: 1.1rem;
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
         }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--revenuerescue-primary);
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero */
+        .page-hero {
+            background: linear-gradient(135deg, var(--revenuerescue-primary) 0%, var(--revenuerescue-dark) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        /* Content */
+        .content {
+            padding: 4rem 0;
+        }
+
         .step {
             background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            transition: all 0.3s;
         }
+
+        .step:hover {
+            border-color: var(--revenuerescue-primary);
+            box-shadow: 0 8px 24px rgba(124, 58, 237, 0.15);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
         .step-number {
-            display: inline-block;
-            width: 36px;
-            height: 36px;
-            background: var(--primary);
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--revenuerescue-primary) 0%, var(--revenuerescue-dark) 100%);
             color: white;
             border-radius: 50%;
-            text-align: center;
-            line-height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin-right: 1rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
         }
+
         .step h2 {
-            display: inline;
-            font-size: 1.25rem;
-            vertical-align: middle;
+            font-size: 1.5rem;
+            color: var(--lexopoly-primary);
         }
+
         .step p {
-            margin-top: 1rem;
-            color: var(--gray-600);
-            padding-left: 52px;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
         }
+
         .step ul {
-            margin-top: 0.5rem;
-            padding-left: 72px;
-            color: var(--gray-600);
+            color: var(--text-secondary);
+            padding-left: 1.5rem;
+            margin-top: 1rem;
         }
+
         .step li {
             margin-bottom: 0.5rem;
+            line-height: 1.6;
         }
-        .cta {
+
+        .tip-box {
+            background: var(--bg-light);
+            border-left: 4px solid var(--revenuerescue-primary);
+            padding: 1rem 1.5rem;
+            margin-top: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tip-box strong {
+            color: var(--revenuerescue-primary);
+        }
+
+        /* CTA */
+        .cta-section {
             text-align: center;
             padding: 3rem 0;
-        }
-        .btn {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.2s;
-        }
-        .btn:hover {
-            background: var(--primary-dark);
-        }
-        .help {
-            text-align: center;
-            padding: 2rem;
-            color: var(--gray-600);
-            border-top: 1px solid var(--gray-100);
+            border-top: 1px solid var(--border);
             margin-top: 2rem;
         }
-        .help a {
-            color: var(--primary);
+
+        .cta-section h3 {
+            font-size: 1.5rem;
+            color: var(--lexopoly-primary);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--revenuerescue-primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--revenuerescue-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
+        }
+
+        /* Help */
+        .help-section {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .help-section p {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .help-section a {
+            color: var(--revenuerescue-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .help-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 2rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .footer a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            margin-top: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+
+            .step-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <a href="/revenuerescue/" class="logo">RevenueRescue</a>
-            <h1>Getting Started</h1>
-            <p class="subtitle">Start recovering lost revenue in under 5 minutes</p>
-        </header>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/revenuerescue/" class="logo">
+                RevenueRescue
+                <span class="logo-subtitle">by Lexopoly</span>
+            </a>
+            <div class="nav-links">
+                <a href="/revenuerescue/">Home</a>
+                <a href="/revenuerescue/pricing/">Pricing</a>
+                <a href="/revenuerescue/contact/">Contact</a>
+            </div>
+        </nav>
+    </header>
 
-        <div class="step">
-            <span class="step-number">1</span>
-            <h2>Connect Your Clio Account</h2>
-            <p>Click "Connect with Clio" and authorize RevenueRescue to access your calendar and activities. We only read your data to find unbilled time - we never modify anything without your approval.</p>
-        </div>
+    <!-- Hero -->
+    <section class="page-hero">
+        <h1>Getting Started</h1>
+        <p>Start recovering lost revenue in under 5 minutes</p>
+    </section>
 
-        <div class="step">
-            <span class="step-number">2</span>
-            <h2>Review Suggestions</h2>
-            <p>RevenueRescue automatically scans your calendar for meetings, calls, and events that may not have been billed. You'll see suggestions in your queue with:</p>
-            <ul>
-                <li>The matter and client name</li>
-                <li>Suggested duration and rate</li>
-                <li>Estimated value to recover</li>
-            </ul>
-        </div>
+    <!-- Content -->
+    <section class="content">
+        <div class="container">
+            <div class="step">
+                <div class="step-header">
+                    <span class="step-number">1</span>
+                    <h2>Connect Your Clio Account</h2>
+                </div>
+                <p>Click <strong>"Connect with Clio"</strong> and authorize RevenueRescue to access your calendar and activities. We use Clio's secure OAuth authentication, which means we never see or store your password.</p>
+                <div class="tip-box">
+                    <strong>Privacy Note:</strong> We only read your calendar data to find unbilled time. We never modify anything in Clio without your explicit approval.
+                </div>
+            </div>
 
-        <div class="step">
-            <span class="step-number">3</span>
-            <h2>Approve with One Click</h2>
-            <p>Review each suggestion and click "Approve" to post the time entry directly to Clio. You can also edit details before approving, or click "Ignore" for items you don't want to bill.</p>
-        </div>
+            <div class="step">
+                <div class="step-header">
+                    <span class="step-number">2</span>
+                    <h2>Review Your Suggestions</h2>
+                </div>
+                <p>RevenueRescue automatically scans your calendar for meetings, calls, and events that may not have been billed. You'll see suggestions in your queue showing:</p>
+                <ul>
+                    <li>The matter and client name</li>
+                    <li>Event description from your calendar</li>
+                    <li>Suggested duration and your billing rate</li>
+                    <li>Estimated value to recover</li>
+                </ul>
+                <div class="tip-box">
+                    <strong>Pro Tip:</strong> Review suggestions at the end of each day or week to keep your billing current.
+                </div>
+            </div>
 
-        <div class="cta">
-            <a href="https://app.lexopoly.com" class="btn">Open RevenueRescue</a>
-        </div>
+            <div class="step">
+                <div class="step-header">
+                    <span class="step-number">3</span>
+                    <h2>Approve with One Click</h2>
+                </div>
+                <p>For each suggestion, you have three options:</p>
+                <ul>
+                    <li><strong>Approve</strong> — Posts the time entry directly to Clio</li>
+                    <li><strong>Edit</strong> — Modify details (description, duration, rate) before approving</li>
+                    <li><strong>Ignore</strong> — Skip items you don't want to bill</li>
+                </ul>
+                <p>Approved entries appear in your Clio time sheet immediately. That's it — revenue captured!</p>
+            </div>
 
-        <div class="help">
-            <p>Need help? Contact us at <a href="mailto:support@lexopoly.com">support@lexopoly.com</a></p>
+            <div class="cta-section">
+                <h3>Ready to Start?</h3>
+                <p>Log in to your RevenueRescue account to begin recovering lost revenue.</p>
+                <a href="https://app.revenuerescue.com" class="btn">Open RevenueRescue</a>
+            </div>
+
+            <div class="help-section">
+                <p>Need help or have questions?</p>
+                <p><a href="mailto:support@lexopoly.com">support@lexopoly.com</a></p>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <a href="/revenuerescue/">Home</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/terms/">Terms</a>
+            <a href="/revenuerescue/contact/">Contact</a>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Lexopoly LLC. All rights reserved.
+        </div>
+    </footer>
 </body>
 </html>
