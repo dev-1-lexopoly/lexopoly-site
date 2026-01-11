@@ -21,16 +21,16 @@
     </script>
 
     <!-- Basic SEO -->
-    <title>Pricing | RevenueRescue - $149/Month for Automatic Revenue Capture</title>
-    <meta name="description" content="$149/month for unlimited billing suggestions, Clio integration, AI-powered time capture. Calculate your ROI - most firms see 7-19× return on investment.">
-    <meta name="keywords" content="law firm billing software pricing, automatic time tracking cost, Clio integration price, legal billing automation cost">
+    <title>Pricing | RevenueRescue - Plans Starting at $149/Month</title>
+    <meta name="description" content="Flexible pricing by attorney count. Solo $149/mo, Firm (2-10) $299/mo, Practice (11-25) $499/mo. 7-day free trial. Calculate your ROI - most firms see 7-19× return.">
+    <meta name="keywords" content="law firm billing software pricing, automatic time tracking cost, Clio integration price, legal billing automation cost, law firm pricing tiers">
     <meta name="author" content="Lexopoly">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://lexopoly.com/revenuerescue/pricing/">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Pricing | RevenueRescue - $149/Month">
-    <meta property="og:description" content="Calculate your ROI - most law firms see 7-19× return on investment">
+    <meta property="og:title" content="Pricing | RevenueRescue - Plans from $149/Month">
+    <meta property="og:description" content="Flexible pricing by attorney count. Solo $149, Firm $299, Practice $499. Calculate your ROI - most law firms see 7-19× return.">
     <meta property="og:url" content="https://lexopoly.com/revenuerescue/pricing/">
     <meta property="og:type" content="website">
 
@@ -454,39 +454,86 @@
 
     <!-- Hero -->
     <section class="hero">
-        <h1>Simple Pricing. Massive ROI.</h1>
-        <p>One plan. All features. 7-19× return on investment for most firms.</p>
+        <h1>Pricing That Scales With Your Firm</h1>
+        <p>Attorney-based pricing. Unlimited users. 7-day free trial. 7-19× ROI for most firms.</p>
     </section>
 
     <div class="container">
-        <!-- Pricing Card -->
-        <div class="pricing-card">
-            <span class="pricing-badge">7-DAY FREE TRIAL</span>
-            <div class="price">$149<span class="price-period">/month</span></div>
-            <div class="trial-badge">7 days free • Credit card required • Billing starts after trial</div>
+        <!-- Pricing Tiers Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 3rem 0;">
 
-            <ul class="features-list">
-                <li>Unlimited billing suggestions</li>
-                <li>AI-powered narrative generation</li>
-                <li>Continuous calendar monitoring</li>
-                <li>One-click approval workflow</li>
-                <li>Secure direct Clio connection</li>
-                <li>Direct time entry posting</li>
-                <li>Revenue dashboard & analytics</li>
-                <li>Historical calendar analysis (30-365 days)</li>
-                <li>Multi-matter support</li>
-                <li>Matter code detection</li>
-                <li>Activity code mapping</li>
-                <li>Undo protection for approved entries</li>
-                <li>Email support</li>
-                <li>All future updates included</li>
-                <li>Cancel anytime</li>
-            </ul>
+            <!-- SOLO Plan -->
+            <div class="pricing-card" style="margin: 0; padding: 2.5rem 2rem;">
+                <span class="pricing-badge">SOLO PRACTITIONER</span>
+                <div class="price" style="font-size: 3.5rem;">$149<span class="price-period">/month</span></div>
+                <div style="color: var(--text-secondary); margin-bottom: 1.5rem; font-weight: 600;">1 Attorney • Unlimited Users</div>
 
-            <a href="/revenuerescue/contact/" class="btn-primary" onclick="trackEvent('revenuerescue', 'pricing_cta_click', 'trial')">Start Your 7-Day Free Trial</a>
+                <ul class="features-list" style="margin-bottom: 1.5rem;">
+                    <li>Unlimited billing suggestions</li>
+                    <li>AI-powered narratives</li>
+                    <li>Calendar monitoring</li>
+                    <li>One-click approval</li>
+                    <li>Clio integration</li>
+                    <li>Revenue dashboard</li>
+                    <li>Email support</li>
+                </ul>
 
-            <p style="margin-top: 2rem; color: var(--text-secondary); font-size: 0.95rem;">
-                Trial access uses your last 30 days of calendar data. Credit card required. You won't be charged during the 7-day trial. Cancel anytime with no charge. Billing starts automatically after trial ends.
+                <a href="/revenuerescue/contact/" class="btn-primary" style="padding: 1rem 2rem; font-size: 1rem;" onclick="trackEvent('revenuerescue', 'pricing_cta_click', 'solo')">Start 7-Day Free Trial</a>
+            </div>
+
+            <!-- FIRM Plan - Featured -->
+            <div class="pricing-card" style="margin: 0; padding: 2.5rem 2rem; transform: scale(1.05); position: relative; z-index: 2;">
+                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--success); color: white; padding: 0.4rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.8rem;">MOST POPULAR</div>
+                <span class="pricing-badge" style="margin-top: 0.5rem;">SMALL FIRM</span>
+                <div class="price" style="font-size: 3.5rem;">$299<span class="price-period">/month</span></div>
+                <div style="color: var(--text-secondary); margin-bottom: 1.5rem; font-weight: 600;">2-10 Attorneys • Unlimited Users</div>
+
+                <ul class="features-list" style="margin-bottom: 1.5rem;">
+                    <li>Everything in Solo, plus:</li>
+                    <li>Multi-attorney support</li>
+                    <li>Firm-wide analytics</li>
+                    <li>Role-based access</li>
+                    <li>Team management</li>
+                    <li>Bulk approval workflows</li>
+                    <li>Priority support</li>
+                </ul>
+
+                <a href="/revenuerescue/contact/" class="btn-primary" style="padding: 1rem 2rem; font-size: 1rem;" onclick="trackEvent('revenuerescue', 'pricing_cta_click', 'firm')">Start 7-Day Free Trial</a>
+            </div>
+
+            <!-- PRACTICE Plan -->
+            <div class="pricing-card" style="margin: 0; padding: 2.5rem 2rem;">
+                <span class="pricing-badge">MID-SIZE PRACTICE</span>
+                <div class="price" style="font-size: 3.5rem;">$499<span class="price-period">/month</span></div>
+                <div style="color: var(--text-secondary); margin-bottom: 1.5rem; font-weight: 600;">11-25 Attorneys • Unlimited Users</div>
+
+                <ul class="features-list" style="margin-bottom: 1.5rem;">
+                    <li>Everything in Firm, plus:</li>
+                    <li>Advanced analytics</li>
+                    <li>Custom workflows</li>
+                    <li>Department grouping</li>
+                    <li>API access</li>
+                    <li>Dedicated onboarding</li>
+                    <li>Phone support</li>
+                </ul>
+
+                <a href="/revenuerescue/contact/" class="btn-primary" style="padding: 1rem 2rem; font-size: 1rem;" onclick="trackEvent('revenuerescue', 'pricing_cta_click', 'practice')">Start 7-Day Free Trial</a>
+            </div>
+        </div>
+
+        <!-- Enterprise callout -->
+        <div style="background: white; border-radius: 16px; padding: 2rem 3rem; margin: 2rem 0 3rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+            <div>
+                <h3 style="color: var(--lexopoly-primary); font-size: 1.5rem; margin-bottom: 0.5rem;">Enterprise (25+ Attorneys)</h3>
+                <p style="color: var(--text-secondary); margin: 0;">Custom pricing, dedicated account manager, SLA guarantees, SSO, and custom integrations.</p>
+            </div>
+            <a href="/revenuerescue/contact/" class="btn-primary" style="padding: 1rem 2rem; white-space: nowrap;" onclick="trackEvent('revenuerescue', 'pricing_cta_click', 'enterprise')">Contact Sales</a>
+        </div>
+
+        <!-- Trial info -->
+        <div style="text-align: center; margin-bottom: 3rem; padding: 1.5rem; background: rgba(124, 58, 237, 0.05); border-radius: 12px;">
+            <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem;">
+                <strong style="color: var(--revenuerescue-primary);">7-day free trial on all plans.</strong> Credit card required. You won't be charged during the trial. Cancel anytime with no charge. Billing starts automatically after trial ends.
             </p>
         </div>
 
@@ -556,11 +603,15 @@
 
             <div class="calculator-inputs">
                 <div class="input-group">
-                    <label for="hourlyRate">Your Billable Rate ($/hour)</label>
+                    <label for="attorneyCount">Number of Attorneys</label>
+                    <input type="number" id="attorneyCount" value="1" min="1" max="100" step="1" oninput="calculateROI()">
+                </div>
+                <div class="input-group">
+                    <label for="hourlyRate">Average Billable Rate ($/hour)</label>
                     <input type="number" id="hourlyRate" value="350" min="0" step="10" oninput="calculateROI()">
                 </div>
                 <div class="input-group">
-                    <label for="billableHours">Billable Hours Per Week</label>
+                    <label for="billableHours">Billable Hours Per Week (per attorney)</label>
                     <input type="number" id="billableHours" value="30" min="0" max="80" step="1" oninput="calculateROI()">
                 </div>
                 <div class="input-group">
@@ -571,7 +622,11 @@
 
             <div class="calculator-results">
                 <div class="result-row">
-                    <span class="result-label">Annual Billable Hours Lost:</span>
+                    <span class="result-label">Your Plan:</span>
+                    <span class="result-value" id="planTier">Solo</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">Annual Billable Hours Lost (firm-wide):</span>
                     <span class="result-value" id="hoursLost">234 hours</span>
                 </div>
                 <div class="result-row">
@@ -584,7 +639,7 @@
                 </div>
                 <div class="result-row">
                     <span class="result-label">RevenueRescue Cost:</span>
-                    <span class="result-value">-$1,800/year</span>
+                    <span class="result-value" id="planCost">-$1,788/year</span>
                 </div>
                 <div class="result-row">
                     <span class="result-label">NET BENEFIT:</span>
@@ -610,13 +665,13 @@
             <h2>Pricing Questions</h2>
 
             <div class="faq-item">
-                <h3>How is $149/month justified for my firm?</h3>
-                <p><strong>Think of it as capturing 1.28 hours per month of forgotten billable time.</strong> At $350/hour, that's $448 recovered. At $600/hour (typical for partners), that's $768 recovered. RevenueRescue pays for itself in the first 3-5 days of each month. The rest is pure profit. Most solo practitioners recover $12K-$34K net annually. Small firms (3-5 attorneys) recover $100K+ firm-wide.</p>
+                <h3>How is the pricing justified for my firm?</h3>
+                <p><strong>Think of it as capturing a few hours per month of forgotten billable time.</strong> At $350/hour, capturing just 1-2 hours covers your subscription. At $600/hour (typical for partners), it takes even less. RevenueRescue pays for itself in the first week of each month. The rest is pure profit. Solo practitioners typically recover $12K-$34K net annually. Multi-attorney firms often recover $50K-$200K+ firm-wide.</p>
             </div>
 
             <div class="faq-item">
-                <h3>What's included in the price?</h3>
-                <p><strong>Everything.</strong> Unlimited billing suggestions, unlimited calendar monitoring, full Clio integration, AI narrative generation, revenue analytics dashboard, email support, and all future feature updates. No usage limits, no per-user fees (single attorney), no hidden charges. $149/month is the complete price.</p>
+                <h3>What's included in each plan?</h3>
+                <p><strong>All plans include core features:</strong> Unlimited billing suggestions, unlimited calendar monitoring, Clio integration, AI narrative generation, revenue dashboard, and all future updates. Higher tiers add multi-attorney support, firm-wide analytics, role-based access, and priority support. <strong>No per-user fees</strong> - pricing is by attorney count only, with unlimited paralegals, staff, and admin users.</p>
             </div>
 
             <div class="faq-item">
@@ -640,8 +695,8 @@
             </div>
 
             <div class="faq-item">
-                <h3>Do you offer multi-attorney pricing?</h3>
-                <p><strong>Coming soon.</strong> Current pricing is per attorney ($149/month each). <strong>Firm-wide features launching Q2 2025:</strong> Centralized billing, role-based access (attorneys vs administrators), firm-wide analytics dashboard, bulk approval workflows. Pricing: $499/month for 5 attorneys ($99/attorney), $899/month for 10 attorneys ($89/attorney). Contact us if you need multi-attorney now.</p>
+                <h3>How does multi-attorney pricing work?</h3>
+                <p><strong>We price by attorney count, not users.</strong> Your plan tier is based on how many attorneys bill time: Solo (1 attorney) $149/mo, Firm (2-10 attorneys) $299/mo, Practice (11-25 attorneys) $499/mo, Enterprise (25+) custom pricing. Add unlimited paralegals, legal assistants, and admin staff at no extra cost. If your firm grows, you simply upgrade to the next tier.</p>
             </div>
 
             <div class="faq-item">
@@ -707,37 +762,56 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Lexopoly LLC. All rights reserved.</p>
+                <p>&copy; 2026 Lexopoly LLC. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- ROI Calculator JavaScript -->
     <script>
+        function getPlanInfo(attorneyCount) {
+            if (attorneyCount <= 1) {
+                return { name: 'Solo ($149/mo)', monthly: 149 };
+            } else if (attorneyCount <= 10) {
+                return { name: 'Firm ($299/mo)', monthly: 299 };
+            } else if (attorneyCount <= 25) {
+                return { name: 'Practice ($499/mo)', monthly: 499 };
+            } else {
+                // Enterprise: estimate $20/attorney/month for ROI calc
+                return { name: 'Enterprise (custom)', monthly: attorneyCount * 20 };
+            }
+        }
+
         function calculateROI() {
+            const attorneyCount = parseInt(document.getElementById('attorneyCount').value) || 1;
             const hourlyRate = parseFloat(document.getElementById('hourlyRate').value) || 0;
             const billableHours = parseFloat(document.getElementById('billableHours').value) || 0;
             const lossPercent = parseFloat(document.getElementById('lossPercent').value) || 0;
 
-            // Calculate annual hours and revenue
-            const annualBillableHours = billableHours * 52;
+            // Get plan pricing
+            const plan = getPlanInfo(attorneyCount);
+            const annualCost = plan.monthly * 12;
+
+            // Calculate annual hours and revenue (firm-wide)
+            const annualBillableHours = billableHours * 52 * attorneyCount;
             const hoursLost = annualBillableHours * (lossPercent / 100);
             const revenueLost = hoursLost * hourlyRate;
 
             // RevenueRescue captures 90% of lost time
             const revenueRecovered = revenueLost * 0.9;
-            const revenueRescueCost = 149 * 12; // $149/month
-            const netBenefit = revenueRecovered - revenueRescueCost;
-            const roiMultiplier = revenueRescueCost > 0 ? (netBenefit / revenueRescueCost) : 0;
+            const netBenefit = revenueRecovered - annualCost;
+            const roiMultiplier = annualCost > 0 ? (netBenefit / annualCost) : 0;
 
             // Payback period (days to recover cost)
             const dailyRevenue = revenueRecovered / 365;
-            const paybackDays = dailyRevenue > 0 ? Math.ceil(revenueRescueCost / dailyRevenue) : 0;
+            const paybackDays = dailyRevenue > 0 ? Math.ceil(annualCost / dailyRevenue) : 0;
 
             // Update display
-            document.getElementById('hoursLost').textContent = `${Math.round(hoursLost)} hours`;
+            document.getElementById('planTier').textContent = plan.name;
+            document.getElementById('hoursLost').textContent = `${Math.round(hoursLost).toLocaleString()} hours`;
             document.getElementById('revenueLost').textContent = `$${revenueLost.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0})}`;
             document.getElementById('revenueRecovered').textContent = `$${revenueRecovered.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0})}`;
+            document.getElementById('planCost').textContent = `-$${annualCost.toLocaleString()}/year`;
             document.getElementById('netBenefit').textContent = `$${netBenefit.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0})}/year`;
             document.getElementById('roi').textContent = `${Math.round(roiMultiplier)}× ROI`;
             document.getElementById('payback').textContent = `${paybackDays} days`;
