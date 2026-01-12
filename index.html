@@ -772,6 +772,19 @@
             border-left: 4px solid var(--accent);
         }
 
+        .product-card.featured {
+            border-left-color: #7c3aed;
+        }
+
+        .section-subheader {
+            grid-column: 1 / -1;
+            color: white;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
         .product-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.2);
@@ -1605,13 +1618,13 @@
                     <div class="peerpush-badge-container">
                         <h4>QuoteCreator</h4>
                         <a href="/quotecreator/">
-                            <img src="https://peerpush.net/p/quotecreator/badge" alt="QuoteCreator - Available on PeerPush" style="height: 60px;">
+                            <img src="https://peerpush.net/p/quotecreator/badge" alt="QuoteCreator - Available on PeerPush" style="height: 40px;">
                         </a>
                     </div>
                     <div class="peerpush-badge-container">
                         <h4>ComplianceLogger</h4>
                         <a href="/compliancelogger/">
-                            <img src="https://peerpush.net/p/compliancelogger/badge.png" alt="ComplianceLogger badge" style="width: 230px;">
+                            <img src="https://peerpush.net/p/compliancelogger/badge.png" alt="ComplianceLogger badge" style="height: 40px;">
                         </a>
                     </div>
                 </div>
@@ -1624,22 +1637,37 @@
         </section>
 
         <section class="portfolio fade-in" id="products">
-            <h2>Our Products</h2>
-            <p class="portfolio-subtitle">Professional tools designed to make your work easier</p>
+            <h2>For Law Firms</h2>
+            <p class="portfolio-subtitle">Clio-integrated tools for legal professionals</p>
             <div class="portfolio-grid">
-                <div class="product-card">
-                    <span class="product-icon">🎙️</span>
-                    <h3>LocalTranscribe</h3>
-                    <p class="product-tagline">28x faster transcription with local privacy</p>
-                    <p>Professional-grade transcription software with 100% local processing. Perfect for lawyers, journalists, and anyone who values privacy and speed.</p>
+                <div class="product-card featured">
+                    <span class="product-icon">💰</span>
+                    <h3>RevenueRescue</h3>
+                    <p class="product-tagline">Stop losing $20K-$40K in billable time every year</p>
+                    <p>AI-powered automatic time capture for law firms using Clio. Monitors your calendar, detects unbilled client activities, and generates professional billing suggestions. Lawyers approve with one click—revenue captured in minutes, not hours.</p>
                     <ul class="product-features">
-                        <li>85-92% accuracy</li>
-                        <li>28x faster than real-time</li>
-                        <li>Complete privacy control</li>
-                        <li>Clio integration</li>
-                        <li>$79 one-time purchase</li>
+                        <li>AI-powered calendar monitoring detects unbilled time</li>
+                        <li>One-click approval workflow (no manual entry)</li>
+                        <li>Secure direct Clio connection</li>
+                        <li>Revenue analytics dashboard tracks captured value</li>
+                        <li>$149/month subscription (7-19x ROI)</li>
                     </ul>
-                    <a href="/localtranscribe/" class="product-link">Learn More →</a>
+                    <a href="/revenuerescue/" class="product-link">Learn More →</a>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-icon">⚖️</span>
+                    <h3>CASS Calculator</h3>
+                    <p class="product-tagline">Child and spousal support calculations</p>
+                    <p>Calculate child support and spousal support with confidence using state-specific formulas. Currently available for Michigan, with more states launching soon.</p>
+                    <ul class="product-features">
+                        <li>Unlimited calculations</li>
+                        <li>PDF export & calculation history</li>
+                        <li>Michigan formulas (MCL 552.605 + Olson)</li>
+                        <li>Clio integration included</li>
+                        <li>$74.99/year (Michigan)</li>
+                    </ul>
+                    <a href="/casscalculator/" class="product-link">Learn More →</a>
                 </div>
 
                 <div class="product-card">
@@ -1662,6 +1690,23 @@
                     <a href="/quotecreator/" class="product-link">Learn More →</a>
                 </div>
 
+                <h3 class="section-subheader">Other Professional Tools</h3>
+
+                <div class="product-card">
+                    <span class="product-icon">🎙️</span>
+                    <h3>LocalTranscribe</h3>
+                    <p class="product-tagline">28x faster transcription with local privacy</p>
+                    <p>Professional-grade transcription software with 100% local processing. Perfect for lawyers, journalists, and anyone who values privacy and speed.</p>
+                    <ul class="product-features">
+                        <li>85-92% accuracy</li>
+                        <li>28x faster than real-time</li>
+                        <li>Complete privacy control</li>
+                        <li>Clio integration</li>
+                        <li>$79 one-time purchase</li>
+                    </ul>
+                    <a href="/localtranscribe/" class="product-link">Learn More →</a>
+                </div>
+
                 <div class="product-card">
                     <span class="product-icon">📊</span>
                     <h3>ComplianceLogger</h3>
@@ -1676,40 +1721,10 @@
                     </ul>
                     <div class="product-badge">
                         <a href="https://peerpush.net/p/compliancelogger" target="_blank" rel="noopener">
-                            <img src="https://peerpush.net/p/compliancelogger/badge.png" alt="ComplianceLogger badge" style="width: 230px;">
+                            <img src="https://peerpush.net/p/compliancelogger/badge.png" alt="ComplianceLogger badge" style="height: 40px;">
                         </a>
                     </div>
                     <a href="/compliancelogger/" class="product-link">Learn More →</a>
-                </div>
-
-                <div class="product-card">
-                    <span class="product-icon">⚖️</span>
-                    <h3>CASS Calculator</h3>
-                    <p class="product-tagline">Child and spousal support calculations</p>
-                    <p>Calculate child support and spousal support with confidence using state-specific formulas. Currently available for Michigan, with more states launching soon.</p>
-                    <ul class="product-features">
-                        <li>Unlimited calculations</li>
-                        <li>PDF export & calculation history</li>
-                        <li>Michigan formulas (MCL 552.605 + Olson)</li>
-                        <li>Clio integration included</li>
-                        <li>$74.99/year (Michigan)</li>
-                    </ul>
-                    <a href="/casscalculator/" class="product-link">Learn More →</a>
-                </div>
-
-                <div class="product-card">
-                    <span class="product-icon">💰</span>
-                    <h3>RevenueRescue</h3>
-                    <p class="product-tagline">Stop losing $20K-$40K in billable time every year</p>
-                    <p>AI-powered automatic time capture for law firms using Clio. Monitors your calendar, detects unbilled client activities, and generates professional billing suggestions. Lawyers approve with one click—revenue captured in minutes, not hours.</p>
-                    <ul class="product-features">
-                        <li>AI-powered calendar monitoring detects unbilled time</li>
-                        <li>One-click approval workflow (no manual entry)</li>
-                        <li>Secure direct Clio connection</li>
-                        <li>Revenue analytics dashboard tracks captured value</li>
-                        <li>$149/month subscription (7-19x ROI)</li>
-                    </ul>
-                    <a href="/revenuerescue/" class="product-link">Learn More →</a>
                 </div>
             </div>
         </section>
