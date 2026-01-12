@@ -423,6 +423,23 @@
             display: block;
         }
 
+        /* Feather SVG Icons */
+        .svg-icon {
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .solution-icon .svg-icon {
+            width: 48px;
+            height: 48px;
+            color: var(--lexopoly-primary);
+        }
+
         .solution-card h3 {
             margin-bottom: 1rem;
             font-size: 1.4rem;
@@ -790,7 +807,7 @@
             <h2>Legal Software Solutions from Lexopoly</h2>
             <div class="solution-grid">
                 <div class="solution-card" style="border-left: 4px solid #7c3aed;">
-                    <span class="solution-icon">💰</span>
+                    <span class="solution-icon"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span>
                     <h3>RevenueRescue</h3>
                     <p class="product-tagline" style="color: #7c3aed; font-weight: 600; margin-bottom: 1rem;">Stop Losing $20K-$40K in Billable Time Every Year</p>
                     <p>AI-powered automatic time capture for law firms using Clio. Monitors your calendar, detects unbilled client activities, and generates professional billing suggestions. Lawyers approve with one click.</p>
@@ -805,7 +822,7 @@
                 </div>
 
                 <div class="solution-card">
-                    <span class="solution-icon">🎙️</span>
+                    <span class="solution-icon"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg></span>
                     <h3>LocalTranscribe</h3>
                     <p class="product-tagline" style="color: var(--lawyers); font-weight: 600; margin-bottom: 1rem;">Secure Legal Transcription with Attorney-Client Privilege Protection</p>
                     <p>Professional-grade transcription with 100% local processing. Your client conversations never leave your computer. Perfect for depositions, client meetings, court proceedings, and legal research.</p>
@@ -820,7 +837,7 @@
                 </div>
 
                 <div class="solution-card">
-                    <span class="solution-icon">📋</span>
+                    <span class="solution-icon"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg></span>
                     <h3>QuoteCreator</h3>
                     <p class="product-tagline" style="color: var(--lawyers); font-weight: 600; margin-bottom: 1rem;">Professional Legal Estimates with One-Tap Clio Upload</p>
                     <p>Generate professional fee estimates on your Android device and upload them directly to Clio client matters with one tap. Built for attorneys who need fast, professional estimates for retainers, flat fees, and project quotes.</p>
@@ -873,17 +890,17 @@
             <h2>Why Lawyers Choose Lexopoly</h2>
             <div class="solution-grid">
                 <div class="solution-card">
-                    <span class="solution-icon">🔒</span>
+                    <span class="solution-icon"><svg class="svg-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span>
                     <h3>Complete Confidentiality</h3>
                     <p>Local transcription processing keeps your audio on your computer during transcription. Attorney-client privilege protected - you control what data goes where.</p>
                 </div>
                 <div class="solution-card">
-                    <span class="solution-icon">💰</span>
+                    <span class="solution-icon"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span>
                     <h3>Predictable Pricing</h3>
                     <p>One-time purchase pricing. No per-minute fees, no subscriptions, no usage limits. LocalTranscribe is $79 one-time.</p>
                 </div>
                 <div class="solution-card">
-                    <span class="solution-icon">⚡</span>
+                    <span class="solution-icon"><svg class="svg-icon" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span>
                     <h3>Seamless Workflow</h3>
                     <p>Direct Clio integration, standard export formats, and instant processing. Transcripts integrate with client matters seamlessly.</p>
                 </div>

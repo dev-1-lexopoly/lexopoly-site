@@ -271,6 +271,52 @@
             margin-right: auto;
         }
 
+        /* Product Screenshot Section */
+        .screenshot-section {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+        }
+
+        .screenshot-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .screenshot-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--lexopoly-primary);
+            margin-bottom: 1rem;
+        }
+
+        .screenshot-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .screenshot-wrapper {
+            background: white;
+            border-radius: 16px;
+            padding: 1rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            display: inline-block;
+        }
+
+        .screenshot-wrapper img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .screenshot-caption {
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
         /* Problem Statement */
         .problem-grid {
             display: grid;
@@ -313,30 +359,40 @@
             line-height: 1.6;
         }
 
-        /* How It Works */
+        /* How It Works - Alternating Layout */
         .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            display: flex;
+            flex-direction: column;
             gap: 2rem;
             margin-top: 3rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .step-card {
             background: white;
             border-radius: 16px;
-            padding: 2.5rem;
-            text-align: center;
+            padding: 2.5rem 3rem;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .step-card:nth-child(even) {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+
+        .step-card:nth-child(odd) {
+            text-align: left;
         }
 
         .step-number {
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 60px;
+            flex-shrink: 0;
+            width: 70px;
+            height: 70px;
             background: linear-gradient(135deg, var(--revenuerescue-primary) 0%, var(--revenuerescue-dark) 100%);
             color: white;
             border-radius: 50%;
@@ -346,6 +402,17 @@
             font-size: 1.8rem;
             font-weight: 700;
             box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        @media (max-width: 600px) {
+            .step-card {
+                flex-direction: column !important;
+                text-align: center !important;
+            }
         }
 
         .step-title {
@@ -385,6 +452,49 @@
         .feature-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
+        }
+
+        /* Feather SVG Icons */
+        .svg-icon {
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .feature-icon .svg-icon {
+            width: 48px;
+            height: 48px;
+            color: var(--revenuerescue-primary);
+        }
+
+        /* Hero Trust Badges */
+        .hero-trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.6rem 1.2rem;
+            border-radius: 24px;
+            font-size: 0.95rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .trust-badge .svg-icon {
+            width: 20px;
+            height: 20px;
+            color: white;
         }
 
         .feature-title {
@@ -600,6 +710,44 @@
                 display: none;
             }
         }
+
+        /* Scroll Animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered animation delays */
+        .scroll-animate:nth-child(1) { transition-delay: 0s; }
+        .scroll-animate:nth-child(2) { transition-delay: 0.1s; }
+        .scroll-animate:nth-child(3) { transition-delay: 0.2s; }
+        .scroll-animate:nth-child(4) { transition-delay: 0.3s; }
+        .scroll-animate:nth-child(5) { transition-delay: 0.4s; }
+        .scroll-animate:nth-child(6) { transition-delay: 0.5s; }
+
+        /* Counter animation */
+        .count-up {
+            display: inline-block;
+        }
+
+        /* Section Background Variations */
+        .bg-light-gray {
+            background: #f8f9fa;
+        }
+
+        .bg-light-purple {
+            background: #f5f3ff;
+        }
+
+        .bg-white {
+            background: white;
+        }
     </style>
 </head>
 <body>
@@ -626,6 +774,20 @@
             <div class="hero-tagline">Automatic Revenue Capture for Law Firms Using Clio</div>
             <p class="hero-subtitle">Try RevenueRescue free for 7 days. AI monitors your calendar, detects unbilled time, generates billing suggestions. Approve with one click. Credit card required—billing starts after trial. Cancel anytime with no charge.</p>
             <div class="hero-stats">Starting at $149/month • 7-day free trial • 7-19× ROI</div>
+            <div class="hero-trust-badges">
+                <div class="trust-badge">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    Secure Clio OAuth
+                </div>
+                <div class="trust-badge">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    Your Data Stays in Clio
+                </div>
+                <div class="trust-badge">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    30-Day Money-Back Guarantee
+                </div>
+            </div>
             <div class="hero-ctas">
                 <a href="/revenuerescue/contact/" class="btn-hero btn-primary" onclick="trackEvent('revenuerescue', 'hero_cta_click', 'trial')">Start Your 7-Day Free Trial</a>
                 <a href="/revenuerescue/pricing/" class="btn-hero btn-secondary" onclick="trackEvent('revenuerescue', 'hero_cta_click', 'calculate')">Calculate Your Lost Revenue</a>
@@ -633,23 +795,35 @@
         </div>
     </section>
 
+    <!-- Product Screenshot -->
+    <section class="screenshot-section">
+        <div class="screenshot-container">
+            <h2 class="screenshot-title">See It In Action</h2>
+            <p class="screenshot-subtitle">AI-powered billing suggestions queue with one-click approval</p>
+            <div class="screenshot-wrapper">
+                <img src="assets/product-screenshot-queue.png" alt="RevenueRescue dashboard showing billing suggestions queue with estimated recovery amounts, confidence scores, and one-click approval buttons" loading="lazy">
+            </div>
+            <p class="screenshot-caption">Real interface: Review AI-detected billing opportunities, see estimated value, approve with one click</p>
+        </div>
+    </section>
+
     <!-- Problem Statement -->
-    <section class="section">
+    <section class="section bg-light-gray">
         <div class="container">
             <h2 class="section-title">Law Firms Are Bleeding Revenue</h2>
             <p class="section-subtitle">Every day attorneys forget to bill for client calls, email consultations, and calendar activities. Memory fades. Revenue disappears. Most firms have no idea how much they're losing.</p>
             <div class="problem-grid">
-                <div class="problem-card">
+                <div class="problem-card scroll-animate">
                     <div class="problem-stat">10-20%</div>
                     <div class="problem-label">Billable Time Lost</div>
                     <p class="problem-desc">ABA research shows law firms lose 10-20% of billable time due to delayed manual entry and memory deterioration.</p>
                 </div>
-                <div class="problem-card">
+                <div class="problem-card scroll-animate">
                     <div class="problem-stat">$70K-$450K</div>
                     <div class="problem-label">Annual Cost Per Firm</div>
                     <p class="problem-desc">Combined opportunity cost plus revenue loss from forgotten billable activities. Scales with firm size.</p>
                 </div>
-                <div class="problem-card">
+                <div class="problem-card scroll-animate">
                     <div class="problem-stat">30-75 min</div>
                     <div class="problem-label">Wasted Daily</div>
                     <p class="problem-desc">Per attorney on manual time entry burden. That's 125-312 hours per year on administrative recordkeeping.</p>
@@ -664,58 +838,64 @@
             <h2 class="section-title">How RevenueRescue Works</h2>
             <p class="section-subtitle">Three simple steps. Zero manual entry. Maximum revenue capture.</p>
             <div class="steps-grid">
-                <div class="step-card">
+                <div class="step-card scroll-animate">
                     <div class="step-number">1</div>
-                    <h3 class="step-title">Monitor</h3>
-                    <p class="step-desc">Connects to your Clio calendar and monitors billable activities automatically. Secure authentication means we never see your password.</p>
+                    <div class="step-content">
+                        <h3 class="step-title">Monitor</h3>
+                        <p class="step-desc">Connects to your Clio calendar and monitors billable activities automatically. Secure authentication means we never see your password.</p>
+                    </div>
                 </div>
-                <div class="step-card">
+                <div class="step-card scroll-animate">
                     <div class="step-number">2</div>
-                    <h3 class="step-title">Suggest</h3>
-                    <p class="step-desc">AI detects unbilled time and generates professional billing entries with narratives. Time calculations and matter codes handled automatically.</p>
+                    <div class="step-content">
+                        <h3 class="step-title">Suggest</h3>
+                        <p class="step-desc">AI detects unbilled time and generates professional billing entries with narratives. Time calculations and matter codes handled automatically.</p>
+                    </div>
                 </div>
-                <div class="step-card">
+                <div class="step-card scroll-animate">
                     <div class="step-number">3</div>
-                    <h3 class="step-title">Rescue</h3>
-                    <p class="step-desc">You approve suggestions with one click. We post to Clio. Revenue captured. The entire process takes minutes, not hours.</p>
+                    <div class="step-content">
+                        <h3 class="step-title">Rescue</h3>
+                        <p class="step-desc">You approve suggestions with one click. We post to Clio. Revenue captured. The entire process takes minutes, not hours.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Features -->
-    <section class="section">
+    <section class="section bg-light-purple">
         <div class="container">
             <h2 class="section-title">Powerful Features for Revenue Recovery</h2>
             <p class="section-subtitle">Everything you need to capture lost billable time automatically</p>
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📅</div>
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon"><svg class="svg-icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
                     <h3 class="feature-title">Calendar Monitoring</h3>
                     <p class="feature-desc">Continuous automatic detection of billable calendar events. Never forgets, never sleeps, always watching.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon"><svg class="svg-icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></div>
                     <h3 class="feature-title">AI Suggestions</h3>
                     <p class="feature-desc">Smart billing narratives generated automatically with proper formatting and time calculations.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">✓</div>
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon"><svg class="svg-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
                     <h3 class="feature-title">One-Click Approval</h3>
                     <p class="feature-desc">Review and approve suggestions in seconds. Reject any suggestion that's not billable. Bulk actions supported.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔗</div>
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></div>
                     <h3 class="feature-title">Clio Integration</h3>
                     <p class="feature-desc">Secure direct connection with Clio. Approved suggestions post directly to your time entries. No manual copy-paste.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon"><svg class="svg-icon" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
                     <h3 class="feature-title">Revenue Analytics</h3>
                     <p class="feature-desc">Visualize captured revenue vs. potential. Track improvement over time. Identify patterns in unbilled activities.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💼</div>
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon"><svg class="svg-icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div>
                     <h3 class="feature-title">Multi-Matter Support</h3>
                     <p class="feature-desc">Handles attorneys with multiple active matters. Smart matter detection from calendar event titles.</p>
                 </div>
@@ -729,18 +909,18 @@
             <h2 class="section-title">Why Continue After Your Trial?</h2>
             <p class="section-subtitle">Your trial shows potential from the last 30 days. The real value comes from ongoing revenue capture.</p>
             <div class="problem-grid">
-                <div class="problem-card">
-                    <div class="feature-icon">📈</div>
+                <div class="problem-card scroll-animate">
+                    <div class="feature-icon"><svg class="svg-icon" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div>
                     <div class="problem-label">Full Historical Access</div>
                     <p class="problem-desc">Trial shows 30 days. Paid subscription gives unlimited access to all calendar history. Catch opportunities from months ago that you forgot to bill.</p>
                 </div>
-                <div class="problem-card">
-                    <div class="feature-icon">🔄</div>
+                <div class="problem-card scroll-animate">
+                    <div class="feature-icon"><svg class="svg-icon" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></div>
                     <div class="problem-label">Continuous Monitoring</div>
                     <p class="problem-desc">Trial is a snapshot. Subscription provides real-time monitoring going forward. Every new client meeting, call, and activity automatically captured—forever.</p>
                 </div>
-                <div class="problem-card">
-                    <div class="feature-icon">📊</div>
+                <div class="problem-card scroll-animate">
+                    <div class="feature-icon"><svg class="svg-icon" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
                     <div class="problem-label">Growing Analytics</div>
                     <p class="problem-desc">The longer you use RevenueRescue, the better the analytics become. Track patterns over months and years. Identify your most profitable activities and billing gaps.</p>
                 </div>
@@ -781,7 +961,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="section">
+    <section class="section bg-light-gray">
         <div class="container">
             <div class="faq-section">
                 <h2 class="section-title">Frequently Asked Questions</h2>
@@ -871,5 +1051,26 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        // Intersection Observer for scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.scroll-animate');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            animatedElements.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
