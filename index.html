@@ -617,9 +617,21 @@
         .vertical-card.education { border-left-color: var(--education); }
 
         .vertical-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
             margin-bottom: 1rem;
             font-size: 1.4rem;
             color: var(--lexopoly-primary);
+        }
+
+        .vertical-card h3 svg {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+            flex-shrink: 0;
         }
 
         .vertical-card p {
@@ -753,8 +765,34 @@
         }
 
         .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
             font-size: 0.9rem;
             opacity: 0.9;
+        }
+
+        .trust-badge svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+            flex-shrink: 0;
+        }
+
+        .company-info span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .company-info svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
         }
 
         .footer-bottom {
@@ -1756,32 +1794,32 @@
             <h2>Built for Professionals</h2>
             <div class="verticals-grid">
                 <div class="vertical-card lawyers">
-                    <h3>👨‍⚖️ Lawyers</h3>
+                    <h3><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> Lawyers</h3>
                     <p>Protect attorney-client privilege with local processing. Integrate with Clio, generate time entries, and maintain confidentiality.</p>
                     <a href="/lawyers/" class="vertical-link">Learn More →</a>
                 </div>
                 <div class="vertical-card journalists">
-                    <h3>📰 Journalists</h3>
+                    <h3><svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg> Journalists</h3>
                     <p>Keep sources protected with complete privacy control. Fast interview transcription to meet tight deadlines.</p>
                     <a href="/journalists/" class="vertical-link">Learn More →</a>
                 </div>
                 <div class="vertical-card dictation">
-                    <h3>🎤 Dictation + Medical</h3>
+                    <h3><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg> Dictation + Medical</h3>
                     <p>Turn speech into professional documents. Perfect for executives, researchers, physicians, psychologists, and healthcare providers. Local processing supports HIPAA compliance requirements.</p>
                     <a href="/dictation/" class="vertical-link">Learn More →</a>
                 </div>
                 <div class="vertical-card court">
-                    <h3>⚖️ Court Reporters</h3>
+                    <h3><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg> Court Reporters</h3>
                     <p>Enhance your workflow with real-time backup transcription. Quality assurance and verification tools built-in.</p>
                     <a href="/court-reporters/" class="vertical-link">Learn More →</a>
                 </div>
                 <div class="vertical-card government">
-                    <h3>🏛️ Government</h3>
+                    <h3><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Government</h3>
                     <p>Meet security requirements with local processing. Cost-effective solution for court systems and agencies.</p>
                     <a href="/government/" class="vertical-link">Learn More →</a>
                 </div>
                 <div class="vertical-card education">
-                    <h3>🎓 Education</h3>
+                    <h3><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg> Education</h3>
                     <p>Make lectures accessible to all students. Support note-taking and compliance with accessibility requirements.</p>
                     <a href="/education/" class="vertical-link">Learn More →</a>
                 </div>
@@ -1863,10 +1901,10 @@
             <div class="footer-section">
                 <h4>Trust & Security</h4>
                 <div class="footer-trust">
-                    <div class="trust-badge">🔒 Local Processing</div>
-                    <div class="trust-badge">🏥 HIPAA Ready</div>
-                    <div class="trust-badge">⚖️ Legal Grade</div>
-                    <div class="trust-badge">✓ 30-Day Money-Back Guarantee</div>
+                    <div class="trust-badge"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Local Processing</div>
+                    <div class="trust-badge"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> HIPAA Ready</div>
+                    <div class="trust-badge"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> Legal Grade</div>
+                    <div class="trust-badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> 30-Day Money-Back Guarantee</div>
                 </div>
             </div>
             <div class="footer-section">
@@ -1881,9 +1919,9 @@
         <div class="footer-bottom">
             <p>&copy; 2025 Lexopoly LLC. All rights reserved.</p>
             <div class="company-info">
-                <span>🏢 Lexopoly LLC</span>
-                <span>🇺🇸 Wyoming, USA</span>
-                <span>🛡️ Privacy-First Since 2025</span>
+                <span><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Lexopoly LLC</span>
+                <span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Wyoming, USA</span>
+                <span><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> Privacy-First Since 2025</span>
             </div>
         </div>
     </footer>
