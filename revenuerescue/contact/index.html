@@ -91,35 +91,155 @@
             font-weight: 400;
         }
 
-        .nav-links {
+        /* Main Navigation */
+        .nav-main {
             display: flex;
-            gap: 2rem;
             align-items: center;
+            gap: 0.5rem;
         }
 
-        .nav-links a {
-            text-decoration: none;
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown > a {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.75rem 1rem;
             color: var(--text-primary);
+            text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
+            border-radius: 6px;
+            transition: all 0.2s;
+            cursor: pointer;
+            user-select: none;
         }
 
-        .nav-links a:hover {
+        .nav-dropdown > a:hover {
+            background: var(--bg-light);
             color: var(--revenuerescue-primary);
         }
 
-        .btn-nav-cta {
-            background: var(--revenuerescue-primary);
-            color: white !important;
-            padding: 0.7rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s;
+        .dropdown-arrow {
+            font-size: 0.7em;
+            transition: transform 0.2s;
         }
 
-        .btn-nav-cta:hover {
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: translateY(2px);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            padding: 0.5rem;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            z-index: 1000;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--bg-light);
+            color: var(--revenuerescue-primary);
+            padding-left: 1.25rem;
+        }
+
+        .dropdown-header {
+            padding: 0.5rem 1rem 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-main > a:not(.btn-secondary-nav):not(.btn-primary-nav) {
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .nav-main > a:not(.btn-secondary-nav):not(.btn-primary-nav):hover {
+            background: var(--bg-light);
+            color: var(--revenuerescue-primary);
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 0.5rem;
+            margin-left: 1rem;
+        }
+
+        .btn-secondary-nav {
+            padding: 0.5rem 1.25rem;
+            border: 2px solid var(--revenuerescue-primary);
+            color: var(--revenuerescue-primary);
+            background: transparent;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary-nav:hover {
+            background: var(--revenuerescue-primary);
+            color: white;
+        }
+
+        .btn-primary-nav {
+            padding: 0.5rem 1.25rem;
+            background: var(--revenuerescue-primary);
+            color: white;
+            border: 2px solid var(--revenuerescue-primary);
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .btn-primary-nav:hover {
             background: var(--revenuerescue-dark);
-            transform: translateY(-2px);
+            border-color: var(--revenuerescue-dark);
+            transform: translateY(-1px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
         }
 
         /* Hero */
@@ -317,8 +437,62 @@
                 padding: 2rem 1rem;
             }
 
-            .nav-links {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-main {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+                border-top: 1px solid var(--border);
+            }
+
+            .nav-main.mobile-open {
+                display: flex;
+            }
+
+            .nav-dropdown {
+                width: 100%;
+            }
+
+            .nav-dropdown > a {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                display: none;
+                padding-left: 1rem;
+                background: var(--bg-light);
+            }
+
+            .nav-dropdown.mobile-open .dropdown-menu {
+                display: block;
+            }
+
+            .nav-cta {
+                flex-direction: column;
+                margin-left: 0;
+                margin-top: 1rem;
+                width: 100%;
+            }
+
+            .nav-cta a {
+                width: 100%;
+                text-align: center;
             }
         }
     </style>
@@ -327,15 +501,45 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav-container">
-            <a href="/revenuerescue/" class="logo">
+            <a href="/" class="logo">
                 RevenueRescue
                 <span class="logo-subtitle">by Lexopoly</span>
             </a>
-            <div class="nav-links">
-                <a href="/revenuerescue/features/">Features</a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <div class="nav-main" id="nav-main">
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>Products <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">Software Products</div>
+                        <a href="/revenuerescue/">RevenueRescue</a>
+                        <a href="/casscalculator/">CASS Calculator</a>
+                        <a href="/quotecreator/">QuoteCreator</a>
+                        <a href="/localtranscribe/">LocalTranscribe</a>
+                        <a href="/compliancelogger/">ComplianceLogger</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>Solutions <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">By Practice Area</div>
+                        <a href="/lawyers/">For Lawyers</a>
+                        <a href="/revenuerescue/">Revenue Recovery</a>
+                        <a href="/localtranscribe/">Private Transcription</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>About <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="/about/">About Lexopoly</a>
+                        <a href="/contact/">Contact Us</a>
+                        <a href="/blog/">Blog</a>
+                    </div>
+                </div>
                 <a href="/revenuerescue/pricing/">Pricing</a>
-                <a href="/revenuerescue/contact/">Contact</a>
-                <a href="/revenuerescue/contact/" class="btn-nav-cta" onclick="trackEvent('revenuerescue', 'nav_cta_click', 'contact')">Start Free Trial</a>
+                <div class="nav-cta">
+                    <a href="/revenuerescue/contact/" class="btn-secondary-nav">Contact Sales</a>
+                    <a href="/revenuerescue/contact/" class="btn-primary-nav" onclick="trackEvent('revenuerescue', 'nav_cta_click', 'contact')">Start Free Trial</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -516,5 +720,17 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('nav-main').classList.toggle('mobile-open');
+        }
+
+        function toggleMobileDropdown(dropdown) {
+            if (window.innerWidth <= 768) {
+                dropdown.classList.toggle('mobile-open');
+            }
+        }
+    </script>
 </body>
 </html>
