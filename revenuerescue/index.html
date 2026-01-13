@@ -597,6 +597,49 @@
             color: var(--revenuerescue-primary);
         }
 
+        /* Hero Badge & Source Icons */
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .source-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .source-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .source-item svg {
+            width: 28px;
+            height: 28px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .source-item span {
+            font-size: 0.8rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
         /* Hero Trust Badges */
         .hero-trust-badges {
             display: flex;
@@ -824,6 +867,19 @@
                 width: 100%;
             }
 
+            .source-icons {
+                gap: 1rem;
+            }
+
+            .source-item svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            .source-item span {
+                font-size: 0.75rem;
+            }
+
             .section-title {
                 font-size: 2rem;
             }
@@ -1014,7 +1070,26 @@
         <div class="hero-content">
             <h1>Stop Losing $20K-$40K in Billable Time Every Year</h1>
             <div class="hero-tagline">Automatic Revenue Capture for Law Firms Using Clio</div>
-            <p class="hero-subtitle">Try RevenueRescue free for 7 days. Intelligent revenue detection monitors your calendar, finds unbilled time, generates billing suggestions. Approve with one click. Credit card required—billing starts after trial. Cancel anytime with no charge.</p>
+            <div class="hero-badge">4-Source Detection</div>
+            <div class="source-icons">
+                <div class="source-item">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <span>Calendars</span>
+                </div>
+                <div class="source-item">
+                    <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                    <span>Tasks</span>
+                </div>
+                <div class="source-item">
+                    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span>Emails</span>
+                </div>
+                <div class="source-item">
+                    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                    <span>Documents</span>
+                </div>
+            </div>
+            <p class="hero-subtitle">Try RevenueRescue free for 7 days. Intelligent revenue detection monitors your Clio activity, finds unbilled work, generates billing suggestions. Approve with one click. Credit card required—billing starts after trial. Cancel anytime with no charge.</p>
             <div class="hero-stats">Starting at $149/month • 7-day free trial • 7-19× ROI</div>
             <div class="hero-trust-badges">
                 <div class="trust-badge">
