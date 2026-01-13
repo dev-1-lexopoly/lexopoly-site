@@ -83,7 +83,7 @@
         }
 
         /* Prevent layout shift */
-        .feature-icon, .trust-icon, .cert-icon {
+        .cert-icon {
             width: 1em;
             height: 1em;
             display: inline-block;
@@ -545,7 +545,8 @@
         .feature-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
-            display: block;
+            display: flex;
+            justify-content: center;
             transition: transform 0.3s ease;
         }
 
@@ -957,7 +958,8 @@
         .trust-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
-            display: block;
+            display: flex;
+            justify-content: center;
         }
 
         .trust-item h3 {
