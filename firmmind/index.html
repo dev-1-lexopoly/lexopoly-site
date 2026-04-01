@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N29Z7B6T5T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N29Z7B6T5T');
+    </script>
+
+    <!-- Basic SEO -->
+    <title>FirmMind | Private AI for Regulated Professionals | Lexopoly</title>
+    <meta name="description" content="Patent-pending private AI for regulated professionals. Intercepts before data reaches the model, verifies no leaks come back. 12 verticals, 20M+ professionals. Model-agnostic — works with any LLM.">
+    <meta name="keywords" content="private AI, regulated AI, compliance AI, HIPAA AI, legal AI, patent pending, model agnostic, FirmMind, Lexopoly">
+    <meta name="author" content="Lexopoly Inc.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lexopoly.com/firmmind/">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="FirmMind | Private AI for Regulated Professionals | Lexopoly">
+    <meta property="og:description" content="Patent-pending private AI for regulated professionals. Intercepts before data reaches the model, verifies no leaks come back. Works with any LLM.">
+    <meta property="og:url" content="https://lexopoly.com/firmmind/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lexopoly.com/assets/og-firmmind.png">
+    <meta property="og:image:alt" content="FirmMind - Private AI for Regulated Professionals">
+    <meta property="og:site_name" content="Lexopoly">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FirmMind | Private AI for Regulated Professionals | Lexopoly">
+    <meta name="twitter:description" content="Patent-pending private AI for regulated professionals. Intercepts before data reaches the model, verifies no leaks come back. Works with any LLM.">
+    <meta name="twitter:image" content="https://lexopoly.com/assets/og-firmmind.png">
+    <meta name="twitter:site" content="@lexopoly">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#2563eb">
+    <meta name="application-name" content="FirmMind by Lexopoly">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+
+    <style>
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --fm-primary: #2563eb;
+            --fm-accent: #7c3aed;
+            --lexopoly-primary: #1a365d;
+            --accent: #2c5aa0;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f7fafc;
+            --border: #e2e8f0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        /* ============================================
+           FADE-IN ANIMATIONS
+           ============================================ */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in:nth-child(1) { transition-delay: 0.1s; }
+        .fade-in:nth-child(2) { transition-delay: 0.2s; }
+        .fade-in:nth-child(3) { transition-delay: 0.3s; }
+        .fade-in:nth-child(4) { transition-delay: 0.4s; }
+
+        /* ============================================
+           SVG ICONS
+           ============================================ */
+        .svg-icon {
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* ============================================
+           STICKY HEADER & NAVIGATION
+           ============================================ */
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--lexopoly-primary);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+            transition: opacity 0.3s;
+        }
+
+        .logo-img {
+            height: 100px;
+            width: auto;
+        }
+
+        .logo:hover { opacity: 0.8; }
+
+        .logo-subtitle {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-top: -2px;
+        }
+
+        .nav-main {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-dropdown { position: relative; }
+
+        .nav-dropdown > a {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.2s;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .nav-dropdown > a:hover {
+            background: var(--bg-secondary);
+            color: var(--accent);
+        }
+
+        .dropdown-arrow {
+            font-size: 0.7em;
+            transition: transform 0.2s;
+        }
+
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: translateY(2px);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            padding: 0.5rem;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            z-index: 1000;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--bg-secondary);
+            color: var(--accent);
+            padding-left: 1.25rem;
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 0.5rem 0;
+        }
+
+        .dropdown-header {
+            padding: 0.5rem 1rem 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 0.5rem;
+            margin-left: 1rem;
+        }
+
+        .btn-secondary-nav {
+            padding: 0.5rem 1.25rem;
+            border: 2px solid var(--fm-primary);
+            color: var(--fm-primary);
+            background: transparent;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary-nav:hover {
+            background: var(--fm-primary);
+            color: white;
+        }
+
+        .btn-primary-nav {
+            padding: 0.5rem 1.25rem;
+            background: var(--accent);
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 2px solid var(--accent);
+            transition: all 0.2s;
+        }
+
+        .btn-primary-nav:hover {
+            background: #2c5aa0;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(44, 90, 160, 0.3);
+        }
+
+        .nav-main > a:not(.btn-secondary-nav):not(.btn-primary-nav) {
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .nav-main > a:not(.btn-secondary-nav):not(.btn-primary-nav):hover {
+            background: var(--bg-secondary);
+            color: var(--accent);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            padding: 6rem 2rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.08) 0%, transparent 60%),
+                        radial-gradient(ellipse at 70% 20%, rgba(255,255,255,0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(4px);
+            letter-spacing: 0.02em;
+        }
+
+        .hero-badge svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+            vertical-align: -2px;
+            margin-right: 0.4rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.95;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-hero-primary {
+            background: white;
+            color: var(--fm-primary);
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-hero-primary:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .btn-hero-primary svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .btn-hero-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid rgba(255,255,255,0.6);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-hero-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-hero-secondary svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        /* ============================================
+           SECTION COMMON
+           ============================================ */
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--lexopoly-primary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .section-alt {
+            background: var(--bg-secondary);
+        }
+
+        /* ============================================
+           FEATURES SECTION
+           ============================================ */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(37, 99, 235, 0.1);
+            border-color: var(--fm-primary);
+        }
+
+        .feature-card-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--fm-primary);
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            color: var(--lexopoly-primary);
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* ============================================
+           PRICING SECTION
+           ============================================ */
+        .pricing-section {
+            background: var(--bg-secondary);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .pricing-card {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(37, 99, 235, 0.1);
+            border-color: var(--fm-primary);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--fm-primary);
+            position: relative;
+        }
+
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--fm-primary);
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .pricing-plan-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--lexopoly-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--fm-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .pricing-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+
+        .pricing-note {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-cta {
+            text-align: center;
+        }
+
+        .btn-pricing {
+            display: inline-block;
+            background: var(--fm-primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--fm-primary);
+        }
+
+        .btn-pricing:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+        }
+
+        /* ============================================
+           TRUST SIGNALS
+           ============================================ */
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .trust-item {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .trust-item-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem;
+        }
+
+        .trust-item-icon svg {
+            width: 26px;
+            height: 26px;
+            stroke: var(--fm-primary);
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        .trust-item h3 {
+            font-size: 1.1rem;
+            color: var(--lexopoly-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .trust-item p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           CTA SECTION
+           ============================================ */
+        .cta-section {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta-primary {
+            background: white;
+            color: var(--fm-primary);
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta-primary:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .btn-cta-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid rgba(255,255,255,0.6);
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white;
+            transform: translateY(-2px);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: var(--lexopoly-primary);
+            padding: 3rem 2rem 2rem;
+            color: white;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover { opacity: 1; }
+
+        .footer-trust {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .footer-trust-badge svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+            flex-shrink: 0;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .company-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .company-info span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .company-info svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        /* ============================================
+           RESPONSIVE: 968px
+           ============================================ */
+        @media (max-width: 968px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-main {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                margin: 0.5rem;
+                padding: 1rem;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            .nav-main.show {
+                display: flex;
+            }
+
+            .nav-dropdown { width: 100%; }
+
+            .nav-dropdown > a {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                padding: 0 0 0 1rem;
+                margin-top: 0.5rem;
+                display: none;
+            }
+
+            .nav-dropdown.mobile-open .dropdown-menu {
+                display: block;
+            }
+
+            .nav-dropdown.mobile-open .dropdown-arrow {
+                transform: rotate(180deg);
+            }
+
+            .nav-cta {
+                margin-left: 0;
+                margin-top: 1rem;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-secondary-nav,
+            .btn-primary-nav {
+                width: 100%;
+                text-align: center;
+                padding: 0.75rem 1.5rem;
+            }
+
+            .hero { padding: 4rem 1.5rem; }
+
+            .hero h1 {
+                font-size: 2.2rem;
+                line-height: 1.2;
+            }
+
+            .hero .subtitle { font-size: 1.1rem; }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section { padding: 3.5rem 1.5rem; }
+
+            .section-header h2 { font-size: 2rem; }
+
+            .cta-section h2 { font-size: 2rem; }
+        }
+
+        /* ============================================
+           RESPONSIVE: 768px
+           ============================================ */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.9rem; }
+
+            .hero .subtitle { font-size: 1rem; }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-hero-primary,
+            .btn-hero-secondary {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-cta-primary,
+            .btn-cta-secondary {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            .section { padding: 3rem 1rem; }
+
+            .section-header h2 { font-size: 1.75rem; }
+
+            .cta-section { padding: 3.5rem 1.5rem; }
+
+            .cta-section h2 { font-size: 1.75rem; }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .company-info {
+                flex-direction: column;
+                gap: 0.75rem;
+                align-items: center;
+            }
+        }
+
+        /* Accessibility: keyboard focus states */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid var(--accent, #2563eb);
+            outline-offset: 2px;
+        }
+
+    </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "FirmMind",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": ["Windows", "Linux", "macOS"],
+      "description": "Patent-pending private AI for regulated professionals. Intercepts before data reaches the model, verifies no leaks come back. 12 regulated verticals, 20M+ professionals. Model-agnostic — works with any LLM.",
+      "url": "https://lexopoly.com/firmmind/",
+      "provider": {
+        "@type": "Organization",
+        "name": "Lexopoly Inc.",
+        "url": "https://lexopoly.com"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "49",
+        "highPrice": "99",
+        "description": "Pro $49/month, Firm $99/month"
+      },
+      "featureList": [
+        "Private AI - data never leaves your network",
+        "Patent pending privacy technology",
+        "Claude, GPT, and more LLMs supported",
+        "RedRope integration",
+        "Document drafting and analysis"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER & NAVIGATION
+         ============================================ -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo/lexopoly-navbar.png" alt="Lexopoly" class="logo-img">
+            </a>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+
+            <div class="nav-main" id="nav-main">
+                <!-- Products Dropdown -->
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>
+                        Products
+                        <span class="dropdown-arrow">&#9660;</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">Platform</div>
+                        <a href="/redrope/">RedRope &mdash; Practice Management</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">AI Assistants</div>
+                        <a href="/lex/">Lex O.P. Lee &mdash; Mailroom Supervisor</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">Standalone</div>
+                        <a href="/firmmind/">FirmMind &mdash; Private AI</a>
+                        <a href="/casscalculator/">CASS Calculator</a>
+                        <a href="/quotecreator/">QuoteCreator</a>
+                        <a href="/mailman/">MailMan &mdash; Document Mailing</a>
+                        <a href="/compliancelogger/">ComplianceLogger</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">Clio Add-ons</div>
+                        <a href="/revenuerescue/">RevenueRescue</a>
+                    </div>
+                </div>
+
+                <!-- About Dropdown -->
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>
+                        About
+                        <span class="dropdown-arrow">&#9660;</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/about/">About Lexopoly</a>
+                        <a href="/contact/">Contact Us</a>
+                        <a href="/support/">Support</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/privacy/">Privacy Policy</a>
+                        <a href="/terms/">Terms of Service</a>
+                    </div>
+                </div>
+
+                <!-- Pricing Link -->
+                <a href="/pricing/">Pricing</a>
+
+                <!-- CTAs -->
+                <div class="nav-cta">
+                    <a href="/contact/" class="btn-secondary-nav">Join Waitlist</a>
+                    <a href="https://firmmind.lexopoly.com" rel="noopener" class="btn-primary-nav">Get Started</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                Patent Pending
+            </div>
+            <h1>Private AI for Regulated Professionals</h1>
+            <p class="subtitle">Intercepts before data reaches the model. Verifies no leaks come back. Works with Claude, GPT, Ollama, and any LLM &mdash; all privacy-shielded. Built for legal. Expanding to medical, financial, and any regulated profession.</p>
+            <div class="hero-cta">
+                <a href="https://firmmind.lexopoly.com" rel="noopener" class="btn-hero-primary">
+                    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+                    Try FirmMind
+                </a>
+                <a href="#features" class="btn-hero-secondary">
+                    <svg aria-hidden="true" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FEATURES SECTION
+         ============================================ -->
+    <section id="features">
+        <div class="section">
+            <div class="section-header fade-in">
+                <h2>How FirmMind Protects Your Clients</h2>
+                <p>Use any AI model without risking confidential data. FirmMind sits between you and the AI &mdash; your clients stay protected.</p>
+            </div>
+            <div class="features-grid">
+                <!-- Feature 1: Privacy-First Architecture -->
+                <div class="feature-card fade-in">
+                    <div class="feature-card-icon">
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h3>Privacy-First Architecture</h3>
+                    <p>Confidential data is anonymized before it reaches the AI model &mdash; names, case numbers, SSNs, and identifiers are replaced with tokens. The AI works with full context but zero knowledge of who's involved.</p>
+                </div>
+
+                <!-- Feature 2: Multiple LLM Support -->
+                <div class="feature-card fade-in">
+                    <div class="feature-card-icon">
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    </div>
+                    <h3>Model-Agnostic</h3>
+                    <p>Works with Claude, GPT, Ollama, and any LLM API &mdash; all privacy-shielded. Choose the best model for each task. Switch providers without re-architecting your compliance layer.</p>
+                </div>
+
+                <!-- Feature 3: AI View Toggle -->
+                <div class="feature-card fade-in">
+                    <div class="feature-card-icon">
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    </div>
+                    <h3>AI View Toggle</h3>
+                    <p>See exactly what the AI sees &mdash; and what it doesn't. Toggle between your real document and the anonymized version the AI receives. Full context for the model, zero knowledge of who's involved.</p>
+                </div>
+
+                <!-- Feature 4: Zero-Knowledge Conversations -->
+                <div class="feature-card fade-in">
+                    <div class="feature-card-icon">
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                    </div>
+                    <h3>Zero-Knowledge Proven</h3>
+                    <p>Every conversation is verifiably private. Client names, case numbers, SSNs, and identifiers never reach the AI model. You get the full power of AI without the compliance risk.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PRICING SECTION
+         ============================================ -->
+    <section class="pricing-section section-alt">
+        <div class="section">
+            <div class="section-header fade-in">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>No hidden fees. No per-query charges. Privacy included at every tier.</p>
+            </div>
+            <div class="pricing-grid fade-in">
+                <!-- Pro Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-plan-name">Pro</div>
+                    <div class="pricing-price">$49<span>/month</span></div>
+                    <div class="pricing-note" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">or $490/year (save 2 months)</div>
+                </div>
+
+                <!-- Firm Plan -->
+                <div class="pricing-card featured">
+                    <div class="pricing-plan-name">Firm</div>
+                    <div class="pricing-price">$99<span>/month</span></div>
+                    <div class="pricing-note" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">or $990/year (save 2 months)</div>
+                </div>
+            </div>
+            <p class="pricing-note fade-in">Try FirmMind free. Upgrade when you're ready.</p>
+            <div class="pricing-cta fade-in">
+                <a href="https://firmmind.lexopoly.com" rel="noopener" class="btn-pricing">Try FirmMind</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TRUST SIGNALS SECTION
+         ============================================ -->
+    <section>
+        <div class="section">
+            <div class="section-header fade-in">
+                <h2>Why Trust FirmMind</h2>
+            </div>
+            <div class="trust-grid fade-in">
+                <div class="trust-item">
+                    <div class="trust-item-icon">
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h3>Patent Pending Technology</h3>
+                    <p>Our privacy architecture is protected by a patent application covering the core technology.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-item-icon">
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
+                    <h3>Your Data Never Leaves Your Network</h3>
+                    <p>Client names, case details, and confidential information stay on your infrastructure. Always.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-item-icon">
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <h3>Customer-First</h3>
+                    <p>Every product decision is driven by what practitioners actually need. We answer to customers, not shareholders.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-item-icon">
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </div>
+                    <h3>Built for Practitioners</h3>
+                    <p>Designed with an understanding of what regulated professionals actually need.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FINAL CTA SECTION
+         ============================================ -->
+    <section class="cta-section">
+        <div class="cta-inner fade-in">
+            <h2>Ready for Compliant AI?</h2>
+            <p>FirmMind is live. Use any AI model without risking confidential data. Your clients stay protected, your work stays compliant.</p>
+            <div class="cta-buttons">
+                <a href="https://firmmind.lexopoly.com" rel="noopener" class="btn-cta-primary">Try FirmMind</a>
+                <a href="/contact/" class="btn-cta-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Company</h4>
+                <div class="footer-links">
+                    <a href="/about/">About Lexopoly</a>
+                    <a href="/contact/">Contact Us</a>
+                    <a href="/support/">Support</a>
+                    <a href="mailto:hello@lexopoly.com">hello@lexopoly.com</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Products</h4>
+                <div class="footer-links">
+                    <a href="/redrope/">RedRope</a>
+                    <a href="/firmmind/">FirmMind</a>
+                    <a href="/lex/">Lex O.P. Lee</a>
+                    <a href="/pricing/">All Products &amp; Pricing</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Trust &amp; Security</h4>
+                <div class="footer-trust">
+                    <div class="footer-trust-badge"><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Clio Compatible</div>
+                    <div class="footer-trust-badge"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> Patent Pending</div>
+                    <div class="footer-trust-badge"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> Privacy-First Architecture</div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="footer-links">
+                    <a href="https://x.com/lexopoly" target="_blank" rel="noopener">Follow on X</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lexopoly Inc. All rights reserved.</p>
+            <div class="company-info">
+                <span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Lexopoly Inc.</span>
+                <span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Delaware, USA</span>
+                <span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> AI-Powered Practice Management</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            var navMain = document.getElementById('nav-main');
+            navMain.classList.toggle('show');
+            var btn = document.querySelector('.mobile-menu-btn');
+            btn.setAttribute('aria-expanded', navMain.classList.contains('show'));
+        }
+
+        function toggleMobileDropdown(element) {
+            if (window.innerWidth <= 968) {
+                element.classList.toggle('mobile-open');
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var navContainer = document.querySelector('.nav-container');
+            var navMain = document.getElementById('nav-main');
+            if (!navContainer.contains(event.target) && navMain.classList.contains('show')) {
+                navMain.classList.remove('show');
+            }
+        });
+
+        // Close mobile dropdowns on resize to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 968) {
+                document.querySelectorAll('.nav-dropdown.mobile-open').forEach(function(dropdown) {
+                    dropdown.classList.remove('mobile-open');
+                });
+            }
+        });
+
+        // Scroll fade-in animations
+        document.addEventListener('DOMContentLoaded', function() {
+            var observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(function(el) {
+                observer.observe(el);
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

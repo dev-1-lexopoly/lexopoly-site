@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N29Z7B6T5T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N29Z7B6T5T');
+    </script>
+
+    <!-- Basic SEO -->
+    <title>MailMan | Legal Document Mailing Service | Lexopoly</title>
+    <meta name="description" content="Send court filings, client letters, and legal notices via API or one click. Pay-per-mail from $1.75. PDF in, USPS mail out. By Lexopoly.">
+    <meta name="keywords" content="legal document mailing, court filing mail, certified mail legal, law firm mailing service, RedRope integration, legal notices mail">
+    <meta name="author" content="Lexopoly Inc.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lexopoly.com/mailman/">
+
+    <!-- Performance optimizations -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="MailMan | Legal Document Mailing Service | Lexopoly">
+    <meta property="og:description" content="Send court filings, client letters, and legal notices via API or one click. Pay-per-mail from $1.75. PDF in, USPS mail out. By Lexopoly.">
+    <meta property="og:url" content="https://lexopoly.com/mailman/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lexopoly.com/assets/og-mailman.png">
+    <meta property="og:image:alt" content="MailMan - Legal Document Mailing Service by Lexopoly">
+    <meta property="og:site_name" content="Lexopoly">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MailMan | Legal Document Mailing Service | Lexopoly">
+    <meta name="twitter:description" content="Send court filings, client letters, and legal notices via API or one click. Pay-per-mail from $1.75. PDF in, USPS mail out.">
+    <meta name="twitter:image" content="https://lexopoly.com/assets/og-mailman.png">
+    <meta name="twitter:site" content="@lexopoly">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#d97706">
+    <meta name="msapplication-TileColor" content="#d97706">
+    <meta name="application-name" content="MailMan">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --mailman-primary: #d97706;
+            --mailman-light: #fef3c7;
+            --mailman-dark: #92400e;
+            --lexopoly-primary: #1a365d;
+            --accent: #2c5aa0;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f7fafc;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* SVG Icons */
+        .svg-icon {
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* ======================== */
+        /* NAVIGATION               */
+        /* ======================== */
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--lexopoly-primary);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+            transition: opacity 0.3s;
+        }
+
+        .logo-img {
+            height: 100px;
+            width: auto;
+        }
+
+        .logo:hover { opacity: 0.8; }
+
+        .logo-subtitle {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-top: -2px;
+        }
+
+        .nav-main {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-dropdown { position: relative; }
+
+        .nav-dropdown > a {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.2s;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .nav-dropdown > a:hover {
+            background: var(--bg-secondary);
+            color: var(--accent);
+        }
+
+        .dropdown-arrow {
+            font-size: 0.7em;
+            transition: transform 0.2s;
+        }
+
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: translateY(2px);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            padding: 0.5rem;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            z-index: 1000;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--bg-secondary);
+            color: var(--accent);
+            padding-left: 1.25rem;
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 0.5rem 0;
+        }
+
+        .dropdown-header {
+            padding: 0.5rem 1rem 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 0.5rem;
+            margin-left: 1rem;
+        }
+
+        .btn-secondary-nav {
+            padding: 0.5rem 1.25rem;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            background: transparent;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary-nav:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary-nav {
+            padding: 0.5rem 1.25rem;
+            background: var(--accent);
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 2px solid var(--accent);
+            transition: all 0.2s;
+        }
+
+        .btn-primary-nav:hover {
+            background: #2c5aa0;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(44, 90, 160, 0.3);
+        }
+
+        .nav-main > a:not(.btn-secondary-nav):not(.btn-primary-nav) {
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .nav-main > a:not(.btn-secondary-nav):not(.btn-primary-nav):hover {
+            background: var(--bg-secondary);
+            color: var(--accent);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* ======================== */
+        /* HERO                     */
+        /* ======================== */
+        .hero {
+            background: linear-gradient(135deg, var(--mailman-primary) 0%, var(--mailman-dark) 100%);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+
+        .hero-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.15;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .btn-hero {
+            display: inline-block;
+            background: white;
+            color: var(--mailman-dark);
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .btn-hero:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ======================== */
+        /* FEATURES                 */
+        /* ======================== */
+        .features {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--lexopoly-primary);
+            margin-bottom: 2.5rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            border-color: var(--mailman-primary);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 56px;
+            background: var(--mailman-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: var(--mailman-primary);
+        }
+
+        .feature-icon .svg-icon {
+            width: 24px;
+            height: 56px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ======================== */
+        /* PRICING NOTE             */
+        /* ======================== */
+        .pricing-note {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+            text-align: center;
+        }
+
+        .pricing-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2.5rem;
+        }
+
+        .pricing-card h2 {
+            font-size: 1.5rem;
+            color: var(--lexopoly-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .pricing-card p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* ======================== */
+        /* BOTTOM CTA               */
+        /* ======================== */
+        .bottom-cta {
+            background: var(--lexopoly-primary);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .bottom-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .bottom-cta p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: var(--mailman-primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            background: #b45309;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(217, 119, 6, 0.3);
+        }
+
+        /* ======================== */
+        /* FOOTER                   */
+        /* ======================== */
+        .footer {
+            background: var(--lexopoly-primary);
+            padding: 3rem 2rem 2rem;
+            color: white;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover { opacity: 1; }
+
+        .footer-trust {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .trust-badge svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+            flex-shrink: 0;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .company-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .company-info span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .company-info svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        /* ======================== */
+        /* RESPONSIVE               */
+        /* ======================== */
+        @media (max-width: 968px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-main {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                margin: 0.5rem;
+                padding: 1rem;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            .nav-main.show {
+                display: flex;
+            }
+
+            .nav-dropdown {
+                width: 100%;
+            }
+
+            .nav-dropdown > a {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                padding: 0 0 0 1rem;
+                margin-top: 0.5rem;
+                display: none;
+            }
+
+            .nav-dropdown.mobile-open .dropdown-menu {
+                display: block;
+            }
+
+            .nav-dropdown.mobile-open .dropdown-arrow {
+                transform: rotate(180deg);
+            }
+
+            .nav-cta {
+                margin-left: 0;
+                margin-top: 1rem;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-secondary-nav,
+            .btn-primary-nav {
+                width: 100%;
+                text-align: center;
+                padding: 0.75rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.05rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3.5rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .features {
+                padding: 3rem 1.5rem;
+            }
+
+            .features h2 {
+                font-size: 1.6rem;
+            }
+
+            .pricing-note {
+                padding: 0 1.5rem 3rem;
+            }
+
+            .pricing-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .bottom-cta {
+                padding: 3rem 1.5rem;
+            }
+
+            .bottom-cta h2 {
+                font-size: 1.6rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .company-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo/lexopoly-navbar.png" alt="Lexopoly" class="logo-img">
+            </a>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" class="svg-icon"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+
+            <div class="nav-main" id="nav-main">
+                <!-- Products Dropdown -->
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>
+                        Products
+                        <span class="dropdown-arrow">&#9660;</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">Platform</div>
+                        <a href="/redrope/">RedRope &mdash; Practice Management</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">AI Assistants</div>
+                        <a href="/lex/">Lex O.P. Lee &mdash; Mailroom Supervisor</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">Standalone</div>
+                        <a href="/firmmind/">FirmMind &mdash; Private AI</a>
+                        <a href="/casscalculator/">CASS Calculator</a>
+                        <a href="/quotecreator/">QuoteCreator</a>
+                        <a href="/mailman/">MailMan &mdash; Document Mailing</a>
+                        <a href="/compliancelogger/">ComplianceLogger</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">Clio Add-ons</div>
+                        <a href="/revenuerescue/">RevenueRescue</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/#products" style="font-weight: 600;">View All Products &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- About Dropdown -->
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>
+                        About
+                        <span class="dropdown-arrow">&#9660;</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/about/">About Lexopoly</a>
+                        <a href="/contact/">Contact Us</a>
+                        <a href="/support/">Support</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/privacy/">Privacy Policy</a>
+                        <a href="/terms/">Terms of Service</a>
+                    </div>
+                </div>
+
+                <!-- Pricing Link -->
+                <a href="/pricing/">Pricing</a>
+
+                <!-- CTAs -->
+                <div class="nav-cta">
+                    <a href="/contact/" class="btn-secondary-nav">Contact Us</a>
+                    <a href="https://mailman.lexopoly.com" class="btn-primary-nav">Start Sending</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">Live Now</div>
+            <h1>Send Physical Mail via API</h1>
+            <p>Upload a PDF, pay per piece, track delivery. First Class from $1.75. Integrates with any app or AI agent &mdash; or use the dashboard.</p>
+            <a href="https://mailman.lexopoly.com" class="btn-hero">Start Sending Mail</a>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <h2>How MailMan Works</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <!-- Feather: link (integration) -->
+                    <svg viewBox="0 0 24 24" class="svg-icon"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </div>
+                <h3>Simple REST API</h3>
+                <p>One POST with a base64 PDF creates, validates, and mails. Integrate physical mail into any app in minutes.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <!-- Feather: dollar-sign -->
+                    <svg viewBox="0 0 24 24" class="svg-icon"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </div>
+                <h3>Pay Per Mail</h3>
+                <p>No subscription, no minimum. Pay only for what you send.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <!-- Feather: shield (certified) -->
+                    <svg viewBox="0 0 24 24" class="svg-icon"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <h3>Certified &amp; Tracked</h3>
+                <p>Certified mail with tracking for service of process and court filings.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <!-- Feather: send (one click) -->
+                    <svg viewBox="0 0 24 24" class="svg-icon"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </div>
+                <h3>One Click</h3>
+                <p>Select document, pick recipient, click send. We handle the rest.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTEGRATION CALLOUT -->
+    <section style="max-width: 800px; margin: 0 auto; padding: 0 2rem 3rem; text-align: center;">
+        <div style="background: var(--mailman-light); border: 1px solid #fde68a; border-radius: 12px; padding: 2rem 2.5rem;">
+            <h3 style="font-size: 1.2rem; color: var(--mailman-dark); margin-bottom: 0.5rem;">Building something that needs to send mail?</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">MailMan is an API-first mailing service. Integrate physical mail into your app or workflow with a few lines of code. REST API with interactive docs, address validation, and tracking built in.</p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="https://mailman.lexopoly.com/api/docs" style="color: var(--accent); font-weight: 600; text-decoration: none; font-size: 0.95rem;">API Docs &rarr;</a>
+                <a href="/contact/" style="color: var(--accent); font-weight: 600; text-decoration: none; font-size: 0.95rem;">Contact for Integrations &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING NOTE -->
+    <section class="pricing-note">
+        <div class="pricing-card">
+            <h2>Simple Pricing</h2>
+            <p style="margin-bottom: 1.5rem;">Pay per piece. No subscription, no minimums.</p>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; text-align: center;">
+                <div>
+                    <div style="font-size: 1.8rem; font-weight: 700; color: var(--mailman-primary);">$1.75</div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary);">First Class</div>
+                </div>
+                <div>
+                    <div style="font-size: 1.8rem; font-weight: 700; color: var(--mailman-primary);">$7.50</div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary);">Certified Mail</div>
+                </div>
+                <div>
+                    <div style="font-size: 1.8rem; font-weight: 700; color: var(--mailman-primary);">$12.50</div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary);">Priority Mail</div>
+                </div>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-secondary);">Extra pages $0.25 each. Color printing $0.50. <a href="https://mailman.lexopoly.com/api/v1/pricing?tier=first_class&pages=1" style="color: var(--accent);">Query pricing via API</a>.</p>
+        </div>
+    </section>
+
+    <!-- LEX CALLOUT -->
+    <section style="max-width: 800px; margin: 0 auto; padding: 0 2rem 3rem; text-align: center;">
+        <div style="background: var(--mailman-light); border: 1px solid #fde68a; border-radius: 12px; padding: 2rem 2.5rem;">
+            <h3 style="font-size: 1.2rem; color: var(--mailman-dark); margin-bottom: 0.5rem;">Meet Lex O.P. Lee &mdash; Your Mailroom Supervisor</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">Lex uses the same MailMan API your agents will. He handles pricing, creates mailings, generates PDFs, and tracks USPS delivery &mdash; all through natural conversation.</p>
+            <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+                <a href="https://mailman.lexopoly.com/lex/" style="display: inline-block; background: var(--mailman-primary); color: white; padding: 0.6rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.2s;">Talk to Lex &rarr;</a>
+                <a href="/lex/" style="color: var(--accent); font-weight: 600; text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center;">Learn more about Lex &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="bottom-cta">
+        <h2>Start Sending Mail Today</h2>
+        <p>Sign up, add a payment method, and send your first letter in minutes.</p>
+        <a href="https://mailman.lexopoly.com" class="btn-cta" style="margin-right: 1rem;">Create Account</a>
+        <a href="https://mailman.lexopoly.com/api/docs" class="btn-cta" style="background: transparent; border: 2px solid var(--mailman-primary);">API Docs</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Company</h4>
+                <div class="footer-links">
+                    <a href="/about/">About Lexopoly</a>
+                    <a href="/contact/">Contact Us</a>
+                    <a href="/support/">Support</a>
+                    <a href="mailto:hello@lexopoly.com">hello@lexopoly.com</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Products</h4>
+                <div class="footer-links">
+                    <a href="/redrope/">RedRope</a>
+                    <a href="/firmmind/">FirmMind</a>
+                    <a href="/lex/">Lex O.P. Lee</a>
+                    <a href="https://mailman.lexopoly.com">MailMan</a>
+                    <a href="/pricing/">All Products &amp; Pricing</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Trust &amp; Security</h4>
+                <div class="footer-trust">
+                    <div class="trust-badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> USPS Address Validation</div>
+                    <div class="trust-badge"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Certified Mail Tracking</div>
+                    <div class="trust-badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Stripe Payments</div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="footer-links">
+                    <a href="https://x.com/lexopoly" target="_blank" rel="noopener">Follow on X</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lexopoly Inc. All rights reserved.</p>
+            <div class="company-info">
+                <span><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Lexopoly Inc.</span>
+                <span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Delaware, USA</span>
+                <span><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> AI-Powered Practice Management</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const navMain = document.getElementById('nav-main');
+            navMain.classList.toggle('show');
+        }
+
+        function toggleMobileDropdown(element) {
+            if (window.innerWidth <= 968) {
+                element.classList.toggle('mobile-open');
+            }
+        }
+
+        document.addEventListener('click', function(event) {
+            const navContainer = document.querySelector('.nav-container');
+            const navMain = document.getElementById('nav-main');
+            if (!navContainer.contains(event.target) && navMain.classList.contains('show')) {
+                navMain.classList.remove('show');
+            }
+        });
+
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 968) {
+                document.querySelectorAll('.nav-dropdown.mobile-open').forEach(function(dropdown) {
+                    dropdown.classList.remove('mobile-open');
+                });
+                var navMain = document.getElementById('nav-main');
+                if (navMain.classList.contains('show')) {
+                    navMain.classList.remove('show');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

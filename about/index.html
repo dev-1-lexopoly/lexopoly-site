@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N29Z7B6T5T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        // Note: Config is called in analytics.js with attribution data
+    </script>
+    <title>About Lexopoly — AI-Powered Practice Management for Solo & Small Firms</title>
+    <meta name="description" content="Lexopoly builds legal technology for solo and small law firms. Products include RedRope practice management, FirmMind private AI, RevenueRescue, CASS Calculator, QuoteCreator, MailMan, and ComplianceLogger.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Core brand colors */
+            --lexopoly-primary: #1a365d;
+            --lexopoly-secondary: #2d3748;
+            --accent: #2c5aa0;
+
+            /* Vertical-specific colors */
+            --lawyers: #2b6cb0;
+            --journalists: #b45309;
+            --dictation: #2f7d32;
+            --court: #553c9a;
+            --government: #4a5568;
+            --education: #8b5a00;
+
+            /* UI colors */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f7fafc;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --border: #e2e8f0;
+            --success: #2f7d32;
+            --warning: #8b5a00;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* Header - Unified Navigation Template */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--lexopoly-primary);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-img {
+            height: 100px;
+            width: auto;
+        }
+
+        .hero-mark {
+            width: 400px;
+            max-width: 80vw;
+            height: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        .logo-subtitle {
+            font-size: 0.65rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            letter-spacing: 0.02em;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .nav-main {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown > a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: color 0.3s;
+        }
+
+        .nav-dropdown > a:hover {
+            color: var(--accent);
+        }
+
+        .dropdown-arrow {
+            font-size: 0.7rem;
+            transition: transform 0.2s;
+        }
+
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            min-width: 220px;
+            padding: 0.5rem 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            z-index: 1000;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--bg-secondary);
+            color: var(--accent);
+        }
+
+        .dropdown-header {
+            padding: 0.5rem 1.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 0.5rem 0;
+        }
+
+        .nav-main > a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-main > a:hover {
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn-secondary-nav {
+            padding: 0.5rem 1.25rem;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary-nav:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary-nav {
+            padding: 0.5rem 1.25rem;
+            background: var(--accent);
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-primary-nav:hover {
+            background: var(--lexopoly-primary);
+        }
+
+        /* Main content container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        /* Content sections */
+        .content-section {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+
+        .content-section h2 {
+            font-size: 2.5rem;
+            color: var(--lexopoly-primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .content-section h3 {
+            font-size: 1.8rem;
+            color: var(--lexopoly-primary);
+            margin-bottom: 1rem;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .content-section ul {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Two column layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        /* Product cards */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .product-card {
+            padding: 2rem;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .product-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .product-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .product-card h4 {
+            color: var(--lexopoly-primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .product-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .product-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .product-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Mission statement */
+        .mission {
+            background: linear-gradient(135deg, var(--accent) 0%, #2c5aa0 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .mission h2 {
+            color: white;
+        }
+
+        .mission p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Values grid */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .value-card {
+            padding: 2rem;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .value-card h4 {
+            color: var(--lexopoly-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .value-card p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        /* Call to action */
+        .cta-section {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #2c5aa0;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid var(--accent);
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Mobile Navigation - Unified Template */
+        @media (max-width: 968px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-main {
+                position: fixed;
+                top: 73px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 1rem 0;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+
+            .nav-main.show {
+                max-height: 80vh;
+                overflow-y: auto;
+                opacity: 1;
+            }
+
+            .nav-dropdown {
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-dropdown > a {
+                padding: 1rem 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                min-height: 44px;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                border-radius: 0;
+                background: var(--bg-secondary);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                padding: 0;
+            }
+
+            .nav-dropdown.mobile-open .dropdown-menu {
+                max-height: 500px;
+                padding: 0.5rem 0;
+            }
+
+            .dropdown-menu a {
+                padding: 0.75rem 2rem 0.75rem 3rem;
+                min-height: 44px;
+            }
+
+            .nav-main > a {
+                padding: 1rem 2rem;
+                border-bottom: 1px solid var(--border);
+                min-height: 44px;
+            }
+
+            .nav-cta {
+                flex-direction: column;
+                padding: 1rem 2rem;
+                gap: 0.75rem;
+            }
+
+            .btn-secondary-nav,
+            .btn-primary-nav {
+                width: 100%;
+                text-align: center;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .content-section {
+                padding: 2rem 1rem;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo/lexopoly-navbar.png" alt="Lexopoly" class="logo-img">
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
+
+            <div class="nav-main" id="nav-main">
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>Products <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">Platform</div>
+                        <a href="/redrope/">RedRope — Practice Management</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">AI Assistants</div>
+                        <a href="/lex/">Lex O.P. Lee — Mailroom Supervisor</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">Standalone</div>
+                        <a href="/firmmind/">FirmMind — Private AI</a>
+                        <a href="/casscalculator/">CASS Calculator</a>
+                        <a href="/quotecreator/">QuoteCreator</a>
+                        <a href="/mailman/">MailMan — Document Mailing</a>
+                        <a href="/compliancelogger/">ComplianceLogger</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">Clio Add-ons</div>
+                        <a href="/revenuerescue/">RevenueRescue</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/#products" style="font-weight: 600;">View All Products →</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>About <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="/about/">About Lexopoly</a>
+                        <a href="/contact/">Contact Us</a>
+                        <a href="/support/">Support</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/privacy/">Privacy Policy</a>
+                        <a href="/terms/">Terms of Service</a>
+                    </div>
+                </div>
+
+                <a href="/pricing/">Pricing</a>
+
+                <div class="nav-cta">
+                    <a href="/contact/" class="btn-secondary-nav">Join Waitlist</a>
+                    <a href="/redrope/" class="btn-primary-nav">Get Started</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <img src="/assets/logo/lexopoly-logo.png" alt="Lexopoly" class="hero-mark">
+            <h1>About Lexopoly</h1>
+            <p class="subtitle">
+                We build legal technology for solo and small law firms — practice management, private AI, billing tools, and more. One platform.
+            </p>
+        </section>
+
+        <section class="content-section mission">
+            <h2>Our Mission</h2>
+            <p>
+                660,000+ solo attorneys have no affordable practice management. We're building one — along with private AI, billing recovery, and the tools law firms actually need. Affordable, self-hosted or cloud, and privacy-first.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2>Our Products</h2>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <span class="product-icon"><svg class="svg-icon" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></span>
+                    <h4>RedRope</h4>
+                    <p>
+                        Complete practice management for solo and small law firms. Matters, contacts, billing, trust accounting, documents, calendar, and API access. Self-hosted from $20 or cloud from $29/month.
+                    </p>
+                    <a href="/redrope/" class="product-link">Learn more about RedRope →</a>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-icon"><svg class="svg-icon" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></span>
+                    <h4>FirmMind</h4>
+                    <p>
+                        Private AI for regulated professionals. Patent-pending privacy architecture keeps client data on your network. Works with Claude, GPT, and more — all privacy-shielded.
+                    </p>
+                    <a href="/firmmind/" class="product-link">Learn more about FirmMind →</a>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-icon"><svg class="svg-icon" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#2c5aa0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span>
+                    <h4>RevenueRescue</h4>
+                    <p>
+                        Automatic time capture for law firms using Clio. Monitors your calendar, detects unbilled client activities, and generates billing suggestions with one-click approval. $149/month.
+                    </p>
+                    <a href="/revenuerescue/" class="product-link">Learn more about RevenueRescue →</a>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-icon"><svg class="svg-icon" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#2c5aa0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span>
+                    <h4>CASS Calculator</h4>
+                    <p>
+                        Michigan family law calculator for child support and spousal support. Built for attorneys and self-represented litigants. $74.99/year.
+                    </p>
+                    <a href="/casscalculator/" class="product-link">Learn more about CASS Calculator →</a>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-icon"><svg class="svg-icon" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#2c5aa0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></span>
+                    <h4>QuoteCreator</h4>
+                    <p>
+                        Professional estimate and quote builder. One-time $12.99 payment, no subscription. Create unlimited quotes with optional Clio integration.
+                    </p>
+                    <a href="/quotecreator/" class="product-link">Learn more about QuoteCreator →</a>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-icon"><svg class="svg-icon" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>
+                    <h4>MailMan</h4>
+                    <p>
+                        Legal document mailing, one click. Send court filings, client letters, and legal notices directly from RedRope. Pay-per-mail, no subscription. Coming soon.
+                    </p>
+                    <a href="/mailman/" class="product-link">Learn more about MailMan →</a>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-icon"><svg class="svg-icon" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#2c5aa0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></span>
+                    <h4>ComplianceLogger</h4>
+                    <p>
+                        EPA waste compliance tracking for construction companies. Proactive tracking and audit reconstruction with photo documentation. $149/year.
+                    </p>
+                    <a href="/compliancelogger/" class="product-link">Learn more about ComplianceLogger →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="two-column">
+                <div>
+                    <h3>Why We Exist</h3>
+                    <p>
+                        Most practice management software is too expensive for solo attorneys and small firms. Per-seat pricing, mandatory cloud hosting, and locked-in ecosystems add up fast. Meanwhile, AI tools like ChatGPT have no privacy protections for client data.
+                    </p>
+                    <p>
+                        Lexopoly builds the alternative: affordable practice management with a self-hosted option, private AI that keeps data on your network, and Clio add-on tools that work with your existing setup.
+                    </p>
+                </div>
+                <div>
+                    <h3>How We're Different</h3>
+                    <ul>
+                        <li><strong>Self-Hosted Option:</strong> RedRope runs on your own server. Client data never touches our infrastructure. Attorney-client privilege protected by architecture.</li>
+                        <li><strong>Private AI:</strong> FirmMind's patent-pending technology keeps your data on your network while providing AI-powered drafting and analysis via Claude, GPT, and more.</li>
+                        <li><strong>Affordable:</strong> RedRope from $20. No per-seat fees eating into a solo practice. Transparent pricing across every product.</li>
+                        <li><strong>Works With Clio Too:</strong> RevenueRescue, CASS Calculator, and QuoteCreator integrate with Clio. Use them alongside Clio, or switch to RedRope.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Our Values</h2>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <span class="value-icon"><svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#2c5aa0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span>
+                    <h4>Privacy First</h4>
+                    <p>Self-hosted deployment, patent-pending private AI, and data that stays on your network. We build privacy into the architecture, not just the policy.</p>
+                </div>
+
+                <div class="value-card">
+                    <span class="value-icon"><svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#2c5aa0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span>
+                    <h4>Affordable</h4>
+                    <p>Practice management from $20. No per-seat gouging. Solo attorneys and small firms deserve the same tools as big firms, at prices that make sense.</p>
+                </div>
+
+                <div class="value-card">
+                    <span class="value-icon"><svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#2c5aa0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline><line x1="12" y1="16" x2="12" y2="8"></line></svg></span>
+                    <h4>Ship Real Products</h4>
+                    <p>We build software that solves actual problems for actual firms, then move to the next one.</p>
+                </div>
+
+                <div class="value-card">
+                    <span class="value-icon"><svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#2c5aa0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                    <h4>Transparent</h4>
+                    <p>No hidden fees, no dark patterns, no surprises. Simple pricing, clear documentation, honest about what's live and what's coming.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="cta-section">
+                <h2>Ready to Get Started?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-secondary);">
+                    See what affordable, private practice management looks like.
+                </p>
+                <div class="cta-buttons">
+                    <a href="/redrope/" class="btn-primary">See RedRope</a>
+                    <a href="/contact/" class="btn-secondary">Join FirmMind Waitlist</a>
+                    <a href="/pricing/" class="btn-secondary">View All Pricing</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="/about/">About</a>
+            <a href="/support/">Support</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/terms/">Terms</a>
+            <a href="/contact/">Contact</a>
+            <a href="mailto:hello@lexopoly.com">hello@lexopoly.com</a>
+            <a href="https://x.com/lexopoly" target="_blank" rel="noopener">Follow on X</a>
+        </div>
+        <p>&copy; 2026 Lexopoly Inc. (Delaware, USA). All rights reserved.</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+            AI-powered practice management for solo &amp; small law firms.
+        </p>
+    </footer>
+
+    <!-- Analytics Integration -->
+    <script src="/js/analytics.js"></script>
+
+    <script>
+        function toggleMobileMenu() {
+            const navMain = document.getElementById('nav-main');
+            navMain.classList.toggle('show');
+        }
+
+        function toggleMobileDropdown(element) {
+            if (window.innerWidth <= 968) {
+                element.classList.toggle('mobile-open');
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('.nav-container');
+            const navMain = document.getElementById('nav-main');
+            if (!nav.contains(event.target) && navMain.classList.contains('show')) {
+                navMain.classList.remove('show');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-main a[href]').forEach(link => {
+            link.addEventListener('click', function() {
+                const navMain = document.getElementById('nav-main');
+                navMain.classList.remove('show');
+            });
+        });
+
+        // Clear mobile dropdown states when resizing to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 968) {
+                document.querySelectorAll('.nav-dropdown.mobile-open').forEach(dropdown => {
+                    dropdown.classList.remove('mobile-open');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

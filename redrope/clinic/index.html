@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N29Z7B6T5T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N29Z7B6T5T');
+
+        function trackEvent(category, action, label) {
+            gtag('event', action, {
+                'event_category': category,
+                'event_label': label
+            });
+        }
+    </script>
+
+    <!-- Basic SEO -->
+    <title>RedRope Pilot Program | Free License for Legal Aid &amp; Clinics | Lexopoly</title>
+    <meta name="description" content="Join the RedRope Pilot Program. Free lifetime self-hosted practice management for legal aid organizations and law school litigation clinics. Help us build what practitioners actually need.">
+    <meta name="keywords" content="legal aid software, law school clinic, practice management, free license, self-hosted, legal technology, pro bono, clinical legal education, pilot program, RedRope, Lexopoly">
+    <meta name="author" content="Lexopoly Inc.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lexopoly.com/redrope/clinic/">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="RedRope Pilot Program | Free for Legal Aid & Clinics">
+    <meta property="og:description" content="Join the RedRope Pilot Program. Free lifetime self-hosted practice management for legal aid and law school clinics.">
+    <meta property="og:url" content="https://lexopoly.com/redrope/clinic/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lexopoly.com/assets/og-redrope.png">
+    <meta property="og:image:alt" content="RedRope Pilot Program — Free for Legal Aid & Clinics">
+    <meta property="og:site_name" content="Lexopoly">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RedRope Pilot Program | Free for Legal Aid & Clinics">
+    <meta name="twitter:description" content="Join the RedRope Pilot Program. Free lifetime self-hosted practice management for legal aid and law school clinics.">
+    <meta name="twitter:image" content="https://lexopoly.com/assets/og-redrope.png">
+    <meta name="twitter:site" content="@lexopoly">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#1a6b3c">
+    <meta name="msapplication-TileColor" content="#1a6b3c">
+    <meta name="application-name" content="RedRope by Lexopoly">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Offer",
+      "name": "RedRope Pilot Program",
+      "description": "Free lifetime self-hosted license for RedRope practice management software. Pilot program for qualifying legal aid organizations and law school litigation clinics.",
+      "url": "https://lexopoly.com/redrope/clinic/",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "Lexopoly Inc.",
+        "url": "https://lexopoly.com"
+      },
+      "itemOffered": {
+        "@type": "SoftwareApplication",
+        "name": "RedRope",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Windows, macOS, Linux, Web"
+      }
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --clinic-primary: #1a6b3c;
+            --clinic-dark: #145a31;
+            --clinic-light: #e8f5ee;
+            --lexopoly-primary: #1a365d;
+            --accent: #2c5aa0;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --bg-light: #f7fafc;
+            --bg-secondary: #f7fafc;
+            --border: #e2e8f0;
+            --success: #2f7d32;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: white;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Feather SVG Icons */
+        .svg-icon {
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* Fade-in animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in:nth-child(1) { transition-delay: 0.1s; }
+        .fade-in:nth-child(2) { transition-delay: 0.2s; }
+        .fade-in:nth-child(3) { transition-delay: 0.3s; }
+        .fade-in:nth-child(4) { transition-delay: 0.4s; }
+        .fade-in:nth-child(5) { transition-delay: 0.5s; }
+        .fade-in:nth-child(6) { transition-delay: 0.6s; }
+
+        .fade-in, .feature-card, .offer-card, .trust-item {
+            will-change: transform;
+        }
+
+        /* ===== HEADER / NAVIGATION ===== */
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--lexopoly-primary);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+            transition: opacity 0.3s;
+        }
+
+        .logo-img {
+            height: 100px;
+            width: auto;
+        }
+
+        .logo:hover {
+            opacity: 0.8;
+        }
+
+        .nav-main {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown > a {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.2s;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .nav-dropdown > a:hover {
+            background: var(--bg-secondary);
+            color: var(--accent);
+        }
+
+        .dropdown-arrow {
+            font-size: 0.7em;
+            transition: transform 0.2s;
+        }
+
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: translateY(2px);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            padding: 0.5rem;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            z-index: 1000;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--bg-secondary);
+            color: var(--accent);
+            padding-left: 1.25rem;
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 0.5rem 0;
+        }
+
+        .dropdown-header {
+            padding: 0.5rem 1rem 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-main > a:not(.btn-secondary-nav):not(.btn-primary-nav) {
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .nav-main > a:not(.btn-secondary-nav):not(.btn-primary-nav):hover {
+            background: var(--bg-secondary);
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-left: 0.5rem;
+        }
+
+        .btn-secondary-nav {
+            padding: 0.5rem 1.25rem;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .btn-secondary-nav:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary-nav {
+            padding: 0.5rem 1.25rem;
+            background: var(--clinic-primary);
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+            border: 2px solid var(--clinic-primary);
+        }
+
+        .btn-primary-nav:hover {
+            background: var(--clinic-dark);
+            border-color: var(--clinic-dark);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--clinic-primary) 0%, var(--clinic-dark) 60%, #0d4020 100%);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.15;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 750px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.03em;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-hero {
+            padding: 1.2rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-hero-primary {
+            background: white;
+            color: var(--clinic-primary);
+        }
+
+        .btn-hero-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+
+        .btn-hero-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-hero-secondary:hover {
+            background: white;
+            color: var(--clinic-primary);
+            transform: translateY(-4px);
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--lexopoly-primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== OFFER SECTION ===== */
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .offer-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 2px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(26, 107, 60, 0.15);
+            border-color: var(--clinic-primary);
+        }
+
+        .offer-card.featured {
+            border-color: var(--clinic-primary);
+            box-shadow: 0 8px 30px rgba(26, 107, 60, 0.2);
+        }
+
+        .offer-badge {
+            display: inline-block;
+            background: var(--clinic-light);
+            color: var(--clinic-primary);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: 0.03em;
+        }
+
+        .offer-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--lexopoly-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .offer-price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--clinic-primary);
+            margin: 1rem 0 0.25rem;
+        }
+
+        .offer-period {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .offer-details {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .offer-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .offer-features li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 1.8rem;
+        }
+
+        .offer-features li svg {
+            position: absolute;
+            left: 0;
+            top: 0.55rem;
+            width: 16px;
+            height: 16px;
+            stroke: var(--success);
+            stroke-width: 3;
+            fill: none;
+        }
+
+        .offer-cta {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .offer-cta-primary {
+            background: var(--clinic-primary);
+            color: white;
+        }
+
+        .offer-cta-primary:hover {
+            background: var(--clinic-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(26, 107, 60, 0.3);
+        }
+
+        /* ===== FEATURES SECTION ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-top: 4px solid var(--clinic-primary);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(26, 107, 60, 0.15);
+        }
+
+        .feature-icon {
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .feature-icon .svg-icon {
+            width: 48px;
+            height: 56px;
+            color: var(--clinic-primary);
+        }
+
+        .feature-card:hover .feature-icon .svg-icon {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--lexopoly-primary);
+        }
+
+        .feature-desc {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .feature-list {
+            list-style: none;
+            text-align: left;
+            margin-top: 1rem;
+        }
+
+        .feature-list li {
+            padding: 0.4rem 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .feature-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.85rem;
+            width: 8px;
+            height: 8px;
+            background: var(--clinic-primary);
+            border-radius: 50%;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            counter-reset: step;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            counter-increment: step;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            background: var(--clinic-light);
+            color: var(--clinic-primary);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .step-card h3 {
+            margin-bottom: 0.75rem;
+            color: var(--lexopoly-primary);
+            font-size: 1.15rem;
+        }
+
+        .step-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* ===== TRUST / WHY SECTION ===== */
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .trust-item {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: all 0.3s;
+        }
+
+        .trust-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .trust-icon {
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .trust-icon .svg-icon {
+            width: 48px;
+            height: 56px;
+            color: var(--clinic-primary);
+        }
+
+        .trust-item h3 {
+            margin-bottom: 0.75rem;
+            color: var(--lexopoly-primary);
+            font-size: 1.15rem;
+        }
+
+        .trust-item p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* ===== FINAL CTA ===== */
+        .final-cta {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--clinic-primary) 0%, var(--clinic-dark) 100%);
+            color: white;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .btn-hero {
+            background: white;
+            color: var(--clinic-primary);
+        }
+
+        .final-cta .btn-hero:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem 2rem;
+            opacity: 0.95;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .footer-trust {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .footer-trust-badge svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+            flex-shrink: 0;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .company-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .company-info span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .company-info svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 968px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-main {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                margin: 0.5rem;
+                padding: 1rem;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            .nav-main.show {
+                display: flex;
+            }
+
+            .nav-dropdown {
+                width: 100%;
+            }
+
+            .nav-dropdown > a {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                padding: 0 0 0 1rem;
+                margin-top: 0.5rem;
+                display: none;
+            }
+
+            .nav-dropdown.mobile-open .dropdown-menu {
+                display: block;
+            }
+
+            .nav-dropdown.mobile-open .dropdown-arrow {
+                transform: rotate(180deg);
+            }
+
+            .nav-cta {
+                margin-left: 0;
+                margin-top: 1rem;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-secondary-nav,
+            .btn-primary-nav {
+                width: 100%;
+                text-align: center;
+                padding: 0.75rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-hero {
+                width: 100%;
+                max-width: 320px;
+                text-align: center;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .offer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+
+            .offer-price {
+                font-size: 2.5rem;
+            }
+
+            .company-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
+
+        /* Accessibility: keyboard focus states */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid var(--accent, #2563eb);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- UNIFIED NAVIGATION TEMPLATE -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo/lexopoly-navbar.png" alt="Lexopoly" class="logo-img">
+            </a>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+
+            <div class="nav-main" id="nav-main">
+                <!-- Products Dropdown -->
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>
+                        Products
+                        <span class="dropdown-arrow">&#9660;</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">Platform</div>
+                        <a href="/redrope/">RedRope &mdash; Practice Management</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">AI Assistants</div>
+                        <a href="/lex/">Lex O.P. Lee &mdash; Mailroom Supervisor</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">Standalone</div>
+                        <a href="/firmmind/">FirmMind &mdash; Private AI</a>
+                        <a href="/casscalculator/">CASS Calculator</a>
+                        <a href="/quotecreator/">QuoteCreator</a>
+                        <a href="/mailman/">MailMan &mdash; Document Mailing</a>
+                        <a href="/compliancelogger/">ComplianceLogger</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">Clio Add-ons</div>
+                        <a href="/revenuerescue/">RevenueRescue</a>
+                    </div>
+                </div>
+
+                <!-- About Dropdown -->
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>
+                        About
+                        <span class="dropdown-arrow">&#9660;</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/about/">About Lexopoly</a>
+                        <a href="/contact/">Contact Us</a>
+                        <a href="/support/">Support</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/privacy/">Privacy Policy</a>
+                        <a href="/terms/">Terms of Service</a>
+                    </div>
+                </div>
+
+                <!-- Pricing Link -->
+                <a href="/pricing/">Pricing</a>
+
+                <!-- CTAs -->
+                <div class="nav-cta">
+                    <a href="/redrope/" class="btn-secondary-nav">RedRope</a>
+                    <a href="mailto:hello@lexopoly.com?subject=RedRope%20Pilot%20Program%20Application&amp;body=Organization%20Name%3A%20%0A%0AType%20(clinic%20%2F%20legal%20aid%20%2F%20pro%20bono%20program)%3A%20%0A%0AContact%20Person%3A%20%0ARole%2FTitle%3A%20%0AEmail%3A%20%0APhone%20(optional)%3A%20%0A%0ANumber%20of%20Licenses%20Requested%3A%20%0ANumber%20of%20Attorneys%3A%20%0ANumber%20of%20Law%20Students%3A%20%0AAdditional%20Support%20Staff%3A%20%0A%0ABrief%20Description%20of%20Your%20Organization%3A%20%0A%0AAnything%20else%20we%20should%20know%3A%20" class="btn-primary-nav" onclick="trackEvent('clinic', 'nav_cta_click', 'request_license')">Request License</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Free for Legal Aid &amp; Law School Clinics</div>
+            <h1>Practice Management Software. Free for Those Who Need It Most.</h1>
+            <p class="hero-subtitle">Free lifetime self-hosted license for legal aid organizations and law school clinics. Full-featured, on your machine, no strings. Part of our Pilot Program &mdash; your feedback shapes what we build next.</p>
+            <p style="font-size: 0.9rem; opacity: 0.75; margin-top: 0.75rem; font-style: italic;">Limited availability &mdash; pilot program slots are first-come, first-served.</p>
+            <div class="hero-ctas">
+                <a href="#offer" class="btn-hero btn-hero-secondary" onclick="trackEvent('clinic', 'hero_cta_click', 'see_offer')">See the Offer</a>
+                <a href="mailto:hello@lexopoly.com?subject=RedRope%20Pilot%20Program%20Application&amp;body=Organization%20Name%3A%20%0A%0AType%20(clinic%20%2F%20legal%20aid%20%2F%20pro%20bono%20program)%3A%20%0A%0AContact%20Person%3A%20%0ARole%2FTitle%3A%20%0AEmail%3A%20%0APhone%20(optional)%3A%20%0A%0ANumber%20of%20Licenses%20Requested%3A%20%0ANumber%20of%20Attorneys%3A%20%0ANumber%20of%20Law%20Students%3A%20%0AAdditional%20Support%20Staff%3A%20%0A%0ABrief%20Description%20of%20Your%20Organization%3A%20%0A%0AAnything%20else%20we%20should%20know%3A%20" class="btn-hero btn-hero-primary" onclick="trackEvent('clinic', 'hero_cta_click', 'request_license')">Request a Free License</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get Section -->
+    <section class="section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">What You Get</h2>
+            <p class="section-subtitle">The same software paying firms use. Full feature set, no limitations, no expiration.</p>
+
+            <div class="features-grid">
+                <!-- Matters & Contacts -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <svg aria-hidden="true" class="svg-icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                    </div>
+                    <h3 class="feature-title">Matter Management</h3>
+                    <p class="feature-desc">Track every case from intake to closure with conflict checking built in.</p>
+                    <ul class="feature-list">
+                        <li>Full matter lifecycle tracking</li>
+                        <li>Conflict checking across all matters</li>
+                        <li>Contact and related party management</li>
+                        <li>Custom fields and categories</li>
+                    </ul>
+                </div>
+
+                <!-- Billing & Time -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <svg aria-hidden="true" class="svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <h3 class="feature-title">Time Tracking &amp; Billing</h3>
+                    <p class="feature-desc">Log time, generate invoices, and manage trust accounting for grant reporting.</p>
+                    <ul class="feature-list">
+                        <li>Time tracking per matter</li>
+                        <li>Invoicing and billing reports</li>
+                        <li>IOLTA/trust ledger with audit trail</li>
+                        <li>Grant reporting-friendly data export</li>
+                    </ul>
+                </div>
+
+                <!-- Documents & Calendar -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <svg aria-hidden="true" class="svg-icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    </div>
+                    <h3 class="feature-title">Documents &amp; Calendar</h3>
+                    <p class="feature-desc">Keep case files organized and never miss a court deadline or filing date.</p>
+                    <ul class="feature-list">
+                        <li>Document management per matter</li>
+                        <li>Court deadline tracking</li>
+                        <li>Calendar with month, week, day views</li>
+                        <li>Matter-linked events and reminders</li>
+                    </ul>
+                </div>
+
+                <!-- Security & Access -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <svg aria-hidden="true" class="svg-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h3 class="feature-title">Security &amp; Data Export</h3>
+                    <p class="feature-desc">Enterprise-grade security with full data portability for grant reporting and audits.</p>
+                    <ul class="feature-list">
+                        <li>MFA/TOTP authentication</li>
+                        <li>Role-based access control</li>
+                        <li>Full audit logging</li>
+                        <li>Data export for reporting</li>
+                    </ul>
+                </div>
+
+                <!-- Dark Mode -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <svg aria-hidden="true" class="svg-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </div>
+                    <h3 class="feature-title">Light &amp; Dark Mode</h3>
+                    <p class="feature-desc">Work the way you prefer. Toggle between light and dark themes with one click.</p>
+                    <ul class="feature-list">
+                        <li>Full dark mode throughout the app</li>
+                        <li>One-click theme toggle</li>
+                        <li>Preference saved between sessions</li>
+                        <li>Easier on the eyes for long hours</li>
+                    </ul>
+                </div>
+
+                <!-- MailMan Integration -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <svg aria-hidden="true" class="svg-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </div>
+                    <h3 class="feature-title">MailMan Integration</h3>
+                    <p class="feature-desc">Send physical mail directly from RedRope. Letters, filings, and client correspondence &mdash; no trip to the post office.</p>
+                    <ul class="feature-list">
+                        <li>Send physical mail from the app</li>
+                        <li>Track mailing status per matter</li>
+                        <li>Client correspondence on file</li>
+                        <li>Integrated with Lexopoly MailMan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Offer Section -->
+    <section class="section" id="offer">
+        <div class="container">
+            <h2 class="section-title">What You Get &amp; What We Ask</h2>
+            <p class="section-subtitle">Free software in exchange for honest feedback. That's the whole deal.</p>
+
+            <div class="offer-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <!-- Free License -->
+                <div class="offer-card featured fade-in">
+                    <span class="offer-badge">What You Get</span>
+                    <h3 class="offer-title">Free Lifetime License</h3>
+                    <div class="offer-price">$0</div>
+                    <div class="offer-period">forever</div>
+                    <p class="offer-details">Full self-hosted RedRope license. Runs on your own machine &mdash; no cloud, no subscription.</p>
+                    <ul class="offer-features">
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Full feature set (same as paid version)</li>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> No expiration date</li>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Self-hosted on-premises</li>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Secure remote access built in</li>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Direct support from the dev team</li>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> No data collection or tracking</li>
+                    </ul>
+                    <a href="mailto:hello@lexopoly.com?subject=RedRope%20Pilot%20Program%20Application&amp;body=Organization%20Name%3A%20%0A%0AType%20(clinic%20%2F%20legal%20aid%20%2F%20pro%20bono%20program)%3A%20%0A%0AContact%20Person%3A%20%0ARole%2FTitle%3A%20%0AEmail%3A%20%0APhone%20(optional)%3A%20%0A%0ANumber%20of%20Licenses%20Requested%3A%20%0ANumber%20of%20Attorneys%3A%20%0ANumber%20of%20Law%20Students%3A%20%0AAdditional%20Support%20Staff%3A%20%0A%0ABrief%20Description%20of%20Your%20Organization%3A%20%0A%0AAnything%20else%20we%20should%20know%3A%20" class="offer-cta offer-cta-primary" onclick="trackEvent('clinic', 'offer_cta_click', 'request_license')">Request a Free License</a>
+                </div>
+
+                <!-- What We Ask -->
+                <div class="offer-card fade-in">
+                    <span class="offer-badge">What We Ask</span>
+                    <h3 class="offer-title">Two Surveys &amp; a Quote</h3>
+                    <div style="margin: 1.5rem 0;">
+                        <svg aria-hidden="true" class="svg-icon" viewBox="0 0 24 24" style="width: 56px; height: 56px; color: var(--clinic-primary);"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    </div>
+                    <p class="offer-details">Low lift. We want to build what practitioners actually need &mdash; your experience is the roadmap.</p>
+                    <ul class="offer-features">
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> 5-minute survey after 7 days of use</li>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> 5-minute survey at 60 days</li>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> A short quote we can share on our site</li>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Additional feedback always welcome</li>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Feature suggestions encouraged</li>
+                    </ul>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem; line-height: 1.5;">That's it. Your feedback helps us build the features practitioners actually need.</p>
+                </div>
+
+                <!-- Who Qualifies -->
+                <div class="offer-card fade-in">
+                    <span class="offer-badge">Who Qualifies</span>
+                    <h3 class="offer-title">Eligible Organizations</h3>
+                    <div style="margin: 1.5rem 0;">
+                        <svg aria-hidden="true" class="svg-icon" viewBox="0 0 24 24" style="width: 56px; height: 56px; color: var(--clinic-primary);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <ul class="offer-features">
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Law school litigation clinics</li>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Law school clinical programs</li>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Legal aid societies</li>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> LSC grantee organizations</li>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> State bar pro bono programs</li>
+                        <li><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Nonprofit legal services providers</li>
+                    </ul>
+                    <a href="mailto:hello@lexopoly.com?subject=Pilot%20Program%20Eligibility%20Question" class="offer-cta offer-cta-primary" onclick="trackEvent('clinic', 'offer_cta_click', 'eligibility_question')" style="background: white; color: var(--clinic-primary); border: 2px solid var(--clinic-primary);">Not Sure? Ask Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Self-Hosted Section -->
+    <section class="section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Why Self-Hosted Matters for Legal Aid</h2>
+            <p class="section-subtitle">Your clients trust you with sensitive information. The software you use should respect that.</p>
+
+            <div class="trust-grid">
+                <div class="trust-item fade-in">
+                    <div class="trust-icon">
+                        <svg aria-hidden="true" class="svg-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
+                    <h3>Client Data Stays Local</h3>
+                    <p>RedRope runs on your machine. No data is sent to external servers. No cloud dependency. Attorney-client privilege protected at the infrastructure level.</p>
+                </div>
+
+                <div class="trust-item fade-in">
+                    <div class="trust-icon">
+                        <svg aria-hidden="true" class="svg-icon" viewBox="0 0 24 24"><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <h3>No Ongoing Cost</h3>
+                    <p>Self-hosted means no monthly subscription. For organizations running on grants and donations, that matters. One install, use it forever.</p>
+                </div>
+
+                <div class="trust-item fade-in">
+                    <div class="trust-icon">
+                        <svg aria-hidden="true" class="svg-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h3>No Vendor Lock-In</h3>
+                    <p>You own the installation. Export your data anytime. If you outgrow us, take your data and go. No hostage situations.</p>
+                </div>
+
+                <div class="trust-item fade-in">
+                    <div class="trust-icon">
+                        <svg aria-hidden="true" class="svg-icon" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </div>
+                    <h3>Remote Access Built In</h3>
+                    <p>Self-hosted doesn't mean chained to one machine. Built-in secure tunnel lets you access RedRope from courthouse, home, or mobile device.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">How to Apply</h2>
+            <p class="section-subtitle">One email. We respond within 24 hours.</p>
+
+            <div class="steps-grid">
+                <div class="step-card fade-in">
+                    <div class="step-number">1</div>
+                    <h3>Send Us One Paragraph</h3>
+                    <p>Email <strong>hello@lexopoly.com</strong> with: your organization name, what you do (clinic, legal aid, pro bono program), a contact person and their role. That's the whole application.</p>
+                </div>
+
+                <div class="step-card fade-in">
+                    <div class="step-number">2</div>
+                    <h3>Get Your License in 24 Hours</h3>
+                    <p>We'll reply with a license key, install instructions, and a direct line to our technical team. No committee, no approval chain.</p>
+                </div>
+
+                <div class="step-card fade-in">
+                    <div class="step-number">3</div>
+                    <h3>Install and Go</h3>
+                    <p>Run the install on any machine &mdash; office server, laptop, or desktop. One command to start. We'll help you get set up if you need it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Legal Aid Attorneys Deserve Better Tools</h2>
+            <p>You're doing the hardest work in the profession. Your software shouldn't be another obstacle. Email us and we'll get you set up.</p>
+            <a href="mailto:hello@lexopoly.com?subject=RedRope%20Pilot%20Program%20Application&amp;body=Organization%20Name%3A%20%0A%0AType%20(clinic%20%2F%20legal%20aid%20%2F%20pro%20bono%20program)%3A%20%0A%0AContact%20Person%3A%20%0ARole%2FTitle%3A%20%0AEmail%3A%20%0APhone%20(optional)%3A%20%0A%0ANumber%20of%20Licenses%20Requested%3A%20%0ANumber%20of%20Attorneys%3A%20%0ANumber%20of%20Law%20Students%3A%20%0AAdditional%20Support%20Staff%3A%20%0A%0ABrief%20Description%20of%20Your%20Organization%3A%20%0A%0AAnything%20else%20we%20should%20know%3A%20" class="btn-hero" onclick="trackEvent('clinic', 'final_cta_click', 'request_license')">Request a Free License</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Company</h4>
+                <div class="footer-links">
+                    <a href="/about/">About Lexopoly</a>
+                    <a href="/contact/">Contact Us</a>
+                    <a href="/support/">Support</a>
+                    <a href="mailto:hello@lexopoly.com">hello@lexopoly.com</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Products</h4>
+                <div class="footer-links">
+                    <a href="/redrope/">RedRope</a>
+                    <a href="/firmmind/">FirmMind</a>
+                    <a href="/lex/">Lex O.P. Lee</a>
+                    <a href="/pricing/">All Products & Pricing</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Trust &amp; Security</h4>
+                <div class="footer-trust">
+                    <div class="footer-trust-badge"><svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Self-Hosted Option</div>
+                    <div class="footer-trust-badge"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> No Data Collection</div>
+                    <div class="footer-trust-badge"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Client Data Stays Local</div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="footer-links">
+                    <a href="https://x.com/lexopoly" target="_blank" rel="noopener">Follow on X</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lexopoly Inc. All rights reserved.</p>
+            <div class="company-info">
+                <span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Lexopoly Inc.</span>
+                <span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Delaware, USA</span>
+                <span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> Practice Management for Everyone</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navMain = document.getElementById('nav-main');
+            navMain.classList.toggle('show');
+            document.querySelector('.mobile-menu-btn').setAttribute('aria-expanded', navMain.classList.contains('show'));
+        }
+
+        // Mobile dropdown toggle
+        function toggleMobileDropdown(element) {
+            if (window.innerWidth <= 968) {
+                element.classList.toggle('mobile-open');
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navContainer = document.querySelector('.nav-container');
+            const navMain = document.getElementById('nav-main');
+
+            if (!navContainer.contains(event.target) && navMain.classList.contains('show')) {
+                navMain.classList.remove('show');
+            }
+        });
+
+        // Close mobile menu dropdowns when resizing to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 968) {
+                document.querySelectorAll('.nav-dropdown.mobile-open').forEach(dropdown => {
+                    dropdown.classList.remove('mobile-open');
+                });
+                document.getElementById('nav-main').classList.remove('show');
+            }
+        });
+
+        // Scroll fade-in animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N29Z7B6T5T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N29Z7B6T5T');
+
+        function trackEvent(category, action, label) {
+            gtag('event', action, {
+                'event_category': category,
+                'event_label': label
+            });
+        }
+    </script>
+
+    <!-- Basic SEO -->
+    <title>Contact | RevenueRescue - Start Your Free Trial</title>
+    <meta name="description" content="Start your 7-day free trial of RevenueRescue. Contact sales for enterprise pricing. Email support for law firm billing automation questions.">
+    <meta name="keywords" content="RevenueRescue contact, law firm billing software support, free trial, enterprise sales">
+    <meta name="author" content="Lexopoly">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lexopoly.com/revenuerescue/contact/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --revenuerescue-primary: #7c3aed;
+            --revenuerescue-dark: #5b21b6;
+            --lexopoly-primary: #1a365d;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --bg-light: #f7fafc;
+            --border: #e2e8f0;
+            --success: #2f7d32;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-light);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--revenuerescue-primary);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-subtitle {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        /* Main Navigation */
+        .nav-main {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown > a {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.2s;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .nav-dropdown > a:hover {
+            background: var(--bg-light);
+            color: var(--revenuerescue-primary);
+        }
+
+        .dropdown-arrow {
+            font-size: 0.7em;
+            transition: transform 0.2s;
+        }
+
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: translateY(2px);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            padding: 0.5rem;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            z-index: 1000;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--bg-light);
+            color: var(--revenuerescue-primary);
+            padding-left: 1.25rem;
+        }
+
+        .dropdown-header {
+            padding: 0.5rem 1rem 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-main > a:not(.btn-secondary-nav):not(.btn-primary-nav) {
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .nav-main > a:not(.btn-secondary-nav):not(.btn-primary-nav):hover {
+            background: var(--bg-light);
+            color: var(--revenuerescue-primary);
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 0.5rem;
+            margin-left: 1rem;
+        }
+
+        .btn-secondary-nav {
+            padding: 0.5rem 1.25rem;
+            border: 2px solid var(--revenuerescue-primary);
+            color: var(--revenuerescue-primary);
+            background: transparent;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary-nav:hover {
+            background: var(--revenuerescue-primary);
+            color: white;
+        }
+
+        .btn-primary-nav {
+            padding: 0.5rem 1.25rem;
+            background: var(--revenuerescue-primary);
+            color: white;
+            border: 2px solid var(--revenuerescue-primary);
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .btn-primary-nav:hover {
+            background: var(--revenuerescue-dark);
+            border-color: var(--revenuerescue-dark);
+            transform: translateY(-1px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--revenuerescue-primary) 0%, var(--revenuerescue-dark) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Section */
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            margin: 3rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .section h2 {
+            color: var(--lexopoly-primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Methods */
+        .contact-methods {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .contact-card {
+            background: var(--bg-light);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            border-color: var(--revenuerescue-primary);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .contact-card h3 {
+            color: var(--lexopoly-primary);
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-card a {
+            color: var(--revenuerescue-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-card p {
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* Pilot Info Box */
+        .pilot-info {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(91, 33, 182, 0.1) 100%);
+            border-left: 4px solid var(--revenuerescue-primary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .pilot-info strong {
+            color: var(--revenuerescue-primary);
+            font-size: 1.1rem;
+        }
+
+        .pilot-info ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+            line-height: 1.8;
+        }
+
+        /* Support Hours */
+        .hours {
+            background: #e8f5e9;
+            border-left: 4px solid var(--success);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .hours strong {
+            color: var(--success);
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-disclaimer {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 1rem;
+            color: var(--revenuerescue-primary);
+        }
+
+        .footer-column a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-main {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+                border-top: 1px solid var(--border);
+            }
+
+            .nav-main.mobile-open {
+                display: flex;
+            }
+
+            .nav-dropdown {
+                width: 100%;
+            }
+
+            .nav-dropdown > a {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                display: none;
+                padding-left: 1rem;
+                background: var(--bg-light);
+            }
+
+            .nav-dropdown.mobile-open .dropdown-menu {
+                display: block;
+            }
+
+            .nav-cta {
+                flex-direction: column;
+                margin-left: 0;
+                margin-top: 1rem;
+                width: 100%;
+            }
+
+            .nav-cta a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">
+                RevenueRescue
+                <span class="logo-subtitle">by Lexopoly</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <div class="nav-main" id="nav-main">
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>Products <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">Software Products</div>
+                        <a href="/revenuerescue/">RevenueRescue</a>
+                        <a href="/casscalculator/">CASS Calculator</a>
+                        <a href="/quotecreator/">QuoteCreator</a>
+                        <a href="/localtranscribe/">LocalTranscribe</a>
+                        <a href="/compliancelogger/">ComplianceLogger</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>Solutions <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">By Practice Area</div>
+                        <a href="/lawyers/">For Lawyers</a>
+                        <a href="/revenuerescue/">Revenue Recovery</a>
+                        <a href="/localtranscribe/">Private Transcription</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>About <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="/about/">About Lexopoly</a>
+                        <a href="/contact/">Contact Us</a>
+                        <a href="/blog/">Blog</a>
+                    </div>
+                </div>
+                <a href="/revenuerescue/pricing/">Pricing</a>
+                <div class="nav-cta">
+                    <a href="/revenuerescue/contact/" class="btn-secondary-nav">Contact Sales</a>
+                    <a href="/revenuerescue/contact/" class="btn-primary-nav" onclick="trackEvent('revenuerescue', 'nav_cta_click', 'contact')">Start Free Trial</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Get Started with RevenueRescue</h1>
+        <p>Start your 7-day free trial or contact our sales team for enterprise pricing</p>
+    </section>
+
+    <div class="container">
+        <!-- Start Trial Section -->
+        <div class="section">
+            <h2>Start Your 7-Day Free Trial</h2>
+            <p>Ready to stop losing revenue? Get started in minutes with our free trial. No commitment, cancel anytime.</p>
+
+            <div class="pilot-info">
+                <p><strong>What's Included in Your Trial:</strong></p>
+                <ul>
+                    <li>Full access to RevenueRescue for 7 days</li>
+                    <li>Analysis of your last 30 days of calendar data</li>
+                    <li>Unlimited billing suggestions</li>
+                    <li>Direct Clio integration</li>
+                    <li>Revenue dashboard and analytics</li>
+                </ul>
+            </div>
+
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <span class="contact-icon">🚀</span>
+                    <h3>Start Trial Now</h3>
+                    <a href="mailto:support@lexopoly.com?subject=Start%20RevenueRescue%20Trial&body=Hi%2C%0A%0AI'd%20like%20to%20start%20my%207-day%20free%20trial%20of%20RevenueRescue.%0A%0AFirm%20name%3A%20%0ANumber%20of%20attorneys%3A%20%0APractice%20management%20system%3A%20Clio%0A%0AThanks!" onclick="trackEvent('revenuerescue', 'contact_email_click', 'trial')">support@lexopoly.com</a>
+                    <p>Subject line: "Start RevenueRescue Trial"</p>
+                    <p style="margin-top: 1rem;"><strong>Please include:</strong></p>
+                    <p style="margin-top: 0.5rem;">• Your firm name</p>
+                    <p>• Number of attorneys (for plan selection)</p>
+                    <p>• Confirmation you use Clio Manage</p>
+                </div>
+            </div>
+
+            <div class="hours">
+                <p><strong>Setup Time:</strong> 2 minutes. Connect your Clio account, approve access, done.</p>
+                <p style="margin-top: 0.5rem;">First suggestions appear within 24 hours of connecting.</p>
+            </div>
+        </div>
+
+        <!-- Enterprise Section -->
+        <div class="section" style="border: 3px solid var(--revenuerescue-primary);">
+            <h2>Enterprise Sales (25+ Attorneys)</h2>
+            <p>Large firms get custom pricing, dedicated support, and enterprise features. Contact our sales team directly.</p>
+
+            <div class="contact-methods">
+                <div class="contact-card" style="border-color: var(--revenuerescue-primary);">
+                    <span class="contact-icon">🏢</span>
+                    <h3>Contact Sales</h3>
+                    <a href="mailto:sales@lexopoly.com?subject=RevenueRescue%20Enterprise%20Inquiry&body=Hi%2C%0A%0AI'm%20interested%20in%20RevenueRescue%20for%20our%20firm.%0A%0AFirm%20name%3A%20%0ANumber%20of%20attorneys%3A%20%0ALocation%3A%20%0A%0AQuestions%2Frequirements%3A%0A" onclick="trackEvent('revenuerescue', 'contact_email_click', 'enterprise')">sales@lexopoly.com</a>
+                    <p style="margin-top: 1rem;"><strong>Enterprise includes:</strong></p>
+                    <p style="margin-top: 0.5rem;">• Custom pricing based on firm size</p>
+                    <p>• Dedicated account manager</p>
+                    <p>• SLA guarantees</p>
+                    <p>• SSO and custom integrations</p>
+                    <p>• Priority phone support</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- General Support Section -->
+        <div class="section">
+            <h2>General Questions & Support</h2>
+            <p>Have questions about RevenueRescue features, pricing, or compatibility? We're here to help.</p>
+
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <span class="contact-icon">💬</span>
+                    <h3>Email Support</h3>
+                    <a href="mailto:support@lexopoly.com?subject=RevenueRescue%20Question" onclick="trackEvent('revenuerescue', 'contact_email_click', 'support')">support@lexopoly.com</a>
+                    <p>Best for detailed questions and technical support</p>
+                    <p style="margin-top: 1rem;">Average response time: 24 hours during business days</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="section">
+            <h2>Frequently Asked Questions</h2>
+            <p>Before reaching out, check if your question is answered in our FAQs:</p>
+            <ul style="margin-left: 2rem; color: var(--text-secondary); line-height: 2; margin-top: 1rem;">
+                <li><a href="/revenuerescue/#faq" style="color: var(--revenuerescue-primary); text-decoration: none;">How does RevenueRescue detect unbilled time?</a></li>
+                <li><a href="/revenuerescue/#faq" style="color: var(--revenuerescue-primary); text-decoration: none;">Is my Clio data secure?</a></li>
+                <li><a href="/revenuerescue/pricing/#faq" style="color: var(--revenuerescue-primary); text-decoration: none;">How is the pricing justified?</a></li>
+                <li><a href="/revenuerescue/pricing/#faq" style="color: var(--revenuerescue-primary); text-decoration: none;">How does multi-attorney pricing work?</a></li>
+                <li><a href="/revenuerescue/pricing/#faq" style="color: var(--revenuerescue-primary); text-decoration: none;">What if I don't use Clio?</a></li>
+            </ul>
+
+            <p style="margin-top: 2rem;">Can't find what you're looking for? Visit our <a href="/revenuerescue/features/" style="color: var(--revenuerescue-primary);">features page</a> for detailed feature explanations or <a href="/revenuerescue/pricing/" style="color: var(--revenuerescue-primary);">pricing page</a> for ROI calculator and cost details.</p>
+        </div>
+
+        <!-- What to Expect Section -->
+        <div class="section">
+            <h2>What to Expect After Signing Up</h2>
+            <div style="margin-top: 2rem;">
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--revenuerescue-primary); font-size: 1.2rem; margin-bottom: 0.5rem;">1. Quick Response (same day)</h3>
+                    <p>We'll send you access credentials and a link to connect your Clio account. Most trial requests are processed within a few hours during business days.</p>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--revenuerescue-primary); font-size: 1.2rem; margin-bottom: 0.5rem;">2. Easy Setup (2 minutes)</h3>
+                    <p>Click the Clio connect button, log into your Clio account, approve calendar access. That's it. No technical setup, no data migration, no IT involvement.</p>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--revenuerescue-primary); font-size: 1.2rem; margin-bottom: 0.5rem;">3. First Suggestions (within 24 hours)</h3>
+                    <p>RevenueRescue analyzes your calendar data and generates billing suggestions. You'll see your first revenue recovery opportunities within 24 hours of connecting.</p>
+                </div>
+
+                <div>
+                    <h3 style="color: var(--revenuerescue-primary); font-size: 1.2rem; margin-bottom: 0.5rem;">4. 7-Day Trial</h3>
+                    <p>Full access for 7 days. Review suggestions, approve time entries, see real revenue captured. If you love it, billing starts automatically. If not, cancel anytime with no charge.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Lexopoly Section -->
+        <div class="section">
+            <h2>About Lexopoly</h2>
+            <p>RevenueRescue is built by Lexopoly Inc., a software company focused on tools for legal professionals and service businesses. Our products include:</p>
+            <ul style="margin-left: 2rem; color: var(--text-secondary); line-height: 2; margin-top: 1rem;">
+                <li><a href="/localtranscribe/" style="color: var(--revenuerescue-primary);">LocalTranscribe</a> - Privacy-first audio transcription</li>
+                <li><a href="/quotecreator/" style="color: var(--revenuerescue-primary);">QuoteCreator</a> - Professional estimate generation for contractors</li>
+                <li><a href="/compliancelogger/" style="color: var(--revenuerescue-primary);">ComplianceLogger</a> - EPA waste compliance tracking</li>
+                <li><a href="/casscalculator/" style="color: var(--revenuerescue-primary);">CASS Calculator</a> - Child and spousal support calculator</li>
+            </ul>
+            <p style="margin-top: 1.5rem;">We're a small team based in the United States, focused on building practical software that solves real business problems. Learn more at <a href="/" style="color: var(--revenuerescue-primary);">lexopoly.com</a>.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-disclaimer">
+                <strong>Not Financial or Legal Advice:</strong> RevenueRescue is a software tool for time tracking and billing assistance. Results may vary based on firm size, billing practices, and adoption. ROI calculations are estimates based on industry research and may not reflect your specific situation. This software does not provide legal or financial advice. Consult your bar association regarding ethical billing practices in your jurisdiction.
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <a href="/revenuerescue/">Home</a>
+                    <a href="/revenuerescue/features/">Features</a>
+                    <a href="/revenuerescue/pricing/">Pricing</a>
+                    <a href="/revenuerescue/contact/">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <a href="/blog/revenuerescue/">Blog Articles</a>
+                    <a href="/blog/law-firm-revenue-loss/">Revenue Loss Guide</a>
+                    <a href="/blog/manual-time-entry-law-firms/">Time Entry Cost Analysis</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Lexopoly</h4>
+                    <a href="/">All Products</a>
+                    <a href="/localtranscribe/">LocalTranscribe</a>
+                    <a href="/quotecreator/">QuoteCreator</a>
+                    <a href="/compliancelogger/">ComplianceLogger</a>
+                    <a href="/casscalculator/">CASS Calculator</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Service</a>
+                    <a href="/about/">About Lexopoly</a>
+                    <a href="/contact/">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lexopoly Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('nav-main').classList.toggle('mobile-open');
+        }
+
+        function toggleMobileDropdown(dropdown) {
+            if (window.innerWidth <= 768) {
+                dropdown.classList.toggle('mobile-open');
+            }
+        }
+    </script>
+</body>
+</html>
