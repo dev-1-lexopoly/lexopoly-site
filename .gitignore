@@ -33,9 +33,10 @@ out/
 dist/
 build/
 
-# Editor directories
+# Editor directories and agent config
 .vscode/
 .idea/
+.claude/
 
 # OS files
 .DS_Store
