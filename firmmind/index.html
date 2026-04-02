@@ -554,9 +554,9 @@
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            max-width: 700px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 1000px;
             margin: 0 auto 2rem;
         }
 
@@ -950,6 +950,11 @@
                 grid-template-columns: 1fr;
             }
 
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 600px;
+            }
+
             .trust-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -1047,9 +1052,9 @@
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "USD",
-        "lowPrice": "49",
-        "highPrice": "99",
-        "description": "Pro $49/month, Firm $99/month"
+        "lowPrice": "0",
+        "highPrice": "149",
+        "description": "Free $0, Standard $39/month, Pro BYOK $59/month, Enterprise $149+/month"
       },
       "featureList": [
         "Private AI - data never leaves your network",
@@ -1211,21 +1216,35 @@
                 <p>No hidden fees. No per-query charges. Privacy included at every tier.</p>
             </div>
             <div class="pricing-grid fade-in">
-                <!-- Pro Plan -->
+                <!-- Free Plan -->
                 <div class="pricing-card">
-                    <div class="pricing-plan-name">Pro</div>
-                    <div class="pricing-price">$49<span>/month</span></div>
-                    <div class="pricing-note" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">or $490/year (save 2 months)</div>
+                    <div class="pricing-plan-name">Free</div>
+                    <div class="pricing-price">$0<span>/month</span></div>
+                    <div class="pricing-note" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">25 messages/month</div>
                 </div>
 
-                <!-- Firm Plan -->
+                <!-- Standard Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-plan-name">Standard</div>
+                    <div class="pricing-price">$39<span>/month</span></div>
+                    <div class="pricing-note" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">500 messages/month</div>
+                </div>
+
+                <!-- Pro BYOK Plan -->
                 <div class="pricing-card featured">
-                    <div class="pricing-plan-name">Firm</div>
-                    <div class="pricing-price">$99<span>/month</span></div>
-                    <div class="pricing-note" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">or $990/year (save 2 months)</div>
+                    <div class="pricing-plan-name">Pro BYOK</div>
+                    <div class="pricing-price">$59<span>/month</span></div>
+                    <div class="pricing-note" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Unlimited &mdash; your API keys</div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-plan-name">Enterprise</div>
+                    <div class="pricing-price">$149<span>+/mo</span></div>
+                    <div class="pricing-note" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Local Ollama &mdash; air-gap capable</div>
                 </div>
             </div>
-            <p class="pricing-note fade-in">Try FirmMind free. Upgrade when you're ready.</p>
+            <p class="pricing-note fade-in">Start free. Upgrade when you're ready.</p>
             <div class="pricing-cta fade-in">
                 <a href="https://firmmind.lexopoly.com" rel="noopener" class="btn-pricing">Try FirmMind</a>
             </div>
