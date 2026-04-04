@@ -13,7 +13,7 @@
         // Note: Config is called in analytics.js with attribution data
     </script>
     <title>Terms of Service & Legal Disclaimer - Lexopoly</title>
-    <meta name="description" content="Terms of service, privacy policy, and legal disclaimers for LocalTranscribe professional transcription software and services.">
+    <meta name="description" content="Terms of service and legal disclaimers for Lexopoly products including RedRope practice management, FirmMind private AI, MailMan document mailing, LocalTranscribe, and QuoteCreator.">
     <style>
         * {
             margin: 0;
@@ -479,52 +479,61 @@
 <body>
     <header class="header">
         <nav class="nav-container">
-            <a href="/" class="logo"><img src="/assets/logo/lexopoly-navbar.png" alt="Lexopoly" class="logo-img"></a>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
+            <a href="/" class="logo">
+                <img src="/assets/logo/lexopoly-navbar.png" alt="Lexopoly" class="logo-img">
+            </a>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
 
             <div class="nav-main" id="nav-main">
+                <!-- Products Dropdown -->
                 <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
-                    <a>Products <span class="dropdown-arrow">▼</span></a>
+                    <a>
+                        Products
+                        <span class="dropdown-arrow">&#9660;</span>
+                    </a>
                     <div class="dropdown-menu">
-                        <div class="dropdown-header">Our Products</div>
-                        <a href="/revenuerescue/">RevenueRescue</a>
+                        <div class="dropdown-header">Platform</div>
+                        <a href="/redrope/">RedRope &mdash; Practice Management</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">AI Assistants</div>
+                        <a href="/lex/">Lex O.P. Lee &mdash; Mailroom Supervisor</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">Standalone</div>
+                        <a href="/firmmind/">FirmMind &mdash; Private AI</a>
                         <a href="/casscalculator/">CASS Calculator</a>
                         <a href="/quotecreator/">QuoteCreator</a>
-                        <a href="/localtranscribe/">LocalTranscribe</a>
+                        <a href="/mailman/">MailMan &mdash; Document Mailing</a>
                         <a href="/compliancelogger/">ComplianceLogger</a>
-                        <a href="/lex/">Lex O.P. Lee</a>
                         <div class="dropdown-divider"></div>
-                        <a href="/#products">View All Products →</a>
+                        <div class="dropdown-header">Clio Add-ons</div>
+                        <a href="/revenuerescue/">RevenueRescue</a>
                     </div>
                 </div>
 
+                <!-- About Dropdown -->
                 <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
-                    <a>Solutions <span class="dropdown-arrow">▼</span></a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-header">By Industry</div>
-                        <a href="/lawyers/">Lawyers</a>
-                        <a href="/journalists/">Journalists</a>
-                        <a href="/dictation/">Dictation</a>
-                        <a href="/court-reporters/">Court Reporters</a>
-                        <a href="/government/">Government</a>
-                        <a href="/education/">Education</a>
-                    </div>
-                </div>
-
-                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
-                    <a>About <span class="dropdown-arrow">▼</span></a>
+                    <a>
+                        About
+                        <span class="dropdown-arrow">&#9660;</span>
+                    </a>
                     <div class="dropdown-menu">
                         <a href="/about/">About Lexopoly</a>
-                        <a href="/support/">Support</a>
                         <a href="/contact/">Contact Us</a>
+                        <a href="/support/">Support</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/privacy/">Privacy Policy</a>
+                        <a href="/terms/">Terms of Service</a>
                     </div>
                 </div>
 
+                <!-- Pricing Link -->
                 <a href="/pricing/">Pricing</a>
 
+                <!-- CTAs -->
                 <div class="nav-actions">
-                    <a href="/signup/" class="btn-secondary">Sign Up Free</a>
-                    <a href="/demo/" class="btn-primary">Watch Demo</a>
+                    <a href="/contact/" class="btn-secondary">Contact Us</a>
+                    <a href="/redrope/" class="btn-primary">Get Started</a>
                 </div>
             </div>
         </nav>
@@ -534,11 +543,15 @@
         <div class="legal-header">
             <h1>Terms of Service & Legal Disclaimer</h1>
             <p class="subtitle">Professional software services, privacy protection, and legal compliance information</p>
-            <div class="last-updated">Last Updated: January 11, 2026</div>
+            <div class="last-updated">Last Updated: April 4, 2026</div>
 
-            <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <button onclick="switchProduct('localtranscribe')" id="btn-localtranscribe" style="padding: 0.75rem 1.5rem; background: var(--accent); color: white; border: 2px solid var(--accent); border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.3s;">LocalTranscribe Terms</button>
-                <button onclick="switchProduct('quotecreator')" id="btn-quotecreator" style="padding: 0.75rem 1.5rem; background: transparent; color: var(--accent); border: 2px solid var(--accent); border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.3s;">QuoteCreator Terms</button>
+            <div style="margin-top: 2rem; display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+                <button onclick="switchProduct('general')" id="btn-general" style="padding: 0.6rem 1.25rem; background: var(--accent); color: white; border: 2px solid var(--accent); border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;">General Terms</button>
+                <button onclick="switchProduct('redrope')" id="btn-redrope" style="padding: 0.6rem 1.25rem; background: transparent; color: var(--accent); border: 2px solid var(--accent); border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;">RedRope</button>
+                <button onclick="switchProduct('firmmind')" id="btn-firmmind" style="padding: 0.6rem 1.25rem; background: transparent; color: var(--accent); border: 2px solid var(--accent); border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;">FirmMind</button>
+                <button onclick="switchProduct('mailman')" id="btn-mailman" style="padding: 0.6rem 1.25rem; background: transparent; color: var(--accent); border: 2px solid var(--accent); border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;">MailMan</button>
+                <button onclick="switchProduct('localtranscribe')" id="btn-localtranscribe" style="padding: 0.6rem 1.25rem; background: transparent; color: var(--accent); border: 2px solid var(--accent); border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;">LocalTranscribe</button>
+                <button onclick="switchProduct('quotecreator')" id="btn-quotecreator" style="padding: 0.6rem 1.25rem; background: transparent; color: var(--accent); border: 2px solid var(--accent); border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;">QuoteCreator</button>
             </div>
         </div>
 
@@ -548,14 +561,15 @@
                 <li><a href="#privacy-data-handling">1. Privacy & Data Handling</a></li>
                 <li><a href="#communications">2. Communications & Marketing</a></li>
                 <li><a href="#service-terms">3. Service Terms & Usage</a></li>
-                <li><a href="#professional-disclaimers">4. Professional Disclaimers</a></li>
-                <li><a href="#limitation-liability">5. Limitation of Liability</a></li>
-                <li><a href="#compliance-disclaimers">6. Compliance Disclaimers</a></li>
-                <li><a href="#intellectual-property">7. Intellectual Property</a></li>
-                <li><a href="#user-responsibilities">8. User Responsibilities</a></li>
-                <li><a href="#software-terms">9. Software Terms</a></li>
-                <li><a href="#governing-law">10. Governing Law</a></li>
-                <li><a href="#contact">11. Contact Information</a></li>
+                <li><a href="#product-disclaimers">4. Product-Specific Disclaimers</a></li>
+                <li><a href="#professional-disclaimers">5. Professional Disclaimers</a></li>
+                <li><a href="#limitation-liability">6. Limitation of Liability</a></li>
+                <li><a href="#compliance-disclaimers">7. Compliance Disclaimers</a></li>
+                <li><a href="#intellectual-property">8. Intellectual Property</a></li>
+                <li><a href="#user-responsibilities">9. User Responsibilities</a></li>
+                <li><a href="#software-terms">10. Software Terms</a></li>
+                <li><a href="#governing-law">11. Governing Law</a></li>
+                <li><a href="#contact">12. Contact Information</a></li>
             </ul>
         </div>
 
@@ -645,8 +659,48 @@
             <p>While we strive for high availability, we do not guarantee uninterrupted service. Scheduled maintenance and updates may cause temporary service interruptions.</p>
         </section>
 
+        <section class="legal-section" id="product-disclaimers">
+            <h2>4. Product-Specific Disclaimers</h2>
+
+            <p>The following disclaimers apply to specific Lexopoly products in addition to the general terms above.</p>
+
+            <h3 id="disclaimer-redrope">RedRope &mdash; Practice Management</h3>
+            <div class="critical-notice">
+                <h4>Important: RedRope Is Not Legal Counsel</h4>
+                <p><strong>RedRope is practice management software, not a substitute for an attorney.</strong> RedRope helps organize matters, contacts, billing, documents, and calendars for legal practitioners. It does not provide legal advice, legal opinions, or legal representation.</p>
+                <p>AI features within RedRope &mdash; including document generation, AI-assisted research, and automated workflows &mdash; <strong>assist with practice management tasks, not legal judgment.</strong> All AI-generated content requires professional review before use in any legal context.</p>
+                <p>Use of RedRope does not create an attorney-client relationship between you and Lexopoly Inc. RedRope is a tool for licensed practitioners to manage their own practices.</p>
+            </div>
+
+            <h3 id="disclaimer-firmmind">FirmMind &mdash; Private AI</h3>
+            <div class="important-notice">
+                <h4>Important: FirmMind Privacy Scope</h4>
+                <p><strong>FirmMind is AI privacy middleware designed to anonymize personally identifiable information (PII) before processing by cloud AI services.</strong> FirmMind is not a data protection guarantee. While FirmMind employs pattern-based PII detection and redaction, no automated system can guarantee complete identification and removal of all sensitive information.</p>
+                <p>Users are responsible for compliance with applicable privacy regulations (HIPAA, GDPR, CCPA, state bar ethics rules, etc.). FirmMind supports your compliance efforts but does not ensure compliance on its own. Always review anonymized output before transmitting sensitive data.</p>
+            </div>
+
+            <h3 id="disclaimer-mailman">MailMan &mdash; Document Mailing</h3>
+            <div class="important-notice">
+                <h4>Important: MailMan Mailing Service Scope</h4>
+                <p><strong>MailMan is a document mailing service that facilitates sending physical mail via USPS.</strong> Lexopoly is not responsible for the content of documents you send, delivery delays or failures caused by USPS or other postal carriers, or any legal consequences arising from mailed documents.</p>
+                <p>Certified mail tracking and delivery confirmation are provided by USPS. Delivery timelines, proof of service, and related matters are governed by USPS policies and procedures, not by Lexopoly.</p>
+            </div>
+
+            <h3 id="disclaimer-localtranscribe">LocalTranscribe &mdash; Transcription</h3>
+            <div class="important-notice">
+                <h4>Important: Transcription Accuracy</h4>
+                <p><strong>LocalTranscribe is a transcription tool, not a certified transcription service.</strong> While transcription processing occurs locally on your device, all transcripts require human review and verification before use in professional, legal, medical, or official contexts. LocalTranscribe transcripts are not court-certified.</p>
+            </div>
+
+            <h3 id="disclaimer-quotecreator">QuoteCreator &mdash; Fee Agreements</h3>
+            <div class="important-notice">
+                <h4>Important: Fee Agreement Generation</h4>
+                <p><strong>QuoteCreator generates fee agreement documents based on your input.</strong> Generated documents are templates that require professional review. QuoteCreator does not provide legal advice regarding fee structures, retainer agreements, or billing practices. Users are responsible for ensuring all fee agreements comply with their jurisdiction's rules of professional conduct.</p>
+            </div>
+        </section>
+
         <section class="legal-section" id="professional-disclaimers">
-            <h2>4. Professional Disclaimers</h2>
+            <h2>5. Professional Disclaimers</h2>
 
             <div class="critical-notice">
                 <h4>Critical: Professional Use Disclaimers</h4>
@@ -666,7 +720,7 @@
         </section>
 
         <section class="legal-section" id="limitation-liability">
-            <h2>5. Limitation of Liability</h2>
+            <h2>6. Limitation of Liability</h2>
 
             <div class="critical-notice">
                 <h4>Important Legal Limitation</h4>
@@ -684,7 +738,7 @@
         </section>
 
         <section class="legal-section" id="compliance-disclaimers">
-            <h2>6. Compliance Disclaimers</h2>
+            <h2>7. Compliance Disclaimers</h2>
 
             <h3>HIPAA Compliance</h3>
             <div class="important-notice">
@@ -710,7 +764,7 @@
         </section>
 
         <section class="legal-section" id="intellectual-property">
-            <h2>7. Intellectual Property</h2>
+            <h2>8. Intellectual Property</h2>
 
             <h3>Our Intellectual Property</h3>
             <p>LocalTranscribe software, website content, trademarks, and related intellectual property are owned by Lexopoly Inc. You receive a limited license to use our software and services according to these terms.</p>
@@ -723,7 +777,7 @@
         </section>
 
         <section class="legal-section" id="user-responsibilities">
-            <h2>8. User Responsibilities</h2>
+            <h2>9. User Responsibilities</h2>
 
             <h3>Legal Use Requirements</h3>
             <ul>
@@ -752,7 +806,7 @@
         </section>
 
         <section class="legal-section" id="software-terms">
-            <h2>9. Software Terms</h2>
+            <h2>10. Software Terms</h2>
 
             <div class="important-notice">
                 <h4>Software-Specific Terms</h4>
@@ -770,7 +824,7 @@
         </section>
 
         <section class="legal-section" id="governing-law">
-            <h2>10. Governing Law & Dispute Resolution</h2>
+            <h2>11. Governing Law & Dispute Resolution</h2>
 
             <h3>Governing Law</h3>
             <p>These terms are governed by the laws of the State of Delaware, United States, without regard to conflict of law principles.</p>
@@ -786,7 +840,7 @@
         </section>
 
         <section class="legal-section" id="contact">
-            <h2>11. Contact Information</h2>
+            <h2>12. Contact Information</h2>
 
             <div class="contact-info">
                 <h3>Legal & Compliance Inquiries</h3>
@@ -810,36 +864,54 @@
 
     <script>
         // Product Switcher
+        var productNames = {
+            general: 'All Products',
+            redrope: 'RedRope',
+            firmmind: 'FirmMind',
+            mailman: 'MailMan',
+            localtranscribe: 'LocalTranscribe',
+            quotecreator: 'QuoteCreator'
+        };
+
+        var productSubtitles = {
+            general: 'Terms of service and legal disclaimers for all Lexopoly products and services',
+            redrope: 'Practice management software terms, disclaimers, and legal compliance',
+            firmmind: 'Private AI middleware terms, privacy disclaimers, and compliance information',
+            mailman: 'Document mailing service terms, USPS disclaimers, and service scope',
+            localtranscribe: 'Professional transcription services, privacy protection, and legal compliance',
+            quotecreator: 'Fee agreement generation software terms and professional disclaimers'
+        };
+
         function switchProduct(product) {
             // Update button states
-            const buttons = document.querySelectorAll('[id^="btn-"]');
-            buttons.forEach(btn => {
+            var buttons = document.querySelectorAll('[id^="btn-"]');
+            buttons.forEach(function(btn) {
                 btn.style.background = 'transparent';
                 btn.style.color = 'var(--accent)';
             });
 
-            const activeBtn = document.getElementById('btn-' + product);
+            var activeBtn = document.getElementById('btn-' + product);
             activeBtn.style.background = 'var(--accent)';
             activeBtn.style.color = 'white';
 
-            // Update page title
-            const productName = product === 'localtranscribe' ? 'LocalTranscribe' : 'QuoteCreator';
-            document.title = `Terms of Service - ${productName}`;
+            // Update page title and subtitle
+            document.title = 'Terms of Service - ' + productNames[product] + ' - Lexopoly';
+            document.querySelector('.subtitle').textContent = productSubtitles[product];
 
-            // For now, both products share the same terms
-            // In the future, you can add product-specific content here
-            const subtitle = document.querySelector('.subtitle');
-            if (product === 'localtranscribe') {
-                subtitle.textContent = 'Professional transcription services, privacy protection, and legal compliance information';
-            } else {
-                subtitle.textContent = 'Professional estimation software, data handling, and legal compliance information';
+            // Scroll to product-specific disclaimer if not "general"
+            if (product !== 'general') {
+                var target = document.getElementById('disclaimer-' + product);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             }
         }
 
         // Unified Navigation Functions
         function toggleMobileMenu() {
-            const navMain = document.getElementById('nav-main');
+            var navMain = document.getElementById('nav-main');
             navMain.classList.toggle('show');
+            document.querySelector('.mobile-menu-btn').setAttribute('aria-expanded', navMain.classList.contains('show'));
         }
 
         function toggleMobileDropdown(element) {
@@ -850,10 +922,10 @@
 
         // Close mobile menu when clicking outside
         document.addEventListener('click', function(event) {
-            const navMain = document.getElementById('nav-main');
-            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            var navContainer = document.querySelector('.nav-container');
+            var navMain = document.getElementById('nav-main');
 
-            if (!event.target.closest('.nav-main') && !event.target.closest('.mobile-menu-btn')) {
+            if (!navContainer.contains(event.target) && navMain.classList.contains('show')) {
                 navMain.classList.remove('show');
             }
         });
@@ -862,7 +934,7 @@
         window.addEventListener('resize', function() {
             if (window.innerWidth > 968) {
                 document.getElementById('nav-main').classList.remove('show');
-                document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+                document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
                     dropdown.classList.remove('mobile-open');
                 });
             }
