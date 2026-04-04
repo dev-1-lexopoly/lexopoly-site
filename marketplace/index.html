@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N29Z7B6T5T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N29Z7B6T5T');
+    </script>
+
+    <title>RedRope Marketplace | Integrations & Partner Tools | Lexopoly</title>
+    <meta name="description" content="Extend RedRope with marketplace integrations. AI-powered intake, document processing, certified mail, privacy middleware, and more. Built for legal practitioners.">
+    <meta name="keywords" content="RedRope marketplace, legal integrations, practice management integrations, legal AI, Lawgical, RagMetrics, DocuPipe, MailMan, FirmMind, Lexopoly">
+    <meta name="author" content="Lexopoly Inc.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lexopoly.com/marketplace/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="RedRope Marketplace | Integrations & Partner Tools">
+    <meta property="og:description" content="Extend RedRope with marketplace integrations. AI-powered intake, document processing, certified mail, privacy middleware, and more.">
+    <meta property="og:url" content="https://lexopoly.com/marketplace/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lexopoly">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RedRope Marketplace | Integrations & Partner Tools">
+    <meta name="twitter:description" content="Extend RedRope with marketplace integrations. AI-powered intake, document processing, certified mail, privacy middleware, and more.">
+    <meta name="twitter:site" content="@lexopoly">
+
+    <meta name="theme-color" content="#c0392b">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "RedRope Marketplace",
+      "description": "Extend RedRope with marketplace integrations for legal practice management.",
+      "url": "https://lexopoly.com/marketplace/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Lexopoly Inc.",
+        "url": "https://lexopoly.com"
+      }
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --redrope-primary: #c0392b;
+            --redrope-dark: #962d22;
+            --redrope-light: #e74c3c;
+            --accent: #2c5aa0;
+            --lexopoly-primary: #1a365d;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --text-muted: #718096;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f7fafc;
+            --border: #e2e8f0;
+            --success: #2f7d32;
+            --success-bg: #f0fdf4;
+            --coming-soon: #718096;
+            --coming-soon-bg: #f7fafc;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+        }
+
+        /* ===== UNIFIED NAVIGATION ===== */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--lexopoly-primary);
+            text-decoration: none;
+            white-space: nowrap;
+            z-index: 1001;
+        }
+
+        .logo-img { height: 100px; width: auto; }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: var(--lexopoly-primary);
+            z-index: 1001;
+        }
+
+        .nav-main {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-dropdown { position: relative; }
+
+        .nav-dropdown > a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-dropdown > a:hover { color: var(--accent); }
+
+        .dropdown-arrow {
+            font-size: 0.7em;
+            margin-left: 0.3rem;
+            transition: transform 0.3s;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+            z-index: 1000;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--bg-secondary);
+            color: var(--accent);
+        }
+
+        .dropdown-header {
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            opacity: 0.7;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 0.5rem 0;
+        }
+
+        .nav-main > a {
+            padding: 0.75rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            white-space: nowrap;
+        }
+
+        .nav-main > a:hover { color: var(--accent); }
+
+        .nav-cta {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            margin-left: 1rem;
+        }
+
+        .btn-secondary-nav {
+            padding: 0.5rem 1.25rem;
+            border: 2px solid var(--accent);
+            background: transparent;
+            color: var(--accent);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .btn-secondary-nav:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary-nav {
+            padding: 0.5rem 1.25rem;
+            background: var(--redrope-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn-primary-nav:hover {
+            background: var(--redrope-dark);
+            transform: translateY(-2px);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--redrope-primary) 0%, var(--redrope-dark) 100%);
+            color: white;
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .hero-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* ===== FILTER TABS ===== */
+        .filter-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2rem 0;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .filter-tab {
+            padding: 0.5rem 1.25rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-tab:hover {
+            border-color: var(--redrope-primary);
+            color: var(--redrope-primary);
+        }
+
+        .filter-tab.active {
+            background: var(--redrope-primary);
+            color: white;
+            border-color: var(--redrope-primary);
+        }
+
+        /* ===== CARD GRID ===== */
+        .marketplace-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .marketplace-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .marketplace-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .card-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--lexopoly-primary);
+        }
+
+        .card-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+        }
+
+        .badge-live {
+            background: var(--success-bg);
+            color: var(--success);
+            border: 1px solid var(--success);
+        }
+
+        .badge-coming-soon {
+            background: var(--coming-soon-bg);
+            color: var(--coming-soon);
+            border: 1px solid var(--coming-soon);
+        }
+
+        .card-category {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            background: var(--bg-secondary);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .card-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-cta {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .cta-live {
+            background: var(--redrope-primary);
+            color: white;
+        }
+
+        .cta-live:hover {
+            background: var(--redrope-dark);
+        }
+
+        .cta-coming-soon {
+            background: transparent;
+            color: var(--text-muted);
+            border: 2px solid var(--border);
+        }
+
+        .cta-coming-soon:hover {
+            border-color: var(--redrope-primary);
+            color: var(--redrope-primary);
+        }
+
+        /* ===== BUILD ON REDROPE CTA ===== */
+        .partner-cta {
+            background: var(--bg-secondary);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .partner-cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .partner-cta h2 {
+            font-size: 2rem;
+            color: var(--lexopoly-primary);
+            margin-bottom: 1rem;
+        }
+
+        .partner-cta p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .partner-cta-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--redrope-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .partner-cta-btn:hover {
+            background: var(--redrope-dark);
+            transform: translateY(-2px);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--lexopoly-primary);
+            color: white;
+            padding: 3rem 2rem 1.5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .footer-section h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            opacity: 0.7;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: white; }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 968px) {
+            .mobile-menu-btn { display: block; }
+
+            .nav-main {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            }
+
+            .nav-main.show {
+                max-height: 600px;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-dropdown { border-bottom: 1px solid var(--border); }
+
+            .nav-dropdown > a {
+                padding: 1rem 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                min-height: 44px;
+            }
+
+            .nav-dropdown.mobile-open > a .dropdown-arrow { transform: rotate(180deg); }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                border-radius: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+                background: var(--bg-secondary);
+            }
+
+            .nav-dropdown.mobile-open .dropdown-menu { max-height: 500px; }
+
+            .dropdown-menu a { padding: 0.75rem 3rem; min-height: 44px; }
+
+            .nav-main > a {
+                padding: 1rem 2rem;
+                border-bottom: 1px solid var(--border);
+                min-height: 44px;
+            }
+
+            .nav-cta {
+                flex-direction: column;
+                margin: 0;
+                padding: 1rem 2rem;
+                gap: 0.5rem;
+            }
+
+            .nav-cta a { width: 100%; text-align: center; }
+
+            .marketplace-grid {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 1.5rem;
+            }
+
+            .hero h1 { font-size: 2.25rem; }
+
+            .hero-stats { gap: 2rem; }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .marketplace-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+
+            .hero { padding: 3rem 1rem 2.5rem; }
+            .hero h1 { font-size: 2rem; }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .filter-tabs { gap: 0.35rem; }
+            .filter-tab { padding: 0.4rem 0.9rem; font-size: 0.8rem; }
+
+            .footer-content { grid-template-columns: 1fr; }
+        }
+
+        /* Accessibility */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- UNIFIED NAVIGATION -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">
+                <img src="/assets/logo/lexopoly-navbar.png" alt="Lexopoly" class="logo-img">
+            </a>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+
+            <div class="nav-main" id="nav-main">
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>
+                        Products
+                        <span class="dropdown-arrow">&#9660;</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">Platform</div>
+                        <a href="/redrope/">RedRope &mdash; Practice Management</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">AI Assistants</div>
+                        <a href="/lex/">Lex O.P. Lee &mdash; Mailroom Supervisor</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">Standalone</div>
+                        <a href="/firmmind/">FirmMind &mdash; Private AI</a>
+                        <a href="/casscalculator/">CASS Calculator</a>
+                        <a href="/quotecreator/">QuoteCreator</a>
+                        <a href="/mailman/">MailMan &mdash; Document Mailing</a>
+                        <a href="/compliancelogger/">ComplianceLogger</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">Clio Add-ons</div>
+                        <a href="/revenuerescue/">RevenueRescue</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown" onclick="toggleMobileDropdown(this)">
+                    <a>
+                        About
+                        <span class="dropdown-arrow">&#9660;</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/about/">About Lexopoly</a>
+                        <a href="/contact/">Contact Us</a>
+                        <a href="/support/">Support</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/privacy/">Privacy Policy</a>
+                        <a href="/terms/">Terms of Service</a>
+                    </div>
+                </div>
+
+                <a href="/pricing/">Pricing</a>
+
+                <div class="nav-cta">
+                    <a href="/contact/" class="btn-secondary-nav">Contact Us</a>
+                    <a href="https://redrope.lexopoly.com" rel="noopener" class="btn-primary-nav">Get Started</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>RedRope Marketplace</h1>
+            <p class="hero-subtitle">Extend your practice management with vetted integrations. AI-powered intake, document processing, certified mail, privacy middleware, and more &mdash; all connected to your RedRope workflow.</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-number">3</div>
+                    <div class="hero-stat-label">Live Integrations</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">3</div>
+                    <div class="hero-stat-label">Coming Soon</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">6</div>
+                    <div class="hero-stat-label">Categories</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Tabs -->
+    <div class="filter-section">
+        <div class="filter-tabs" id="filter-tabs">
+            <button class="filter-tab active" data-category="all" onclick="filterCards('all', this)">All</button>
+            <button class="filter-tab" data-category="intake" onclick="filterCards('intake', this)">Intake</button>
+            <button class="filter-tab" data-category="document-processing" onclick="filterCards('document-processing', this)">Document Processing</button>
+            <button class="filter-tab" data-category="output-evaluation" onclick="filterCards('output-evaluation', this)">Output Evaluation</button>
+            <button class="filter-tab" data-category="communications" onclick="filterCards('communications', this)">Communications</button>
+            <button class="filter-tab" data-category="privacy" onclick="filterCards('privacy', this)">Privacy &amp; Compliance</button>
+            <button class="filter-tab" data-category="internal" onclick="filterCards('internal', this)">Internal Tools</button>
+        </div>
+    </div>
+
+    <!-- Marketplace Grid -->
+    <div class="marketplace-grid" id="marketplace-grid">
+
+        <!-- Lawgical -->
+        <div class="marketplace-card fade-in" data-category="intake">
+            <div class="card-header">
+                <div class="card-name">Lawgical</div>
+                <span class="card-badge badge-coming-soon">Coming Soon</span>
+            </div>
+            <div class="card-category">Intake</div>
+            <p class="card-description">AI-powered intake and lead engagement. Qualified leads flow directly into RedRope matters, converting website visitors into organized case files automatically.</p>
+            <a href="/contact/" class="card-cta cta-coming-soon">Notify Me</a>
+        </div>
+
+        <!-- RagMetrics -->
+        <div class="marketplace-card fade-in" data-category="output-evaluation">
+            <div class="card-header">
+                <div class="card-name">RagMetrics</div>
+                <span class="card-badge badge-coming-soon">Coming Soon</span>
+            </div>
+            <div class="card-category">Output Evaluation</div>
+            <p class="card-description">Committee-based AI output scoring. Evaluate AI-generated legal documents against quality benchmarks before they reach your clients.</p>
+            <a href="/contact/" class="card-cta cta-coming-soon">Notify Me</a>
+        </div>
+
+        <!-- DocuPipe -->
+        <div class="marketplace-card fade-in" data-category="document-processing">
+            <div class="card-header">
+                <div class="card-name">DocuPipe</div>
+                <span class="card-badge badge-coming-soon">Coming Soon</span>
+            </div>
+            <div class="card-category">Document Processing</div>
+            <p class="card-description">Intelligent document extraction and processing. Scanned documents, PDFs, and forms are extracted and organized into RedRope matters automatically.</p>
+            <a href="/contact/" class="card-cta cta-coming-soon">Notify Me</a>
+        </div>
+
+        <!-- MailMan -->
+        <div class="marketplace-card fade-in" data-category="communications">
+            <div class="card-header">
+                <div class="card-name">MailMan</div>
+                <span class="card-badge badge-live">Live</span>
+            </div>
+            <div class="card-category">Communications</div>
+            <p class="card-description">Send certified mail directly from RedRope. Upload a PDF, pay per piece, track delivery via USPS. First Class from $1.75, Certified from $7.50.</p>
+            <a href="/mailman/" class="card-cta cta-live">Learn More</a>
+        </div>
+
+        <!-- FirmMind -->
+        <div class="marketplace-card fade-in" data-category="privacy">
+            <div class="card-header">
+                <div class="card-name">FirmMind</div>
+                <span class="card-badge badge-live">Live</span>
+            </div>
+            <div class="card-category">Privacy &amp; Compliance</div>
+            <p class="card-description">Privacy middleware for AI. Anonymizes PII before any cloud AI processing, keeping privileged information off third-party servers. Patent pending.</p>
+            <a href="/firmmind/" class="card-cta cta-live">Learn More</a>
+        </div>
+
+        <!-- QuoteCreator -->
+        <div class="marketplace-card fade-in" data-category="internal">
+            <div class="card-header">
+                <div class="card-name">QuoteCreator</div>
+                <span class="card-badge badge-live">Live</span>
+            </div>
+            <div class="card-category">Internal Tools</div>
+            <p class="card-description">Generate professional fee agreements integrated with RedRope matter data. Create accurate quotes in minutes, not hours.</p>
+            <a href="/quotecreator/" class="card-cta cta-live">Learn More</a>
+        </div>
+
+    </div>
+
+    <!-- Build on RedRope CTA -->
+    <section class="partner-cta">
+        <div class="partner-cta-content">
+            <h2>Build on RedRope</h2>
+            <p>RedRope exposes a REST API for matter management, contacts, billing, and documents. If your tool serves legal practitioners, we want to hear from you. Free listing, no mandatory revenue share.</p>
+            <a href="/contact/" class="partner-cta-btn">Apply to Partner</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Company</h4>
+                <div class="footer-links">
+                    <a href="/about/">About Lexopoly</a>
+                    <a href="/contact/">Contact Us</a>
+                    <a href="/support/">Support</a>
+                    <a href="mailto:hello@lexopoly.com">hello@lexopoly.com</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Products</h4>
+                <div class="footer-links">
+                    <a href="/redrope/">RedRope</a>
+                    <a href="/firmmind/">FirmMind</a>
+                    <a href="/lex/">Lex O.P. Lee</a>
+                    <a href="/pricing/">All Products &amp; Pricing</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Marketplace</h4>
+                <div class="footer-links">
+                    <a href="/marketplace/">Browse Integrations</a>
+                    <a href="/contact/">Become a Partner</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="footer-links">
+                    <a href="https://x.com/lexopoly" target="_blank" rel="noopener">Follow on X</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lexopoly Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            var navMain = document.getElementById('nav-main');
+            navMain.classList.toggle('show');
+            document.querySelector('.mobile-menu-btn').setAttribute('aria-expanded', navMain.classList.contains('show'));
+        }
+
+        function toggleMobileDropdown(element) {
+            if (window.innerWidth <= 968) {
+                element.classList.toggle('mobile-open');
+            }
+        }
+
+        document.addEventListener('click', function(event) {
+            var navContainer = document.querySelector('.nav-container');
+            var navMain = document.getElementById('nav-main');
+            if (!navContainer.contains(event.target) && navMain.classList.contains('show')) {
+                navMain.classList.remove('show');
+            }
+        });
+
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 968) {
+                document.querySelectorAll('.nav-dropdown.mobile-open').forEach(function(dropdown) {
+                    dropdown.classList.remove('mobile-open');
+                });
+                document.getElementById('nav-main').classList.remove('show');
+            }
+        });
+
+        // Category filter
+        function filterCards(category, btn) {
+            // Update active tab
+            document.querySelectorAll('.filter-tab').forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+            btn.classList.add('active');
+
+            // Filter cards
+            var cards = document.querySelectorAll('.marketplace-card');
+            cards.forEach(function(card) {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Scroll fade-in
+        document.addEventListener('DOMContentLoaded', function() {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            document.querySelectorAll('.fade-in').forEach(function(el) {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
