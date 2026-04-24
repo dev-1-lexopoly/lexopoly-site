@@ -71,3 +71,17 @@ SUPER_BUS*
 *_SPRINT_*
 POWER_OUTAGE_*
 SITE_SWITCHING_*
+
+# Archive and backup artifacts — never commit to public repo (INCIDENT_015)
+*.tar
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.zip
+*.7z
+*.bak
+*.backup-*
+*-backup-*
+*.old
+*.orig
+*.swp
