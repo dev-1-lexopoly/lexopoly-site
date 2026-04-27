@@ -1,5 +1,5 @@
 # COPYRIGHT & INTELLECTUAL PROPERTY NOTICE
-# © 2025 Lexopoly Inc. All rights reserved.
+# © 2026 Lexopoly Inc. All rights reserved.
 #
 # NO AI TRAINING: Use of this website's content (articles, documentation, product
 # descriptions, templates, code examples) to train generative artificial intelligence
@@ -65,6 +65,31 @@ Disallow: /test-results/
 Disallow: /clio-submission/
 Disallow: /marketing-assets/
 
+# Pre-pivot pages — discourage indexing (current positioning is "Private AI for Regulated Professionals";
+# legacy LocalTranscribe / multi-vertical / EPA-construction content is no longer canonical positioning)
+Disallow: /localtranscribe/
+Disallow: /lawyers/
+Disallow: /journalists/
+Disallow: /dictation/
+Disallow: /court-reporters/
+Disallow: /government/
+Disallow: /education/
+Disallow: /solutions/
+Disallow: /blog/localtranscribe/
+Disallow: /blog/attorney-client-privilege-transcription/
+Disallow: /blog/journalist-source-protection-transcription/
+Disallow: /blog/epa-audit-notice-30-days/
+Disallow: /blog/epa-fines-calculator/
+Disallow: /blog/epa-surprise-inspection-construction/
+Disallow: /blog/epa-violation-notice-response-construction/
+Disallow: /blog/paper-logs-vs-digital-tracking-epa-compliance/
+Disallow: /blog/rcra-recordkeeping-construction-small-business/
+Disallow: /blog/real-time-mobile-waste-logging-construction/
+Disallow: /blog/reconstruct-waste-disposal-records/
+Disallow: /blog/waste-manifest-template/
+Disallow: /blog/construction-waste-disposal-log-template/
+Disallow: /blog/construction-waste-documentation-checklist/
+
 # Screenshots are public (for social media previews)
 Allow: /screenshots/
 
@@ -73,14 +98,18 @@ Allow: /css/
 Allow: /js/
 Allow: /images/
 Allow: /assets/
+
+# Allow current product + canonical pages
+Allow: /redrope/
+Allow: /firmmind/
+Allow: /mailman/
+Allow: /marketplace/
+Allow: /compliancelogger/
+Allow: /quotecreator/
+Allow: /casscalculator/
+Allow: /revenuerescue/
 Allow: /buy/
 Allow: /demo/
-Allow: /lawyers/
-Allow: /journalists/
-Allow: /dictation/
-Allow: /court-reporters/
-Allow: /government/
-Allow: /education/
 Allow: /pricing/
 Allow: /about/
 Allow: /support/
@@ -88,9 +117,6 @@ Allow: /contact/
 Allow: /terms/
 Allow: /privacy/
 Allow: /blog/
-Allow: /compliancelogger/
-Allow: /localtranscribe/
-Allow: /quotecreator/
 
 # Crawl delay for respectful crawling
 Crawl-delay: 1
